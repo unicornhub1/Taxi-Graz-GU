@@ -1,0 +1,17 @@
+export const marqueeItems: string[] = [
+  'Flughafentransfer Graz',
+  'Stretchlimousinen',
+  'Limousine mieten Graz',
+  'Botenfahrten',
+  'Taxi vorbestellen',
+  'Barrierefreie Fahrten',
+  '24/7 Service',
+  'Kartenzahlung möglich',
+  'WhatsApp Buchung',
+  'Taxi Graz Andritz',
+  'Taxi Graz Eggenberg',
+  'Taxi Feldkirchen',
+  'Taxi Kalsdorf',
+  'Taxi Seiersberg',
+  'Taxi Gratkorn',
+]
