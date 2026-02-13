@@ -208,26 +208,26 @@ function CookieBanner({
               </p>
 
               <div className="mt-5 flex flex-col gap-2">
-                <button
-                  onClick={onAcceptAll}
-                  className="w-full rounded-full bg-[var(--color-gold)] py-3 text-sm font-bold text-[var(--color-black)] transition-all hover:bg-[var(--color-gold-dark)] cursor-pointer"
-                >
-                  Alle akzeptieren
-                </button>
                 <div className="flex gap-2">
                   <button
                     onClick={onRejectAll}
-                    className="flex-1 rounded-full border border-white/10 py-3 text-sm font-semibold text-white transition-all hover:bg-white/5 cursor-pointer"
+                    className="flex-1 rounded-full border border-white/20 py-3 text-sm font-semibold text-white transition-all hover:bg-white/5 cursor-pointer"
                   >
                     Nur notwendige
                   </button>
                   <button
-                    onClick={() => setShowDetails(true)}
-                    className="flex-1 rounded-full border border-white/10 py-3 text-sm font-semibold text-white transition-all hover:bg-white/5 cursor-pointer"
+                    onClick={onAcceptAll}
+                    className="flex-1 rounded-full border border-white/20 py-3 text-sm font-semibold text-white transition-all hover:bg-white/5 cursor-pointer"
                   >
-                    Einstellungen
+                    Alle akzeptieren
                   </button>
                 </div>
+                <button
+                  onClick={() => setShowDetails(true)}
+                  className="w-full rounded-full border border-white/10 py-2.5 text-xs font-semibold text-white/60 transition-all hover:bg-white/5 cursor-pointer"
+                >
+                  Einstellungen
+                </button>
               </div>
             </div>
           ) : (

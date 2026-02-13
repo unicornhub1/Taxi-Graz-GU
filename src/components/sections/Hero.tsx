@@ -41,9 +41,9 @@ export function Hero() {
           <div className="lg:col-span-7">
             {/* Eyebrow */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}
               className="flex items-center gap-3 mb-8"
             >
               <span className="flex items-center gap-2 rounded-full border border-[var(--color-gold)]/30 bg-[var(--color-gold)]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-gold)]">
@@ -58,9 +58,9 @@ export function Hero() {
 
             {/* Main headline - large editorial style */}
             <motion.div
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
+              transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
             >
               <h1 className="font-[var(--font-display)] text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-bold leading-[0.95] tracking-tight text-white">
                 Ihr Taxi
@@ -80,9 +80,9 @@ export function Hero() {
 
             {/* Description */}
             <motion.p
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.3 }}
+              transition={{ duration: 0.7, delay: 0.6, ease: 'easeOut' }}
               className="mt-8 max-w-lg text-lg leading-relaxed text-[var(--color-gray-400)]"
             >
               <strong className="text-white">Flughafentransfer</strong>,{' '}
@@ -93,9 +93,9 @@ export function Hero() {
 
             {/* CTA Buttons */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.45 }}
+              transition={{ duration: 0.7, delay: 0.8, ease: 'easeOut' }}
               className="mt-10 flex flex-col sm:flex-row gap-4"
             >
               <a
@@ -120,9 +120,9 @@ export function Hero() {
 
           {/* Right side - Contact card + big phone number */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5, ease: 'easeOut' }}
             className="lg:col-span-5 relative z-20"
           >
             <div className="relative rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
@@ -209,7 +209,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 0.5 }}
+          transition={{ delay: 1.8, duration: 0.6, ease: 'easeOut' }}
           className="absolute bottom-4 left-1/2 -translate-x-1/2 flex-col items-center gap-2 hidden md:flex"
         >
           <span className="text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-gray-500)]">
