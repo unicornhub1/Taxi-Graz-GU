@@ -49,6 +49,7 @@ export async function POST(request: Request) {
     const fromAddress = process.env.SMTP_USER || 'info@taxigraz-gu.at'
 
     const subject = escapeHtml(data.subject || 'Allgemeine Anfrage')
+    const logoUrl = 'https://taxigraz-gu.at/email-logo.svg'
 
     // Mail 1: Benachrichtigung an den Betreiber
     await transporter.sendMail({
@@ -65,19 +66,9 @@ export async function POST(request: Request) {
     <tr><td align="center">
       <table width="600" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;">
 
-        <!-- Header -->
+        <!-- Header with Logo -->
         <tr><td style="background-color: #0A0A0A; border-radius: 16px 16px 0 0; padding: 32px 40px; text-align: center;">
-          <table cellpadding="0" cellspacing="0" style="margin: 0 auto;">
-            <tr>
-              <td style="background-color: #E8B931; width: 40px; height: 40px; border-radius: 10px; text-align: center; vertical-align: middle;">
-                <span style="font-size: 20px; font-weight: bold; color: #0A0A0A;">T</span>
-              </td>
-              <td style="padding-left: 12px;">
-                <span style="font-size: 20px; font-weight: bold; color: #FFFFFF;">Taxi Graz</span>
-                <span style="font-size: 10px; font-weight: 700; letter-spacing: 3px; color: #E8B931; display: block;">GU</span>
-              </td>
-            </tr>
-          </table>
+          <img src="${logoUrl}" alt="Taxi Graz GU" width="240" height="93" style="display: block; margin: 0 auto; max-width: 240px; height: auto;" />
         </td></tr>
 
         <!-- Gold Accent Bar -->
@@ -86,7 +77,7 @@ export async function POST(request: Request) {
         <!-- Content -->
         <tr><td style="background-color: #FFFFFF; padding: 40px;">
           <h1 style="margin: 0 0 4px; font-size: 22px; font-weight: 700; color: #0A0A0A;">Neue Kontaktanfrage</h1>
-          <p style="margin: 0 0 28px; font-size: 14px; color: #6E6E66;">Eingegangen über taxigraz-gu.at</p>
+          <p style="margin: 0 0 28px; font-size: 14px; color: #6E6E66;">Eingegangen &uuml;ber taxigraz-gu.at</p>
 
           <!-- Data Table -->
           <table width="100%" cellpadding="0" cellspacing="0" style="border: 1px solid #EFEFED; border-radius: 12px; overflow: hidden;">
@@ -109,18 +100,6 @@ export async function POST(request: Request) {
             <tr>
               <td style="padding: 14px 16px; font-size: 13px; font-weight: 600; color: #6E6E66; background: #F7F7F5; vertical-align: top;">Nachricht</td>
               <td style="padding: 14px 16px; font-size: 14px; color: #0A0A0A; white-space: pre-wrap; line-height: 1.6;">${escapeHtml(data.message)}</td>
-            </tr>
-          </table>
-
-          <!-- Quick Actions -->
-          <table width="100%" cellpadding="0" cellspacing="0" style="margin-top: 28px;">
-            <tr>
-              <td>
-                <a href="mailto:${escapeHtml(data.email)}" style="display: inline-block; background-color: #E8B931; color: #0A0A0A; font-size: 14px; font-weight: 600; padding: 12px 28px; border-radius: 50px; text-decoration: none;">Antworten</a>
-              </td>
-              <td style="padding-left: 12px;">
-                <a href="tel:${escapeHtml(data.phone)}" style="display: inline-block; background-color: #F7F7F5; color: #0A0A0A; font-size: 14px; font-weight: 600; padding: 12px 28px; border-radius: 50px; text-decoration: none; border: 1px solid #DEDEDA;">Anrufen</a>
-              </td>
             </tr>
           </table>
         </td></tr>
@@ -153,19 +132,11 @@ export async function POST(request: Request) {
     <tr><td align="center">
       <table width="600" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;">
 
-        <!-- Header -->
+        <!-- Header with Logo -->
         <tr><td style="background-color: #0A0A0A; border-radius: 16px 16px 0 0; padding: 32px 40px; text-align: center;">
-          <table cellpadding="0" cellspacing="0" style="margin: 0 auto;">
-            <tr>
-              <td style="background-color: #E8B931; width: 40px; height: 40px; border-radius: 10px; text-align: center; vertical-align: middle;">
-                <span style="font-size: 20px; font-weight: bold; color: #0A0A0A;">T</span>
-              </td>
-              <td style="padding-left: 12px;">
-                <span style="font-size: 20px; font-weight: bold; color: #FFFFFF;">Taxi Graz</span>
-                <span style="font-size: 10px; font-weight: 700; letter-spacing: 3px; color: #E8B931; display: block;">GU</span>
-              </td>
-            </tr>
-          </table>
+          <a href="https://taxigraz-gu.at" style="text-decoration: none;">
+            <img src="${logoUrl}" alt="Taxi Graz GU" width="240" height="93" style="display: block; margin: 0 auto; max-width: 240px; height: auto;" />
+          </a>
         </td></tr>
 
         <!-- Gold Accent Bar -->
@@ -177,19 +148,13 @@ export async function POST(request: Request) {
           <p style="margin: 0 0 12px; font-size: 15px; color: #2E2E2A; line-height: 1.7;">
             Wir haben Ihre Nachricht erhalten und melden uns schnellstm&ouml;glich bei Ihnen.
           </p>
-          <p style="margin: 0 0 28px; font-size: 15px; color: #2E2E2A; line-height: 1.7;">
-            F&uuml;r dringende Anliegen erreichen Sie uns jederzeit telefonisch:
+          <p style="margin: 0 0 8px; font-size: 15px; color: #2E2E2A; line-height: 1.7;">
+            F&uuml;r dringende Anliegen erreichen Sie uns jederzeit telefonisch unter
+            <a href="tel:+436601083003" style="color: #C99B1D; text-decoration: none; font-weight: 600;">+43 660 1083003</a>.
           </p>
 
-          <!-- Phone CTA -->
-          <table width="100%" cellpadding="0" cellspacing="0">
-            <tr><td align="center">
-              <a href="tel:+436601083003" style="display: inline-block; background-color: #E8B931; color: #0A0A0A; font-size: 18px; font-weight: 700; padding: 16px 40px; border-radius: 50px; text-decoration: none;">+43 660 1083003</a>
-            </td></tr>
-          </table>
-
           <!-- Message Recap -->
-          <div style="margin-top: 32px; background-color: #F7F7F5; border-radius: 12px; padding: 24px; border-left: 4px solid #E8B931;">
+          <div style="margin-top: 28px; background-color: #F7F7F5; border-radius: 12px; padding: 24px; border-left: 4px solid #E8B931;">
             <p style="margin: 0 0 4px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #9A9A92;">Ihre Nachricht</p>
             <p style="margin: 8px 0 0; font-size: 13px; font-weight: 600; color: #0A0A0A;">${subject}</p>
             <p style="margin: 12px 0 0; font-size: 14px; color: #4A4A44; white-space: pre-wrap; line-height: 1.6;">${escapeHtml(data.message)}</p>
@@ -202,11 +167,11 @@ export async function POST(request: Request) {
           <p style="margin: 0 0 16px; font-size: 12px; color: #6E6E66;">Walter-Goldschmidt-Gasse 31 &bull; 8042 Graz</p>
           <table cellpadding="0" cellspacing="0" style="margin: 0 auto;">
             <tr>
-              <td style="padding: 0 8px;"><a href="tel:+436601083003" style="font-size: 12px; color: #E8B931; text-decoration: none;">Anrufen</a></td>
+              <td style="padding: 0 8px;"><a href="tel:+436601083003" style="font-size: 12px; color: #E8B931; text-decoration: none;">+43 660 1083003</a></td>
               <td style="color: #4A4A44;">|</td>
               <td style="padding: 0 8px;"><a href="https://wa.me/436601083003" style="font-size: 12px; color: #E8B931; text-decoration: none;">WhatsApp</a></td>
               <td style="color: #4A4A44;">|</td>
-              <td style="padding: 0 8px;"><a href="https://taxigraz-gu.at" style="font-size: 12px; color: #E8B931; text-decoration: none;">Website</a></td>
+              <td style="padding: 0 8px;"><a href="https://taxigraz-gu.at" style="font-size: 12px; color: #E8B931; text-decoration: none;">taxigraz-gu.at</a></td>
             </tr>
           </table>
           <p style="margin: 16px 0 0; font-size: 11px; color: #4A4A44;">Mit freundlichen Gr&uuml;&szlig;en, Ihr Taxi Graz GU Team</p>
