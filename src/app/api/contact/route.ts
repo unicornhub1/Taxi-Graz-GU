@@ -48,6 +48,8 @@ export async function POST(request: Request) {
     const contactEmail = process.env.CONTACT_EMAIL || 'info@taxigraz-gu.at'
     const fromAddress = process.env.SMTP_USER || 'info@taxigraz-gu.at'
 
+    const subject = escapeHtml(data.subject || 'Allgemeine Anfrage')
+
     // Mail 1: Benachrichtigung an den Betreiber
     await transporter.sendMail({
       from: `"Taxi Graz GU Website" <${fromAddress}>`,
@@ -55,29 +57,85 @@ export async function POST(request: Request) {
       replyTo: data.email,
       subject: `Neue Kontaktanfrage: ${data.subject || 'Allgemeine Anfrage'}`,
       html: `
-        <h2>Neue Kontaktanfrage über die Website</h2>
-        <table style="border-collapse: collapse; width: 100%; max-width: 600px;">
-          <tr>
-            <td style="padding: 8px 12px; font-weight: bold; border-bottom: 1px solid #eee;">Name</td>
-            <td style="padding: 8px 12px; border-bottom: 1px solid #eee;">${escapeHtml(data.name)}</td>
-          </tr>
-          <tr>
-            <td style="padding: 8px 12px; font-weight: bold; border-bottom: 1px solid #eee;">E-Mail</td>
-            <td style="padding: 8px 12px; border-bottom: 1px solid #eee;"><a href="mailto:${escapeHtml(data.email)}">${escapeHtml(data.email)}</a></td>
-          </tr>
-          <tr>
-            <td style="padding: 8px 12px; font-weight: bold; border-bottom: 1px solid #eee;">Telefon</td>
-            <td style="padding: 8px 12px; border-bottom: 1px solid #eee;"><a href="tel:${escapeHtml(data.phone)}">${escapeHtml(data.phone)}</a></td>
-          </tr>
-          <tr>
-            <td style="padding: 8px 12px; font-weight: bold; border-bottom: 1px solid #eee;">Betreff</td>
-            <td style="padding: 8px 12px; border-bottom: 1px solid #eee;">${escapeHtml(data.subject || 'Allgemeine Anfrage')}</td>
-          </tr>
-          <tr>
-            <td style="padding: 8px 12px; font-weight: bold; vertical-align: top;">Nachricht</td>
-            <td style="padding: 8px 12px; white-space: pre-wrap;">${escapeHtml(data.message)}</td>
-          </tr>
-        </table>
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body style="margin: 0; padding: 0; background-color: #FAFAF8; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #FAFAF8; padding: 32px 16px;">
+    <tr><td align="center">
+      <table width="600" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;">
+
+        <!-- Header -->
+        <tr><td style="background-color: #0A0A0A; border-radius: 16px 16px 0 0; padding: 32px 40px; text-align: center;">
+          <table cellpadding="0" cellspacing="0" style="margin: 0 auto;">
+            <tr>
+              <td style="background-color: #E8B931; width: 40px; height: 40px; border-radius: 10px; text-align: center; vertical-align: middle;">
+                <span style="font-size: 20px; font-weight: bold; color: #0A0A0A;">T</span>
+              </td>
+              <td style="padding-left: 12px;">
+                <span style="font-size: 20px; font-weight: bold; color: #FFFFFF;">Taxi Graz</span>
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 3px; color: #E8B931; display: block;">GU</span>
+              </td>
+            </tr>
+          </table>
+        </td></tr>
+
+        <!-- Gold Accent Bar -->
+        <tr><td style="background-color: #E8B931; height: 4px;"></td></tr>
+
+        <!-- Content -->
+        <tr><td style="background-color: #FFFFFF; padding: 40px;">
+          <h1 style="margin: 0 0 4px; font-size: 22px; font-weight: 700; color: #0A0A0A;">Neue Kontaktanfrage</h1>
+          <p style="margin: 0 0 28px; font-size: 14px; color: #6E6E66;">Eingegangen über taxigraz-gu.at</p>
+
+          <!-- Data Table -->
+          <table width="100%" cellpadding="0" cellspacing="0" style="border: 1px solid #EFEFED; border-radius: 12px; overflow: hidden;">
+            <tr>
+              <td style="padding: 14px 16px; font-size: 13px; font-weight: 600; color: #6E6E66; background: #F7F7F5; width: 100px; border-bottom: 1px solid #EFEFED;">Name</td>
+              <td style="padding: 14px 16px; font-size: 14px; color: #0A0A0A; border-bottom: 1px solid #EFEFED;">${escapeHtml(data.name)}</td>
+            </tr>
+            <tr>
+              <td style="padding: 14px 16px; font-size: 13px; font-weight: 600; color: #6E6E66; background: #F7F7F5; border-bottom: 1px solid #EFEFED;">E-Mail</td>
+              <td style="padding: 14px 16px; font-size: 14px; border-bottom: 1px solid #EFEFED;"><a href="mailto:${escapeHtml(data.email)}" style="color: #C99B1D; text-decoration: none;">${escapeHtml(data.email)}</a></td>
+            </tr>
+            <tr>
+              <td style="padding: 14px 16px; font-size: 13px; font-weight: 600; color: #6E6E66; background: #F7F7F5; border-bottom: 1px solid #EFEFED;">Telefon</td>
+              <td style="padding: 14px 16px; font-size: 14px; border-bottom: 1px solid #EFEFED;"><a href="tel:${escapeHtml(data.phone)}" style="color: #C99B1D; text-decoration: none;">${escapeHtml(data.phone)}</a></td>
+            </tr>
+            <tr>
+              <td style="padding: 14px 16px; font-size: 13px; font-weight: 600; color: #6E6E66; background: #F7F7F5; border-bottom: 1px solid #EFEFED;">Betreff</td>
+              <td style="padding: 14px 16px; font-size: 14px; color: #0A0A0A; border-bottom: 1px solid #EFEFED;">${subject}</td>
+            </tr>
+            <tr>
+              <td style="padding: 14px 16px; font-size: 13px; font-weight: 600; color: #6E6E66; background: #F7F7F5; vertical-align: top;">Nachricht</td>
+              <td style="padding: 14px 16px; font-size: 14px; color: #0A0A0A; white-space: pre-wrap; line-height: 1.6;">${escapeHtml(data.message)}</td>
+            </tr>
+          </table>
+
+          <!-- Quick Actions -->
+          <table width="100%" cellpadding="0" cellspacing="0" style="margin-top: 28px;">
+            <tr>
+              <td>
+                <a href="mailto:${escapeHtml(data.email)}" style="display: inline-block; background-color: #E8B931; color: #0A0A0A; font-size: 14px; font-weight: 600; padding: 12px 28px; border-radius: 50px; text-decoration: none;">Antworten</a>
+              </td>
+              <td style="padding-left: 12px;">
+                <a href="tel:${escapeHtml(data.phone)}" style="display: inline-block; background-color: #F7F7F5; color: #0A0A0A; font-size: 14px; font-weight: 600; padding: 12px 28px; border-radius: 50px; text-decoration: none; border: 1px solid #DEDEDA;">Anrufen</a>
+              </td>
+            </tr>
+          </table>
+        </td></tr>
+
+        <!-- Footer -->
+        <tr><td style="background-color: #0F0F0D; border-radius: 0 0 16px 16px; padding: 24px 40px; text-align: center;">
+          <p style="margin: 0; font-size: 12px; color: #6E6E66;">Taxi Graz GU &bull; Walter-Goldschmidt-Gasse 31, 8042 Graz</p>
+          <p style="margin: 4px 0 0; font-size: 12px; color: #4A4A44;">Diese E-Mail wurde automatisch von taxigraz-gu.at gesendet.</p>
+        </td></tr>
+
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>
       `,
     })
 
@@ -85,22 +143,80 @@ export async function POST(request: Request) {
     await transporter.sendMail({
       from: `"Taxi Graz GU" <${fromAddress}>`,
       to: data.email,
-      subject: 'Ihre Anfrage bei Taxi Graz GU',
+      subject: 'Ihre Anfrage bei Taxi Graz GU – Wir melden uns!',
       html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px;">
-          <h2 style="color: #1a1a1a;">Vielen Dank für Ihre Nachricht!</h2>
-          <p>Liebe/r ${escapeHtml(data.name)},</p>
-          <p>wir haben Ihre Anfrage erhalten und melden uns schnellstmöglich bei Ihnen.</p>
-          <div style="background: #f9f9f9; padding: 16px; border-radius: 8px; margin: 20px 0;">
-            <p style="margin: 0 0 8px; font-weight: bold;">Ihre Nachricht:</p>
-            <p style="margin: 0; white-space: pre-wrap;">${escapeHtml(data.message)}</p>
-          </div>
-          <p>Mit freundlichen Grüßen,<br>Ihr Taxi Graz GU Team</p>
-          <hr style="border: none; border-top: 1px solid #eee; margin: 24px 0;" />
-          <p style="font-size: 12px; color: #999;">
-            Taxi Graz GU &bull; Tel: +43 660 96 93 894 &bull; info@taxigraz-gu.at
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body style="margin: 0; padding: 0; background-color: #FAFAF8; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #FAFAF8; padding: 32px 16px;">
+    <tr><td align="center">
+      <table width="600" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;">
+
+        <!-- Header -->
+        <tr><td style="background-color: #0A0A0A; border-radius: 16px 16px 0 0; padding: 32px 40px; text-align: center;">
+          <table cellpadding="0" cellspacing="0" style="margin: 0 auto;">
+            <tr>
+              <td style="background-color: #E8B931; width: 40px; height: 40px; border-radius: 10px; text-align: center; vertical-align: middle;">
+                <span style="font-size: 20px; font-weight: bold; color: #0A0A0A;">T</span>
+              </td>
+              <td style="padding-left: 12px;">
+                <span style="font-size: 20px; font-weight: bold; color: #FFFFFF;">Taxi Graz</span>
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 3px; color: #E8B931; display: block;">GU</span>
+              </td>
+            </tr>
+          </table>
+        </td></tr>
+
+        <!-- Gold Accent Bar -->
+        <tr><td style="background-color: #E8B931; height: 4px;"></td></tr>
+
+        <!-- Content -->
+        <tr><td style="background-color: #FFFFFF; padding: 40px;">
+          <h1 style="margin: 0 0 20px; font-size: 24px; font-weight: 700; color: #0A0A0A;">Vielen Dank, ${escapeHtml(data.name)}!</h1>
+          <p style="margin: 0 0 12px; font-size: 15px; color: #2E2E2A; line-height: 1.7;">
+            Wir haben Ihre Nachricht erhalten und melden uns schnellstm&ouml;glich bei Ihnen.
           </p>
-        </div>
+          <p style="margin: 0 0 28px; font-size: 15px; color: #2E2E2A; line-height: 1.7;">
+            F&uuml;r dringende Anliegen erreichen Sie uns jederzeit telefonisch:
+          </p>
+
+          <!-- Phone CTA -->
+          <table width="100%" cellpadding="0" cellspacing="0">
+            <tr><td align="center">
+              <a href="tel:+436601083003" style="display: inline-block; background-color: #E8B931; color: #0A0A0A; font-size: 18px; font-weight: 700; padding: 16px 40px; border-radius: 50px; text-decoration: none;">+43 660 1083003</a>
+            </td></tr>
+          </table>
+
+          <!-- Message Recap -->
+          <div style="margin-top: 32px; background-color: #F7F7F5; border-radius: 12px; padding: 24px; border-left: 4px solid #E8B931;">
+            <p style="margin: 0 0 4px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #9A9A92;">Ihre Nachricht</p>
+            <p style="margin: 8px 0 0; font-size: 13px; font-weight: 600; color: #0A0A0A;">${subject}</p>
+            <p style="margin: 12px 0 0; font-size: 14px; color: #4A4A44; white-space: pre-wrap; line-height: 1.6;">${escapeHtml(data.message)}</p>
+          </div>
+        </td></tr>
+
+        <!-- Footer -->
+        <tr><td style="background-color: #0F0F0D; border-radius: 0 0 16px 16px; padding: 32px 40px; text-align: center;">
+          <p style="margin: 0 0 4px; font-size: 14px; font-weight: 600; color: #FFFFFF;">Taxi Graz GU</p>
+          <p style="margin: 0 0 16px; font-size: 12px; color: #6E6E66;">Walter-Goldschmidt-Gasse 31 &bull; 8042 Graz</p>
+          <table cellpadding="0" cellspacing="0" style="margin: 0 auto;">
+            <tr>
+              <td style="padding: 0 8px;"><a href="tel:+436601083003" style="font-size: 12px; color: #E8B931; text-decoration: none;">Anrufen</a></td>
+              <td style="color: #4A4A44;">|</td>
+              <td style="padding: 0 8px;"><a href="https://wa.me/436601083003" style="font-size: 12px; color: #E8B931; text-decoration: none;">WhatsApp</a></td>
+              <td style="color: #4A4A44;">|</td>
+              <td style="padding: 0 8px;"><a href="https://taxigraz-gu.at" style="font-size: 12px; color: #E8B931; text-decoration: none;">Website</a></td>
+            </tr>
+          </table>
+          <p style="margin: 16px 0 0; font-size: 11px; color: #4A4A44;">Mit freundlichen Gr&uuml;&szlig;en, Ihr Taxi Graz GU Team</p>
+        </td></tr>
+
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>
       `,
     })
 
