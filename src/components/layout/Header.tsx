@@ -2,7 +2,8 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import { Logo } from '@/components/ui/Logo'
+import { useRouter, usePathname } from 'next/navigation'
 import { Phone, Menu, X, MessageCircle, Mail, Star } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { cn } from '@/lib/utils'
@@ -17,13 +18,14 @@ export function Header() {
 
   const handleMobileNav = useCallback((href: string) => {
     setIsMobileOpen(false)
-    // Wait for sheet exit animation, then navigate
     setTimeout(() => {
       if (href.startsWith('/#')) {
         const id = href.replace('/#', '')
         const el = document.getElementById(id)
         if (el) {
           el.scrollIntoView({ behavior: 'smooth' })
+        } else {
+          router.push(href)
         }
       } else {
         router.push(href)
@@ -57,7 +59,7 @@ export function Header() {
         'fixed left-0 right-0 z-50 transition-all duration-500',
         isScrolled
           ? 'top-0 bg-white/90 backdrop-blur-xl shadow-lg shadow-black/5 py-3'
-          : 'top-[40px] bg-transparent py-5'
+          : 'top-0 lg:top-[40px] bg-transparent py-5'
       )}
     >
       <Container>
@@ -65,24 +67,9 @@ export function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className="group flex items-center gap-3 transition-opacity hover:opacity-80"
+            className="block"
           >
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--color-gold)] transition-transform duration-300 group-hover:scale-105">
-              <span className="font-[var(--font-display)] text-lg font-bold text-[var(--color-black)]">
-                T
-              </span>
-            </div>
-            <div className="flex flex-col">
-              <span className={cn(
-                'font-[var(--font-display)] text-lg font-bold leading-tight tracking-tight transition-colors duration-500',
-                isScrolled ? 'text-[var(--color-black)]' : 'text-white'
-              )}>
-                Taxi Graz
-              </span>
-              <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[var(--color-gold-dark)]">
-                GU
-              </span>
-            </div>
+            <Logo className="h-12 w-auto sm:h-14" />
           </Link>
 
           {/* Desktop Navigation */}

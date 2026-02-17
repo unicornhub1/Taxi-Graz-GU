@@ -3,7 +3,7 @@ import { SITE_CONFIG } from '@/lib/constants'
 
 export function ContactBar() {
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 text-white border-b border-white/[0.06]">
+    <div className="fixed top-0 left-0 right-0 z-50 hidden text-white border-b border-white/[0.06] lg:block">
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-6 gap-y-1 px-4 py-2.5 text-xs sm:text-sm">
         <a
           href={`tel:${SITE_CONFIG.phoneRaw}`}

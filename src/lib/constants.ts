@@ -16,7 +16,7 @@ export const SITE_CONFIG = {
   company: {
     legal: 'Aktas Erol e.U.',
     owner: 'Erol Aktas',
-    uid: '[UID-Nummer einfügen]',
+    uid: '', // TODO: UID-Nummer eintragen (Format: ATUxxxxxxxx)
     register: 'FN 523619 d',
     court: 'Landesgericht für ZRS Graz',
   },

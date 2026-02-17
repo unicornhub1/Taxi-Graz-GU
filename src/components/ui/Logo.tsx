@@ -1,0 +1,27 @@
+export function Logo({ className }: { className?: string }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 140" fill="none" className={className}>
+      {/* Äußerer Ring */}
+      <circle cx="70" cy="70" r="66" stroke="#E8B931" strokeWidth="2.5" fill="none"/>
+      <circle cx="70" cy="70" r="60" stroke="#E8B931" strokeWidth="0.5" fill="none" opacity="0.25"/>
+
+      {/* Taxi-Silhouette oben mittig */}
+      <g transform="translate(50, 22) scale(0.32)">
+        <path fill="#E8B931" fillRule="evenodd" clipRule="evenodd" d="M10.17,55.2c-11-5.58-9.72-11.8,1.31-11.15L14,48.68,19,32.85c1.66-5.18,4.25-10,8.83-11.42V5.57A5.58,5.58,0,0,1,33.44,0h56A5.58,5.58,0,0,1,95,5.57V21h1c6.53,0,10.29,5.54,11.87,11.87l3.82,15.35,2.2-4.14c11.34-.66,12.35,5.93.35,11.62l2,3c7.89,8.11,7.15,16.21,5.92,36.24v6.58a3.72,3.72,0,0,1-3.71,3.71H102.57a3.72,3.72,0,0,1-3.71-3.71v-3H24v3a3.72,3.72,0,0,1-3.71,3.71H4.5a3.72,3.72,0,0,1-3.71-3.71V92.93a5.46,5.46,0,0,1,0-.58C-.37,77-2.06,63.12,10.17,55.2ZM39.57,21h5V9.75h3.66v-4H35.91v4h3.66V21Zm8.73,0h5.31l.46-2h4.16l.46,2H64l-4-15.25h-7.8L48.3,21ZM65,21h5.34L72,17h.23l1.68,4h5.59l-3.28-7.63,3.51-7.62H74.24L72.5,9.93h-.25L70.51,5.72H64.78l3.43,7.77L65,21Zm16.92,0h5V5.72h-5V21Zm7.72,6.23H33.06c-5,0-7.52,4.31-9,9.05L19.23,52.17v0h86.82l-3.83-15.92c-1-4.85-4.07-9-9-9ZM56,10.56,55,15H57.3l-1-4.42ZM30.38,73.43,16.32,71.66c-3.32-.37-4.21,1-3.08,3.89l1.52,3.69a5.33,5.33,0,0,0,1.9,2.12,6.43,6.43,0,0,0,3.15.87l12.54.1c3,0,4.34-1.22,3.39-4a6.78,6.78,0,0,0-5.36-4.9Zm62.12,0,14.06-1.77c3.32-.37,4.21,1,3.08,3.89l-1.52,3.69a5.33,5.33,0,0,1-1.9,2.12,6.43,6.43,0,0,1-3.15.87l-12.54.1c-3,0-4.34-1.22-3.39-4a6.78,6.78,0,0,1,5.36-4.9Z"/>
+      </g>
+
+      {/* GU */}
+      <text x="70" y="105" fontFamily="var(--font-body), sans-serif" fontSize="50" fontWeight="700" fill="#E8B931" textAnchor="middle" letterSpacing="10">GU</text>
+
+      {/* TAXI */}
+      <text x="160" y="50" fontFamily="var(--font-body), sans-serif" fontSize="40" fontWeight="700" fill="#E8B931">TAXI</text>
+      <text x="160" y="80" fontFamily="var(--font-body), sans-serif" fontSize="17" fontWeight="300" fill="#E8B931" letterSpacing="5" opacity="0.65">GRAZ &amp; GU</text>
+
+      {/* Linie */}
+      <line x1="160" y1="92" x2="306" y2="92" stroke="#E8B931" strokeWidth="0.7" opacity="0.3"/>
+
+      {/* Tagline */}
+      <text x="160" y="112" fontFamily="var(--font-body), sans-serif" fontSize="10" fontWeight="400" fill="#E8B931" letterSpacing="3.5" opacity="0.4">24/7 PREMIUM SERVICE</text>
+    </svg>
+  )
+}
