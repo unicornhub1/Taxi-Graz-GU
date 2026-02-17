@@ -3,6 +3,7 @@ import { Phone, Mail, MapPin } from 'lucide-react'
 import { SITE_CONFIG } from '@/lib/constants'
 import { navigation } from '@/data/navigation'
 import { Container } from './Container'
+import { Logo } from '@/components/ui/Logo'
 import { CookieSettingsButton } from '@/components/ui/CookieSettingsButton'
 
 export function Footer() {
@@ -12,17 +13,9 @@ export function Footer() {
         <div className="grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--color-gold)]">
-                <span className="text-lg font-bold text-[var(--color-black)]">T</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-lg font-bold leading-tight">Taxi Graz</span>
-                <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[var(--color-gold)]">
-                  GU
-                </span>
-              </div>
-            </div>
+            <Link href="/">
+              <Logo className="h-14 w-auto" />
+            </Link>
             <p className="mt-4 text-sm leading-relaxed text-[var(--color-gray-400)]">
               Ihr zuverlässiges Taxiunternehmen in Graz und Graz-Umgebung. 24/7 erreichbar
               für alle Ihre Fahrten.
