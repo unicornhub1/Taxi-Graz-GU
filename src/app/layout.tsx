@@ -11,6 +11,7 @@ import { StructuredData } from '@/components/sections/StructuredData'
 import './globals.css'
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_CONFIG.url),
   title: {
     default: `Taxi Graz | ${SITE_CONFIG.name} - 24/7 Taxiservice, Flughafentransfer & Stretchlimousinen`,
     template: `%s | ${SITE_CONFIG.name}`,
@@ -53,6 +54,12 @@ export const metadata: Metadata = {
     siteName: SITE_CONFIG.name,
     locale: 'de_AT',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `Taxi Graz | ${SITE_CONFIG.name} - 24/7 Taxiservice`,
+    description:
+      'Taxi Graz GU – Ihr 24/7 Taxiservice in Graz & Umgebung. Flughafentransfer, Stretchlimousinen, Botenfahrten.',
   },
   robots: {
     index: true,

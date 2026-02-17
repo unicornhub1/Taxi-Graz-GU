@@ -137,6 +137,24 @@ function BreadcrumbSchema() {
         name: 'Startseite',
         item: SITE_CONFIG.url,
       },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Kontakt',
+        item: `${SITE_CONFIG.url}/kontakt`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Impressum',
+        item: `${SITE_CONFIG.url}/impressum`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 4,
+        name: 'Datenschutz',
+        item: `${SITE_CONFIG.url}/datenschutz`,
+      },
     ],
   }
 
