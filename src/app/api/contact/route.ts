@@ -16,8 +16,8 @@ function validate(data: ContactFormData): string | null {
   if (!data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
     return 'Bitte geben Sie eine gültige E-Mail-Adresse ein.'
   }
-  if (!data.phone || data.phone.trim().length < 5) {
-    return 'Bitte geben Sie Ihre Telefonnummer ein.'
+  if (data.phone && data.phone.trim().length > 0 && data.phone.trim().length < 5) {
+    return 'Bitte geben Sie eine gültige Telefonnummer ein.'
   }
   if (!data.message || data.message.trim().length < 5) {
     return 'Bitte geben Sie eine Nachricht ein.'
@@ -46,11 +46,7 @@ export async function POST(request: Request) {
     })
 
     const contactEmail = process.env.CONTACT_EMAIL || 'info@taxigraz-gu.at'
-    const forwardEmail = process.env.FORWARD_EMAIL
     const fromAddress = process.env.SMTP_USER || 'info@taxigraz-gu.at'
-    const toAddresses = forwardEmail
-      ? `${contactEmail}, ${forwardEmail}`
-      : contactEmail
 
     const subject = escapeHtml(data.subject || 'Allgemeine Anfrage')
     const logoUrl = 'https://taxigraz-gu.at/email-logo.svg'
@@ -58,7 +54,7 @@ export async function POST(request: Request) {
     // Mail 1: Benachrichtigung an den Betreiber
     await transporter.sendMail({
       from: `"Taxi Graz GU Website" <${fromAddress}>`,
-      to: toAddresses,
+      to: contactEmail,
       replyTo: data.email,
       subject: `Neue Kontaktanfrage: ${data.subject || 'Allgemeine Anfrage'}`,
       html: `

@@ -92,10 +92,9 @@ export function ContactForm() {
         <Input
           id="phone"
           name="phone"
-          label="Telefon"
+          label="Telefon (optional)"
           type="tel"
           placeholder="+43 660 ..."
-          required
           disabled={isLoading}
         />
       </div>
