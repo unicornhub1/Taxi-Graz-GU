@@ -46,7 +46,11 @@ export async function POST(request: Request) {
     })
 
     const contactEmail = process.env.CONTACT_EMAIL || 'info@taxigraz-gu.at'
+    const forwardEmail = process.env.FORWARD_EMAIL
     const fromAddress = process.env.SMTP_USER || 'info@taxigraz-gu.at'
+    const toAddresses = forwardEmail
+      ? `${contactEmail}, ${forwardEmail}`
+      : contactEmail
 
     const subject = escapeHtml(data.subject || 'Allgemeine Anfrage')
     const logoUrl = 'https://taxigraz-gu.at/email-logo.svg'
@@ -54,7 +58,7 @@ export async function POST(request: Request) {
     // Mail 1: Benachrichtigung an den Betreiber
     await transporter.sendMail({
       from: `"Taxi Graz GU Website" <${fromAddress}>`,
-      to: contactEmail,
+      to: toAddresses,
       replyTo: data.email,
       subject: `Neue Kontaktanfrage: ${data.subject || 'Allgemeine Anfrage'}`,
       html: `
