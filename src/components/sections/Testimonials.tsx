@@ -2,12 +2,19 @@
 
 import { motion } from 'framer-motion'
 import { Star } from 'lucide-react'
+import { tinaField } from 'tinacms/dist/react'
+import type { HomeQuery } from '@tina/__generated__/types'
 import { Section } from '@/components/layout/Section'
 import { Card } from '@/components/ui'
-import { testimonials } from '@/data/testimonials'
-import { SITE_CONFIG } from '@/lib/constants'
+import { useSettings } from '@/components/SettingsProvider'
+import { compact, interpolate } from '@/lib/site'
 
-export function Testimonials() {
+export type TestimonialsData = NonNullable<HomeQuery['home']['testimonials']>
+
+export function Testimonials({ data }: { data: TestimonialsData }) {
+  const settings = useSettings()
+  const items = compact(data.items)
+
   return (
     <Section id="bewertungen" className="bg-white">
       <div className="text-center">
@@ -16,8 +23,9 @@ export function Testimonials() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-gold-dark)]"
+          data-tina-field={tinaField(data, 'eyebrow')}
         >
-          Kundenstimmen
+          {data.eyebrow}
         </motion.span>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -25,9 +33,10 @@ export function Testimonials() {
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
           className="mt-3 font-[var(--font-display)] text-3xl font-bold tracking-tight text-[var(--color-black)] sm:text-4xl"
+          data-tina-field={tinaField(data, 'heading')}
         >
-          Das sagen unsere Kunden über{' '}
-          <span className="text-[var(--color-gold-dark)]">Taxi Graz GU</span>
+          {data.heading}{' '}
+          <span className="text-[var(--color-gold-dark)]" data-tina-field={tinaField(data, 'headingHighlight')}>{data.headingHighlight}</span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -35,16 +44,17 @@ export function Testimonials() {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
           className="mx-auto mt-4 max-w-2xl text-[var(--color-gray-500)]"
+          data-tina-field={tinaField(data, 'intro')}
         >
-          Überzeugen Sie sich selbst: Über {SITE_CONFIG.google.reviews} zufriedene Kunden
-          bewerten uns mit durchschnittlich {SITE_CONFIG.google.rating} Sternen auf Google.
+          {interpolate(data.intro, settings)}
         </motion.p>
       </div>
 
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {testimonials.map((testimonial, i) => (
+        {items.map((testimonial, i) => (
           <motion.div
             key={i}
+            data-tina-field={tinaField(testimonial)}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -108,12 +118,12 @@ export function Testimonials() {
         className="mt-8 text-center"
       >
         <a
-          href={SITE_CONFIG.google.mapsUrl}
+          href={settings.google.mapsUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-gray-500)] transition-colors hover:text-[var(--color-gold-dark)]"
         >
-          Alle {SITE_CONFIG.google.reviews} Bewertungen auf Google ansehen
+          <span data-tina-field={tinaField(data, 'googleLinkLabel')}>{interpolate(data.googleLinkLabel, settings)}</span>
           <span>&rarr;</span>
         </a>
       </motion.div>

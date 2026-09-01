@@ -1,27 +1,7 @@
-import { Hero } from '@/components/sections/Hero'
-import { TrustBar } from '@/components/sections/TrustBar'
-import { Marquee } from '@/components/sections/Marquee'
-import { Services } from '@/components/sections/Services'
-import { WhyUs } from '@/components/sections/WhyUs'
-import { Pricing } from '@/components/sections/Pricing'
-import { ServiceAreas } from '@/components/sections/ServiceAreas'
-import { Testimonials } from '@/components/sections/Testimonials'
-import { FAQ } from '@/components/sections/FAQ'
-import { CTA } from '@/components/sections/CTA'
+import client from '@tina/__generated__/client'
+import { HomeClient } from './HomeClient'
 
-export default function HomePage() {
-  return (
-    <>
-      <Hero />
-      <TrustBar />
-      <Marquee />
-      <Services />
-      <WhyUs />
-      <Pricing />
-      <ServiceAreas />
-      <Testimonials />
-      <FAQ />
-      <CTA />
-    </>
-  )
+export default async function HomePage() {
+  const res = await client.queries.home({ relativePath: 'home.json' })
+  return <HomeClient data={res.data} query={res.query} variables={res.variables} />
 }

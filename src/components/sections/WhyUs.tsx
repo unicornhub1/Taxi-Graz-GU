@@ -3,7 +3,13 @@
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 import { Phone } from 'lucide-react'
-import { SITE_CONFIG } from '@/lib/constants'
+import { tinaField } from 'tinacms/dist/react'
+import type { HomeQuery } from '@tina/__generated__/types'
+import { useSettings } from '@/components/SettingsProvider'
+import { compact, interpolate, phoneRaw, whatsappLink } from '@/lib/site'
+import { goldGridStyle } from '@/lib/styles'
+
+export type WhyUsData = NonNullable<HomeQuery['home']['whyUs']>
 
 function AnimatedNumber({ value, suffix = '' }: { value: number; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null)
@@ -37,14 +43,10 @@ function AnimatedNumber({ value, suffix = '' }: { value: number; suffix?: string
   return <span ref={ref}>0{suffix}</span>
 }
 
-const stats = [
-  { value: 24, suffix: '/7', label: 'Erreichbar', sub: 'Tag & Nacht' },
-  { value: 673, suffix: '+', label: 'Bewertungen', sub: '4.9★ auf Google' },
-  { value: 15, suffix: '+', label: 'Jahre Erfahrung', sub: 'Seit 2010 in Graz' },
-  { value: 10, suffix: ' Min', label: 'Vor Ort', sub: 'Durchschnittliche Ankunft' },
-]
+export function WhyUs({ data }: { data: WhyUsData }) {
+  const settings = useSettings()
+  const stats = compact(data.stats)
 
-export function WhyUs() {
   return (
     <section className="relative overflow-hidden bg-[var(--color-gray-900)]">
       {/* Background effects - matching Hero design language */}
@@ -56,14 +58,7 @@ export function WhyUs() {
         <div className="absolute -left-[20%] top-[30%] h-[50vh] w-[50vh] rounded-full bg-gradient-to-br from-[var(--color-gold)]/10 via-[var(--color-gold)]/3 to-transparent blur-3xl" />
         <div className="absolute -right-[15%] bottom-[20%] h-[40vh] w-[40vh] rounded-full bg-[var(--color-gold)]/[0.05] blur-2xl" />
         {/* Subtle grid pattern (same as Hero) */}
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage:
-              'linear-gradient(rgba(232,185,49,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(232,185,49,0.3) 1px, transparent 1px)',
-            backgroundSize: '80px 80px',
-          }}
-        />
+        <div className="absolute inset-0 opacity-[0.03]" style={goldGridStyle} />
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 py-20 md:py-28">
@@ -74,13 +69,13 @@ export function WhyUs() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <span className="text-xs font-bold uppercase tracking-[0.25em] text-[var(--color-gold)]">
-            Warum Taxi Graz GU
+          <span className="text-xs font-bold uppercase tracking-[0.25em] text-[var(--color-gold)]" data-tina-field={tinaField(data, 'eyebrow')}>
+            {data.eyebrow}
           </span>
-          <h2 className="mx-auto mt-4 max-w-2xl font-[var(--font-display)] text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
-            Graz vertraut auf{' '}
-            <span className="relative inline-block text-[var(--color-gold)]">
-              uns
+          <h2 className="mx-auto mt-4 max-w-2xl font-[var(--font-display)] text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl" data-tina-field={tinaField(data, 'heading')}>
+            {data.heading}{' '}
+            <span className="relative inline-block text-[var(--color-gold)]" data-tina-field={tinaField(data, 'headingHighlight')}>
+              {data.headingHighlight}
               <svg className="absolute -bottom-1 left-0 w-full" viewBox="0 0 100 8" fill="none">
                 <path d="M1 6C25 1 75 1 99 6" stroke="var(--color-gold)" strokeWidth="2" strokeLinecap="round" opacity="0.4" />
               </svg>
@@ -93,7 +88,8 @@ export function WhyUs() {
           <div className="grid grid-cols-2 lg:grid-cols-4">
             {stats.map((stat, i) => (
               <motion.div
-                key={stat.label}
+                key={i}
+                data-tina-field={tinaField(stat)}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -105,13 +101,13 @@ export function WhyUs() {
                 } ${i === 1 ? 'border-r-0 lg:border-r lg:border-white/[0.08]' : ''}`}
               >
                 <p className="font-[var(--font-display)] text-5xl font-bold text-white md:text-6xl lg:text-7xl">
-                  <AnimatedNumber value={stat.value} suffix={stat.suffix} />
+                  <AnimatedNumber value={stat.value} suffix={stat.suffix ?? ''} />
                 </p>
                 <p className="mt-3 text-sm font-bold uppercase tracking-[0.15em] text-[var(--color-gold)]">
                   {stat.label}
                 </p>
                 <p className="mt-1 text-xs text-[var(--color-gray-500)]">
-                  {stat.sub}
+                  {interpolate(stat.sub, settings)}
                 </p>
               </motion.div>
             ))}
@@ -127,22 +123,22 @@ export function WhyUs() {
           className="mt-14 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
         >
           <a
-            href={`tel:${SITE_CONFIG.phoneRaw}`}
+            href={`tel:${phoneRaw(settings.contact.phone)}`}
             className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-[var(--color-gold)] px-8 py-4 text-base font-bold text-[var(--color-black)] transition-all duration-300 hover:shadow-2xl hover:shadow-[var(--color-gold)]/25 hover:scale-[1.03]"
           >
             <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
             <Phone className="h-5 w-5 relative z-10" />
-            <span className="relative z-10">Jetzt Taxi bestellen</span>
+            <span className="relative z-10" data-tina-field={tinaField(data, 'ctaLabel')}>{data.ctaLabel}</span>
           </a>
           <span className="text-sm text-[var(--color-gray-500)]">
             oder{' '}
             <a
-              href={SITE_CONFIG.whatsappLink}
+              href={whatsappLink(settings.contact.whatsapp)}
               target="_blank"
               rel="noopener noreferrer"
               className="font-semibold text-green-400 hover:text-green-300 transition-colors"
             >
-              per WhatsApp schreiben
+              <span data-tina-field={tinaField(data, 'ctaWhatsappLabel')}>{data.ctaWhatsappLabel}</span>
             </a>
           </span>
         </motion.div>
