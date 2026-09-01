@@ -1,15 +1,10 @@
 import type { MetadataRoute } from 'next'
-import { SITE_CONFIG } from '@/lib/constants'
+import client from '@tina/__generated__/client'
 
-export default function robots(): MetadataRoute.Robots {
+export default async function robots(): Promise<MetadataRoute.Robots> {
+  const { data } = await client.queries.settings({ relativePath: 'site.json' })
   return {
-    rules: [
-      {
-        userAgent: '*',
-        allow: '/',
-        disallow: ['/api/'],
-      },
-    ],
-    sitemap: `${SITE_CONFIG.url}/sitemap.xml`,
+    rules: [{ userAgent: '*', allow: '/', disallow: ['/api/', '/admin'] }],
+    sitemap: `${data.settings.seo.url}/sitemap.xml`,
   }
 }

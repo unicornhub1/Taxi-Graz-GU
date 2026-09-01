@@ -9,7 +9,7 @@ export function createMetadata(
   const url = `${settings.seo.url}${path}`
 
   return {
-    title: fullTitle,
+    title: { absolute: fullTitle },
     description,
     ...(noIndex && { robots: { index: false, follow: false } }),
     openGraph: { title: fullTitle, description, url, siteName: settings.seo.siteName, type: 'website', locale: 'de_AT' },

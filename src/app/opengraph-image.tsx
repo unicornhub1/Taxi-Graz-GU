@@ -1,11 +1,17 @@
 import { ImageResponse } from 'next/og'
+import client from '@tina/__generated__/client'
+import { deriveAccentPalette } from '@/lib/color'
 
-export const runtime = 'edge'
 export const alt = 'Taxi Graz GU – 24/7 Taxiservice in Graz & Umgebung'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
-export default function OGImage() {
+export default async function OGImage() {
+  const { data } = await client.queries.settings({ relativePath: 'site.json' })
+  const s = data.settings
+  const gold = deriveAccentPalette(s.design.accentColor).base
+  const host = s.seo.url.replace(/^https?:\/\//, '')
+
   return new ImageResponse(
     (
       <div
@@ -19,7 +25,7 @@ export default function OGImage() {
         }}
       >
         {/* Gold top bar */}
-        <div style={{ display: 'flex', width: '100%', height: 6, backgroundColor: '#E8B931' }} />
+        <div style={{ display: 'flex', width: '100%', height: 6, backgroundColor: gold }} />
 
         {/* Content */}
         <div
@@ -43,7 +49,7 @@ export default function OGImage() {
                 width: 72,
                 height: 72,
                 borderRadius: 16,
-                backgroundColor: '#E8B931',
+                backgroundColor: gold,
                 fontSize: 40,
                 fontWeight: 700,
                 color: '#0A0A0A',
@@ -59,7 +65,7 @@ export default function OGImage() {
                 style={{
                   fontSize: 18,
                   fontWeight: 300,
-                  color: '#E8B931',
+                  color: gold,
                   letterSpacing: 8,
                   opacity: 0.7,
                 }}
@@ -93,13 +99,13 @@ export default function OGImage() {
           >
             <div style={{ display: 'flex', gap: 4 }}>
               {[1, 2, 3, 4, 5].map((i) => (
-                <span key={i} style={{ fontSize: 24, color: '#E8B931' }}>
+                <span key={i} style={{ fontSize: 24, color: gold }}>
                   ★
                 </span>
               ))}
             </div>
-            <span style={{ fontSize: 22, fontWeight: 700, color: '#E8B931' }}>4.9</span>
-            <span style={{ fontSize: 18, color: '#6E6E66' }}>(673 Bewertungen)</span>
+            <span style={{ fontSize: 22, fontWeight: 700, color: gold }}>{s.google.rating}</span>
+            <span style={{ fontSize: 18, color: '#6E6E66' }}>({s.google.reviews} Bewertungen)</span>
           </div>
 
           {/* Phone */}
@@ -109,7 +115,7 @@ export default function OGImage() {
               alignItems: 'center',
               justifyContent: 'center',
               marginTop: 16,
-              backgroundColor: '#E8B931',
+              backgroundColor: gold,
               color: '#0A0A0A',
               fontSize: 28,
               fontWeight: 700,
@@ -117,7 +123,7 @@ export default function OGImage() {
               borderRadius: 50,
             }}
           >
-            ☎ +43 660 1083003
+            ☎ {s.contact.phone}
           </div>
         </div>
 
@@ -131,7 +137,7 @@ export default function OGImage() {
             color: '#4A4A44',
           }}
         >
-          taxigraz-gu.at
+          {host}
         </div>
       </div>
     ),
