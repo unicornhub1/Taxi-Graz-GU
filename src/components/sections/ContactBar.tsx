@@ -1,22 +1,26 @@
+'use client'
+
 import { Phone, MessageCircle, Mail } from 'lucide-react'
-import { SITE_CONFIG } from '@/lib/constants'
+import { useSettings } from '@/components/SettingsProvider'
+import { phoneRaw, whatsappLink } from '@/lib/site'
 
 export function ContactBar() {
+  const settings = useSettings()
   return (
     <div className="fixed top-0 left-0 right-0 z-50 hidden text-white border-b border-white/[0.06] lg:block">
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-6 gap-y-1 px-4 py-2.5 text-xs sm:text-sm">
         <a
-          href={`tel:${SITE_CONFIG.phoneRaw}`}
+          href={`tel:${phoneRaw(settings.contact.phone)}`}
           className="flex items-center gap-1.5 transition-colors hover:text-[var(--color-gold)]"
         >
           <Phone className="h-3.5 w-3.5" />
-          <span className="font-medium">{SITE_CONFIG.phone}</span>
+          <span className="font-medium">{settings.contact.phone}</span>
         </a>
 
         <span className="hidden text-[var(--color-gray-600)] sm:inline">|</span>
 
         <a
-          href={SITE_CONFIG.whatsappLink}
+          href={whatsappLink(settings.contact.whatsapp)}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-1.5 transition-colors hover:text-green-400"
@@ -28,11 +32,11 @@ export function ContactBar() {
         <span className="hidden text-[var(--color-gray-600)] sm:inline">|</span>
 
         <a
-          href={`mailto:${SITE_CONFIG.email}`}
+          href={`mailto:${settings.contact.email}`}
           className="flex items-center gap-1.5 transition-colors hover:text-[var(--color-gold)]"
         >
           <Mail className="h-3.5 w-3.5" />
-          <span className="font-medium">{SITE_CONFIG.email}</span>
+          <span className="font-medium">{settings.contact.email}</span>
         </a>
       </div>
     </div>

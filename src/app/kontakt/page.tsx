@@ -1,3 +1,5 @@
+import type { Metadata } from 'next'
+import client from '@tina/__generated__/client'
 import { createMetadata } from '@/lib/metadata'
 import { SITE_CONFIG } from '@/lib/constants'
 import { Section } from '@/components/layout/Section'
@@ -5,12 +7,14 @@ import { ContactForm } from '@/components/sections/ContactForm'
 import { GoogleMap } from './GoogleMap'
 import { Phone, MessageCircle, Mail, MapPin, Clock } from 'lucide-react'
 
-export const metadata = createMetadata({
-  title: 'Kontakt',
-  description:
-    'Kontaktieren Sie Taxi Graz GU – per Telefon, WhatsApp oder Kontaktformular. 24/7 erreichbar für Ihre Taxifahrt in Graz.',
-  path: '/kontakt',
-})
+export async function generateMetadata(): Promise<Metadata> {
+  const { data } = await client.queries.settings({ relativePath: 'site.json' })
+  return createMetadata(data.settings, {
+    title: 'Kontakt',
+    description: 'Kontaktieren Sie Taxi Graz GU – per Telefon, WhatsApp oder Kontaktformular. 24/7 erreichbar für Ihre Taxifahrt in Graz.',
+    path: '/kontakt',
+  })
+}
 
 export default function KontaktPage() {
   return (

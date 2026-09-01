@@ -1,13 +1,18 @@
+import type { Metadata } from 'next'
+import client from '@tina/__generated__/client'
 import { createMetadata } from '@/lib/metadata'
 import { SITE_CONFIG } from '@/lib/constants'
 import { Section } from '@/components/layout/Section'
 
-export const metadata = createMetadata({
-  title: 'Impressum',
-  description: `Impressum von ${SITE_CONFIG.name}`,
-  path: '/impressum',
-  noIndex: true,
-})
+export async function generateMetadata(): Promise<Metadata> {
+  const { data } = await client.queries.settings({ relativePath: 'site.json' })
+  return createMetadata(data.settings, {
+    title: 'Impressum',
+    description: `Impressum von ${data.settings.seo.siteName}`,
+    path: '/impressum',
+    noIndex: true,
+  })
+}
 
 export default function ImpressumPage() {
   return (

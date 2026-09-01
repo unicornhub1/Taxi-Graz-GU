@@ -1,14 +1,19 @@
+import type { Metadata } from 'next'
+import client from '@tina/__generated__/client'
 import { createMetadata } from '@/lib/metadata'
 import { SITE_CONFIG } from '@/lib/constants'
 import { Section } from '@/components/layout/Section'
 import Link from 'next/link'
 
-export const metadata = createMetadata({
-  title: 'Datenschutzerklärung',
-  description: `Datenschutzerklärung von ${SITE_CONFIG.name}`,
-  path: '/datenschutz',
-  noIndex: true,
-})
+export async function generateMetadata(): Promise<Metadata> {
+  const { data } = await client.queries.settings({ relativePath: 'site.json' })
+  return createMetadata(data.settings, {
+    title: 'Datenschutzerklärung',
+    description: `Datenschutzerklärung von ${data.settings.seo.siteName}`,
+    path: '/datenschutz',
+    noIndex: true,
+  })
+}
 
 export default function DatenschutzPage() {
   return (

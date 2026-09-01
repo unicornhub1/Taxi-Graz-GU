@@ -1,28 +1,35 @@
-import { SITE_CONFIG } from '@/lib/constants'
-import { faq } from '@/data/faq'
+import type { SiteSettings } from '@/lib/site'
+import { interpolate } from '@/lib/site'
 
-function LocalBusinessSchema() {
-  const schema = {
+export interface StructuredDataProps {
+  settings: SiteSettings
+  faq: { question: string; answer: string }[]
+  services: { title: string; description: string }[]
+}
+
+function JsonLd({ data }: { data: object }) {
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
+}
+
+export function StructuredData({ settings, faq, services }: StructuredDataProps) {
+  const s = settings
+  const localBusiness = {
     '@context': 'https://schema.org',
     '@type': 'TaxiService',
-    name: SITE_CONFIG.name,
+    name: s.seo.siteName,
     alternateName: 'Taxi Graz //GU',
-    description: SITE_CONFIG.description,
-    url: SITE_CONFIG.url,
-    telephone: SITE_CONFIG.phone,
-    email: SITE_CONFIG.email,
+    description: interpolate(s.seo.description, s),
+    url: s.seo.url,
+    telephone: s.contact.phone,
+    email: s.contact.email,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: SITE_CONFIG.address.street,
-      addressLocality: SITE_CONFIG.address.city,
-      postalCode: SITE_CONFIG.address.zip,
+      streetAddress: s.address.street,
+      addressLocality: s.address.city,
+      postalCode: s.address.zip,
       addressCountry: 'AT',
     },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 47.0500761,
-      longitude: 15.4743797,
-    },
+    geo: { '@type': 'GeoCoordinates', latitude: 47.0500761, longitude: 15.4743797 },
     areaServed: [
       { '@type': 'City', name: 'Graz' },
       { '@type': 'AdministrativeArea', name: 'Graz-Umgebung' },
@@ -30,148 +37,57 @@ function LocalBusinessSchema() {
     ],
     openingHoursSpecification: {
       '@type': 'OpeningHoursSpecification',
-      dayOfWeek: [
-        'Monday', 'Tuesday', 'Wednesday', 'Thursday',
-        'Friday', 'Saturday', 'Sunday',
-      ],
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
       opens: '00:00',
       closes: '23:59',
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: SITE_CONFIG.google.rating,
-      reviewCount: SITE_CONFIG.google.reviews,
+      ratingValue: s.google.rating,
+      reviewCount: s.google.reviews,
       bestRating: 5,
       worstRating: 1,
     },
     priceRange: '€€',
     paymentAccepted: 'Cash, Credit Card, Debit Card',
     currenciesAccepted: 'EUR',
-    sameAs: [SITE_CONFIG.google.mapsUrl],
+    sameAs: [s.google.mapsUrl],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Taxi-Leistungen',
-      itemListElement: [
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Flughafentransfer Graz',
-            description: 'Zuverlässiger Transfer zum Flughafen Graz und zurück. Pünktliche Abholung garantiert – auch bei Frühflügen.',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Stretchlimousinen',
-            description: 'Stilvolle Stretchlimousinen für besondere Anlässe wie Hochzeiten, Geburtstage oder Geschäftsfahrten.',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Botenfahrten',
-            description: 'Schnelle und zuverlässige Kurier- und Botenfahrten in Graz und Umgebung.',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Taxi-Service 24/7',
-            description: 'Rund um die Uhr Taxi-Service in Graz und Graz-Umgebung.',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Barrierefreie Fahrten',
-            description: 'Rollstuhlgerechte Fahrzeuge für mobilitätseingeschränkte Fahrgäste.',
-          },
-        },
-      ],
+      itemListElement: services.map((service) => ({
+        '@type': 'Offer',
+        itemOffered: { '@type': 'Service', name: service.title, description: service.description },
+      })),
     },
   }
 
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  )
-}
-
-function FAQSchema() {
-  const schema = {
+  const faqPage = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: faq.map((item) => ({
       '@type': 'Question',
       name: item.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: item.answer,
-      },
+      acceptedAnswer: { '@type': 'Answer', text: interpolate(item.answer, s) },
     })),
   }
 
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  )
-}
-
-function BreadcrumbSchema() {
-  const schema = {
+  const breadcrumbs = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Startseite',
-        item: SITE_CONFIG.url,
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Kontakt',
-        item: `${SITE_CONFIG.url}/kontakt`,
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: 'Impressum',
-        item: `${SITE_CONFIG.url}/impressum`,
-      },
-      {
-        '@type': 'ListItem',
-        position: 4,
-        name: 'Datenschutz',
-        item: `${SITE_CONFIG.url}/datenschutz`,
-      },
+      { '@type': 'ListItem', position: 1, name: 'Startseite', item: s.seo.url },
+      { '@type': 'ListItem', position: 2, name: 'Kontakt', item: `${s.seo.url}/kontakt` },
+      { '@type': 'ListItem', position: 3, name: 'Impressum', item: `${s.seo.url}/impressum` },
+      { '@type': 'ListItem', position: 4, name: 'Datenschutz', item: `${s.seo.url}/datenschutz` },
     ],
   }
 
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  )
-}
-
-export function StructuredData() {
-  return (
     <>
-      <LocalBusinessSchema />
-      <FAQSchema />
-      <BreadcrumbSchema />
+      <JsonLd data={localBusiness} />
+      <JsonLd data={faqPage} />
+      <JsonLd data={breadcrumbs} />
     </>
   )
 }
