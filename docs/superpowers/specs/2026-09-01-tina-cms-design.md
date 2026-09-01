@@ -146,3 +146,9 @@ Block-Builder / Sektionen umsortieren, Font-Auswahl, mehrsprachige Inhalte, weit
 8. Title-Fix: Unterseiten (`kontakt`, `impressum`, `datenschutz`) setzen `title: { absolute: fullTitle }` (in `src/lib/metadata.ts`, `createMetadata`) statt eines einfachen Strings, damit das `template: '%s | Taxi Graz GU'` aus dem Root-Layout den Seitennamen nicht ein zweites Mal anhängt.
 9. ESLint ignoriert generierte/Tina-eigene Verzeichnisse (`tina/__generated__`, `public/admin`), damit deren Auto-Code nicht gegen die Projekt-Lint-Regeln verstößt.
 10. Nachforderung als eigener Task 11: Navigation, Kontakt-Beschriftungen (Telefon/WhatsApp/E-Mail) und die Footer-Texte wurden zusätzlich in die Einstellungen verschoben; der Footer-Credit („Design by Unicorn Factory") bleibt fest im Code.
+11. Datenschutz-Typografie: `space-y-1`-Blöcke → harte Zeilenumbrüche, `space-y-10` → `space-y-8`, Listen `space-y-2` → `space-y-1` (Seitenhöhe −164 px); Impressum h3→p `mt-1` → `mt-3`.
+12. `runtime = 'edge'` aus `opengraph-image.tsx` entfernt (Bild wird beim Build statisch erzeugt).
+13. Legal-Collection hat zusätzlich das Frontmatter-Feld `intro` (Untertitel im Kopfbereich).
+14. `robots.ts` verbietet zusätzlich `/admin`.
+15. JSON-LD: Service-Beschreibungen kommen aus den sichtbaren Leistungstexten, die LocalBusiness-`description` ist die Meta-Description (mit Platzhaltern aufgelöst).
+16. Akzent-Palette: für die Standardfarbe `#E8B931` exakt die Originaltöne `#F5D668`/`#C99B1D`; für andere Farben Ableitung per HSL (Sättigung + Helligkeit verschoben).
