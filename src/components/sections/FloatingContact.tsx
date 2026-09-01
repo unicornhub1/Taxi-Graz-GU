@@ -6,9 +6,11 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { cn } from '@/lib/utils'
 import { useSettings } from '@/components/SettingsProvider'
 import { phoneRaw, whatsappLink } from '@/lib/site'
+import { tinaField } from 'tinacms/dist/react'
 
 export function FloatingContact() {
   const settings = useSettings()
+  const { labels } = settings
   const [isOpen, setIsOpen] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
 
@@ -42,7 +44,7 @@ export function FloatingContact() {
                   className="flex items-center gap-3 rounded-full bg-[var(--color-gold)] px-5 py-3 font-semibold text-[var(--color-black)] shadow-xl shadow-[var(--color-gold)]/20 transition-transform hover:scale-105"
                 >
                   <Phone className="h-5 w-5" />
-                  Anrufen
+                  <span data-tina-field={tinaField(labels, 'call')}>{labels.call}</span>
                 </motion.a>
                 <motion.a
                   initial={{ opacity: 0, scale: 0.8, y: 10 }}
@@ -54,7 +56,7 @@ export function FloatingContact() {
                   className="flex items-center gap-3 rounded-full bg-green-500 px-5 py-3 font-semibold text-white shadow-xl shadow-green-500/20 transition-transform hover:scale-105"
                 >
                   <MessageCircle className="h-5 w-5" />
-                  WhatsApp
+                  <span data-tina-field={tinaField(labels, 'whatsapp')}>{labels.whatsapp}</span>
                 </motion.a>
               </>
             )}

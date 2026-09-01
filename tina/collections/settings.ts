@@ -61,6 +61,47 @@ export const settings: Collection = {
       type: 'object', name: 'footer', label: 'Footer', required: true,
       fields: [
         { type: 'string', name: 'description', label: 'Kurztext im Footer', required: true, ui: { component: 'textarea' } },
+        { type: 'string', name: 'navHeading', label: 'Überschrift Navigation', required: true },
+        { type: 'string', name: 'legalHeading', label: 'Überschrift Rechtliches', required: true },
+        { type: 'string', name: 'hotlineHeading', label: 'Überschrift Hotline', required: true },
+        { type: 'string', name: 'copyright', label: 'Copyright-Zusatz (nach Jahr und Firma)', required: true },
+      ],
+    },
+    {
+      type: 'object', name: 'navigation', label: 'Navigation', required: true,
+      fields: [
+        {
+          type: 'object', name: 'main', label: 'Hauptmenü', list: true, required: true,
+          ui: { itemProps: (item) => ({ label: item?.label }) },
+          fields: [
+            { type: 'string', name: 'label', label: 'Beschriftung', required: true },
+            { type: 'string', name: 'href', label: 'Link', required: true, description: 'z. B. /#leistungen oder /kontakt' },
+          ],
+        },
+        {
+          type: 'object', name: 'legal', label: 'Rechtliches (Footer)', list: true, required: true,
+          ui: { itemProps: (item) => ({ label: item?.label }) },
+          fields: [
+            { type: 'string', name: 'label', label: 'Beschriftung', required: true },
+            { type: 'string', name: 'href', label: 'Link', required: true },
+          ],
+        },
+      ],
+    },
+    {
+      type: 'object', name: 'labels', label: 'Beschriftungen (Kontakt-Elemente)', required: true,
+      description: 'Wird überall verwendet, wo Telefon, WhatsApp und E-Mail angezeigt werden.',
+      fields: [
+        { type: 'string', name: 'phone', label: '„Telefon"', required: true },
+        { type: 'string', name: 'phoneSub', label: 'Zusatz unter Telefon', required: true },
+        { type: 'string', name: 'whatsapp', label: '„WhatsApp"', required: true },
+        { type: 'string', name: 'whatsappSub', label: 'Zusatz unter WhatsApp', required: true },
+        { type: 'string', name: 'email', label: '„E-Mail"', required: true },
+        { type: 'string', name: 'address', label: '„Adresse"', required: true },
+        { type: 'string', name: 'call', label: 'Kurzer Anruf-Button (mobil)', required: true },
+        { type: 'string', name: 'callNow', label: '„Jetzt anrufen"', required: true },
+        { type: 'string', name: 'reviews', label: '„Bewertungen"', required: true },
+        { type: 'string', name: 'googleReviews', label: '„Google-Bewertungen"', required: true },
       ],
     },
     {

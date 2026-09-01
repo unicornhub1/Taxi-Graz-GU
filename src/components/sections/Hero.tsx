@@ -20,6 +20,7 @@ const inlineMarkdown = {
 
 export function Hero({ data }: { data: HeroData }) {
   const settings = useSettings()
+  const { labels } = settings
   const tel = `tel:${phoneRaw(settings.contact.phone)}`
   const wa = whatsappLink(settings.contact.whatsapp)
 
@@ -62,7 +63,7 @@ export function Hero({ data }: { data: HeroData }) {
               </span>
               <span className="hidden sm:flex items-center gap-1 text-xs text-[var(--color-gray-500)]">
                 <Star className="h-3 w-3 fill-[var(--color-gold)] text-[var(--color-gold)]" />
-                {settings.google.rating} ({settings.google.reviews} Bewertungen)
+                {settings.google.rating} ({settings.google.reviews} {labels.reviews})
               </span>
             </motion.div>
 
@@ -162,8 +163,8 @@ export function Hero({ data }: { data: HeroData }) {
                     <Phone className="h-5 w-5 text-[var(--color-black)]" />
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-white">Telefon</p>
-                    <p className="text-xs text-[var(--color-gray-400)]">24/7 erreichbar</p>
+                    <p className="text-sm font-bold text-white" data-tina-field={tinaField(labels, 'phone')}>{labels.phone}</p>
+                    <p className="text-xs text-[var(--color-gray-400)]" data-tina-field={tinaField(labels, 'phoneSub')}>{labels.phoneSub}</p>
                   </div>
                 </a>
 
@@ -178,8 +179,8 @@ export function Hero({ data }: { data: HeroData }) {
                     <MessageCircle className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-white">WhatsApp</p>
-                    <p className="text-xs text-[var(--color-gray-400)]">Nachricht senden</p>
+                    <p className="text-sm font-bold text-white" data-tina-field={tinaField(labels, 'whatsapp')}>{labels.whatsapp}</p>
+                    <p className="text-xs text-[var(--color-gray-400)]" data-tina-field={tinaField(labels, 'whatsappSub')}>{labels.whatsappSub}</p>
                   </div>
                 </a>
 
@@ -192,7 +193,7 @@ export function Hero({ data }: { data: HeroData }) {
                     <Mail className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-white">E-Mail</p>
+                    <p className="text-sm font-bold text-white" data-tina-field={tinaField(labels, 'email')}>{labels.email}</p>
                     <p className="text-xs text-[var(--color-gray-400)]">{settings.contact.email}</p>
                   </div>
                 </a>
@@ -209,7 +210,7 @@ export function Hero({ data }: { data: HeroData }) {
                   {settings.google.rating}
                 </span>
                 <span className="text-xs text-[var(--color-gray-400)]">
-                  ({settings.google.reviews} Google-Bewertungen)
+                  ({settings.google.reviews} {labels.googleReviews})
                 </span>
               </div>
             </div>

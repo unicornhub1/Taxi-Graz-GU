@@ -37,7 +37,36 @@
     ]
   },
   "footer": {
-    "description": "Ihr zuverlässiges Taxiunternehmen in Graz und Graz-Umgebung. 24/7 erreichbar für alle Ihre Fahrten."
+    "description": "Ihr zuverlässiges Taxiunternehmen in Graz und Graz-Umgebung. 24/7 erreichbar für alle Ihre Fahrten.",
+    "navHeading": "Navigation",
+    "legalHeading": "Rechtliches",
+    "hotlineHeading": "24h Taxi-Hotline",
+    "copyright": "Alle Rechte vorbehalten."
+  },
+  "navigation": {
+    "main": [
+      { "label": "Leistungen", "href": "/#leistungen" },
+      { "label": "Service-Gebiete", "href": "/#gebiete" },
+      { "label": "Bewertungen", "href": "/#bewertungen" },
+      { "label": "FAQ", "href": "/#faq" },
+      { "label": "Kontakt", "href": "/kontakt" }
+    ],
+    "legal": [
+      { "label": "Impressum", "href": "/impressum" },
+      { "label": "Datenschutz", "href": "/datenschutz" }
+    ]
+  },
+  "labels": {
+    "phone": "Telefon",
+    "phoneSub": "24/7 erreichbar",
+    "whatsapp": "WhatsApp",
+    "whatsappSub": "Nachricht senden",
+    "email": "E-Mail",
+    "address": "Adresse",
+    "call": "Anrufen",
+    "callNow": "Jetzt anrufen",
+    "reviews": "Bewertungen",
+    "googleReviews": "Google-Bewertungen"
   },
   "design": {
     "accentColor": "#E8B931",

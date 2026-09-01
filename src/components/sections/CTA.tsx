@@ -12,6 +12,7 @@ export type CtaData = NonNullable<HomeQuery['home']['cta']>
 
 export function CTA({ data }: { data: CtaData }) {
   const settings = useSettings()
+  const { labels } = settings
 
   return (
     <section className="relative overflow-hidden bg-[var(--color-gray-900)] py-20 md:py-28">
@@ -70,8 +71,8 @@ export function CTA({ data }: { data: CtaData }) {
             <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[var(--color-gold)] transition-transform duration-300 group-hover:scale-110">
               <Phone className="h-6 w-6 text-[var(--color-black)]" />
             </div>
-            <span className="text-xs font-medium uppercase tracking-widest text-[var(--color-gray-400)]">
-              Anrufen
+            <span className="text-xs font-medium uppercase tracking-widest text-[var(--color-gray-400)]" data-tina-field={tinaField(labels, 'call')}>
+              {labels.call}
             </span>
             <span className="text-lg font-bold text-white">{settings.contact.phone}</span>
           </a>
@@ -86,10 +87,10 @@ export function CTA({ data }: { data: CtaData }) {
             <div className="flex h-14 w-14 items-center justify-center rounded-full bg-green-500 transition-transform duration-300 group-hover:scale-110">
               <MessageCircle className="h-6 w-6 text-white" />
             </div>
-            <span className="text-xs font-medium uppercase tracking-widest text-[var(--color-gray-400)]">
-              WhatsApp
+            <span className="text-xs font-medium uppercase tracking-widest text-[var(--color-gray-400)]" data-tina-field={tinaField(labels, 'whatsapp')}>
+              {labels.whatsapp}
             </span>
-            <span className="text-lg font-bold text-white">Nachricht senden</span>
+            <span className="text-lg font-bold text-white" data-tina-field={tinaField(labels, 'whatsappSub')}>{labels.whatsappSub}</span>
           </a>
 
           {/* Email */}
@@ -100,8 +101,8 @@ export function CTA({ data }: { data: CtaData }) {
             <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[var(--color-gray-700)] transition-transform duration-300 group-hover:scale-110">
               <Mail className="h-6 w-6 text-white" />
             </div>
-            <span className="text-xs font-medium uppercase tracking-widest text-[var(--color-gray-400)]">
-              E-Mail
+            <span className="text-xs font-medium uppercase tracking-widest text-[var(--color-gray-400)]" data-tina-field={tinaField(labels, 'email')}>
+              {labels.email}
             </span>
             <span className="text-lg font-bold text-white">{settings.contact.email}</span>
           </a>

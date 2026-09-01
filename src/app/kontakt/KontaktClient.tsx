@@ -20,6 +20,7 @@ export function KontaktClient(props: KontaktClientProps) {
   const { data } = useTina(props)
   const page = data.kontakt
   const settings = useSettings()
+  const { labels } = settings
 
   return (
     <>
@@ -63,7 +64,7 @@ export function KontaktClient(props: KontaktClientProps) {
                 <Phone className="h-5 w-5 text-[var(--color-gold-dark)]" />
               </div>
               <div>
-                <h3 className="font-semibold text-[var(--color-black)]">Telefon</h3>
+                <h3 className="font-semibold text-[var(--color-black)]" data-tina-field={tinaField(labels, 'phone')}>{labels.phone}</h3>
                 <p className="mt-0.5 text-lg font-bold text-[var(--color-gold-dark)]">
                   <span data-tina-field={tinaField(settings.contact, 'phone')}>{settings.contact.phone}</span>
                 </p>
@@ -86,8 +87,8 @@ export function KontaktClient(props: KontaktClientProps) {
                 <MessageCircle className="h-5 w-5 text-green-600" />
               </div>
               <div>
-                <h3 className="font-semibold text-[var(--color-black)]">WhatsApp</h3>
-                <p className="mt-0.5 font-bold text-green-600">Nachricht senden</p>
+                <h3 className="font-semibold text-[var(--color-black)]" data-tina-field={tinaField(labels, 'whatsapp')}>{labels.whatsapp}</h3>
+                <p className="mt-0.5 font-bold text-green-600" data-tina-field={tinaField(labels, 'whatsappSub')}>{labels.whatsappSub}</p>
                 <p
                   className="text-xs text-[var(--color-gray-400)]"
                   data-tina-field={tinaField(page.cards, 'whatsappSub')}
@@ -105,7 +106,7 @@ export function KontaktClient(props: KontaktClientProps) {
                 <Mail className="h-5 w-5 text-[var(--color-gray-600)]" />
               </div>
               <div>
-                <h3 className="font-semibold text-[var(--color-black)]">E-Mail</h3>
+                <h3 className="font-semibold text-[var(--color-black)]" data-tina-field={tinaField(labels, 'email')}>{labels.email}</h3>
                 <p className="mt-0.5 font-medium text-[var(--color-gray-600)]">{settings.contact.email}</p>
               </div>
             </a>
@@ -115,7 +116,7 @@ export function KontaktClient(props: KontaktClientProps) {
                 <MapPin className="h-5 w-5 text-[var(--color-gray-600)]" />
               </div>
               <div>
-                <h3 className="font-semibold text-[var(--color-black)]">Adresse</h3>
+                <h3 className="font-semibold text-[var(--color-black)]" data-tina-field={tinaField(labels, 'address')}>{labels.address}</h3>
                 <p className="mt-0.5 text-[var(--color-gray-600)]">
                   {settings.address.street}
                   <br />
