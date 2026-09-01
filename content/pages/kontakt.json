@@ -1,0 +1,22 @@
+{
+  "seo": {
+    "title": "Kontakt",
+    "description": "Kontaktieren Sie Taxi Graz GU – per Telefon, WhatsApp oder Kontaktformular. 24/7 erreichbar für Ihre Taxifahrt in Graz."
+  },
+  "hero": {
+    "eyebrow": "Kontakt",
+    "heading": "Sprechen Sie uns an",
+    "text": "Ob per Telefon, WhatsApp oder Kontaktformular – wir sind 24 Stunden am Tag für Sie erreichbar."
+  },
+  "cards": {
+    "phoneSub": "24/7 erreichbar",
+    "whatsappSub": "Schnell & unkompliziert",
+    "hoursTitle": "Öffnungszeiten",
+    "hoursValue": "24 Stunden / 7 Tage",
+    "hoursSub": "Auch an Feiertagen erreichbar"
+  },
+  "form": {
+    "heading": "Schreiben Sie uns",
+    "text": "Füllen Sie das Formular aus und wir melden uns schnellstmöglich bei Ihnen."
+  }
+}
