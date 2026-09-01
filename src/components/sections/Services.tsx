@@ -1,29 +1,22 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import {
-  Plane,
-  Crown,
-  Package,
-  Car,
-  CalendarClock,
-  Accessibility,
-  type LucideIcon,
-} from 'lucide-react'
+import { Plane, Crown, Package, Car, CalendarClock, Accessibility, MapPin, Clock, Shield, Star, type LucideIcon } from 'lucide-react'
+import { tinaField } from 'tinacms/dist/react'
+import type { HomeQuery } from '@tina/__generated__/types'
 import { Section } from '@/components/layout/Section'
 import { Card } from '@/components/ui'
-import { features } from '@/data/features'
+import { useSettings } from '@/components/SettingsProvider'
+import { compact, interpolate } from '@/lib/site'
 
-const iconMap: Record<string, LucideIcon> = {
-  Plane,
-  Crown,
-  Package,
-  Car,
-  CalendarClock,
-  Accessibility,
-}
+export type ServicesData = NonNullable<HomeQuery['home']['services']>
 
-export function Services() {
+const iconMap: Record<string, LucideIcon> = { Plane, Crown, Package, Car, CalendarClock, Accessibility, MapPin, Clock, Shield, Star }
+
+export function Services({ data }: { data: ServicesData }) {
+  const settings = useSettings()
+  const items = compact(data.items)
+
   return (
     <Section id="leistungen" className="bg-white">
       <div className="text-center">
@@ -32,8 +25,9 @@ export function Services() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-gold-dark)]"
+          data-tina-field={tinaField(data, 'eyebrow')}
         >
-          Unsere Leistungen
+          {data.eyebrow}
         </motion.span>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -41,9 +35,10 @@ export function Services() {
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
           className="mt-3 font-[var(--font-display)] text-3xl font-bold tracking-tight text-[var(--color-black)] sm:text-4xl md:text-5xl"
+          data-tina-field={tinaField(data, 'heading')}
         >
-          Taxi-Leistungen in{' '}
-          <span className="text-[var(--color-gold-dark)]">Graz &amp; Umgebung</span>
+          {data.heading}{' '}
+          <span className="text-[var(--color-gold-dark)]" data-tina-field={tinaField(data, 'headingHighlight')}>{data.headingHighlight}</span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -51,18 +46,19 @@ export function Services() {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
           className="mx-auto mt-4 max-w-2xl text-[var(--color-gray-500)] md:text-lg"
+          data-tina-field={tinaField(data, 'intro')}
         >
-          Von Flughafentransfers bis Stretchlimousinen: Taxi Graz GU ist Ihr zuverlässiger
-          Partner für alle Fahrten in Graz und darüber hinaus.
+          {interpolate(data.intro, settings)}
         </motion.p>
       </div>
 
       <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {features.map((feature, i) => {
+        {items.map((feature, i) => {
           const Icon = iconMap[feature.icon] || Car
           return (
             <motion.div
-              key={feature.title}
+              key={i}
+              data-tina-field={tinaField(feature)}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

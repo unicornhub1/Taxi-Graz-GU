@@ -3,15 +3,19 @@
 import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import { Logo } from '@/components/ui/Logo'
-import { useRouter, usePathname } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import { Phone, Menu, X, MessageCircle, Mail, Star } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { cn } from '@/lib/utils'
-import { SITE_CONFIG } from '@/lib/constants'
-import { navigation } from '@/data/navigation'
+import { useSettings } from '@/components/SettingsProvider'
+import { phoneRaw, whatsappLink, compact } from '@/lib/site'
+import { tinaField } from 'tinacms/dist/react'
 import { Container } from './Container'
 
 export function Header() {
+  const settings = useSettings()
+  const { labels, navigation } = settings
+  const mainNav = compact(navigation.main)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileOpen, setIsMobileOpen] = useState(false)
   const router = useRouter()
@@ -74,7 +78,7 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden items-center gap-8 lg:flex" aria-label="Hauptnavigation">
-            {navigation.main.map((item) => (
+            {mainNav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -84,6 +88,7 @@ export function Header() {
                     ? 'text-[var(--color-gray-600)] hover:text-[var(--color-black)]'
                     : 'text-white/70 hover:text-white'
                 )}
+                data-tina-field={tinaField(item)}
               >
                 {item.label}
               </Link>
@@ -93,12 +98,12 @@ export function Header() {
           {/* CTA + Mobile Toggle */}
           <div className="flex items-center gap-3">
             <a
-              href={`tel:${SITE_CONFIG.phoneRaw}`}
+              href={`tel:${phoneRaw(settings.contact.phone)}`}
               className="inline-flex items-center gap-2 rounded-full bg-[var(--color-gold)] px-5 py-2.5 text-sm font-semibold text-[var(--color-black)] shadow-lg shadow-[var(--color-gold)]/20 transition-all duration-300 hover:bg-[var(--color-gold-dark)] hover:shadow-xl hover:shadow-[var(--color-gold)]/30"
             >
               <Phone className="h-4 w-4" />
-              <span className="hidden sm:inline">{SITE_CONFIG.phone}</span>
-              <span className="sm:hidden">Anrufen</span>
+              <span className="hidden sm:inline" data-tina-field={tinaField(settings.contact, 'phone')}>{settings.contact.phone}</span>
+              <span className="sm:hidden" data-tina-field={tinaField(labels, 'call')}>{labels.call}</span>
             </a>
 
             <button
@@ -153,7 +158,7 @@ export function Header() {
 
             <div className="px-6 pb-10 pt-2">
               <nav className="flex flex-col" aria-label="Mobile Navigation">
-                {navigation.main.map((item, i) => (
+                {mainNav.map((item, i) => (
                   <motion.div
                     key={item.href}
                     initial={{ opacity: 0, x: -20 }}
@@ -163,6 +168,7 @@ export function Header() {
                     <button
                       onClick={() => handleMobileNav(item.href)}
                       className="flex w-full items-center justify-between border-b border-white/[0.06] py-4 text-lg font-semibold text-white transition-colors active:text-[var(--color-gold)] cursor-pointer"
+                      data-tina-field={tinaField(item)}
                     >
                       {item.label}
                       <span className="text-sm text-[var(--color-gold)]">&rarr;</span>
@@ -178,20 +184,20 @@ export function Header() {
                 className="mt-6 space-y-3"
               >
                 <a
-                  href={`tel:${SITE_CONFIG.phoneRaw}`}
+                  href={`tel:${phoneRaw(settings.contact.phone)}`}
                   className="flex items-center gap-4 rounded-2xl bg-[var(--color-gold)] p-4 transition-all active:scale-[0.98]"
                 >
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-black/10">
                     <Phone className="h-5 w-5 text-[var(--color-black)]" />
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-[var(--color-black)]">Jetzt anrufen</p>
-                    <p className="text-xs font-medium text-[var(--color-black)]/70">{SITE_CONFIG.phone}</p>
+                    <p className="text-sm font-bold text-[var(--color-black)]" data-tina-field={tinaField(labels, 'callNow')}>{labels.callNow}</p>
+                    <p className="text-xs font-medium text-[var(--color-black)]/70">{settings.contact.phone}</p>
                   </div>
                 </a>
 
                 <a
-                  href={SITE_CONFIG.whatsappLink}
+                  href={whatsappLink(settings.contact.whatsapp)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 transition-all active:scale-[0.98]"
@@ -200,21 +206,21 @@ export function Header() {
                     <MessageCircle className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-white">WhatsApp</p>
-                    <p className="text-xs text-white/50">Nachricht senden</p>
+                    <p className="text-sm font-bold text-white" data-tina-field={tinaField(labels, 'whatsapp')}>{labels.whatsapp}</p>
+                    <p className="text-xs text-white/50" data-tina-field={tinaField(labels, 'whatsappSub')}>{labels.whatsappSub}</p>
                   </div>
                 </a>
 
                 <a
-                  href={`mailto:${SITE_CONFIG.email}`}
+                  href={`mailto:${settings.contact.email}`}
                   className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 transition-all active:scale-[0.98]"
                 >
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10">
                     <Mail className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-white">E-Mail</p>
-                    <p className="text-xs text-white/50">{SITE_CONFIG.email}</p>
+                    <p className="text-sm font-bold text-white" data-tina-field={tinaField(labels, 'email')}>{labels.email}</p>
+                    <p className="text-xs text-white/50">{settings.contact.email}</p>
                   </div>
                 </a>
               </motion.div>
@@ -230,8 +236,8 @@ export function Header() {
                     <Star key={i} className="h-3.5 w-3.5 fill-[var(--color-gold)] text-[var(--color-gold)]" />
                   ))}
                 </div>
-                <span className="text-sm font-semibold text-[var(--color-gold)]">{SITE_CONFIG.google.rating}</span>
-                <span className="text-xs text-white/40">({SITE_CONFIG.google.reviews} Bewertungen)</span>
+                <span className="text-sm font-semibold text-[var(--color-gold)]">{settings.google.rating}</span>
+                <span className="text-xs text-white/40">({settings.google.reviews} {labels.reviews})</span>
               </motion.div>
             </div>
           </motion.div>
