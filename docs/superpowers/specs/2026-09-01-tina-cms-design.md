@@ -133,3 +133,16 @@ Merge in `main` und Push auf beide Remotes erst nach Freigabe durch Felix.
 ## Nicht im Umfang
 
 Block-Builder / Sektionen umsortieren, Font-Auswahl, mehrsprachige Inhalte, weitere Seiten, Self-Hosting von Tina.
+
+## Abweichungen in der Umsetzung (2026-09-01)
+
+1. `footer.description` liegt in den Einstellungen (`content/settings/site.json`), nicht in `home.json`.
+2. Keine Custom-GraphQL-Queries: Die Einstellungen werden per React-Context aus `SiteShell` an die Komponenten weitergereicht statt clientseitig nachgeladen.
+3. Die TrustBar wurde ohne Icons umgesetzt (nur Zahlen/Labels), abweichend vom ursprünglich skizzierten Icon-Layout.
+4. Der Firmenblock im Impressum wird über ein Frontmatter-Flag `showCompanyBlock` gesteuert statt fest im Markup verdrahtet zu sein.
+5. Impressum-Reihenfolge geändert: Der Firmenblock (§ 5 ECG, Kontakt, UID/Firmenbuchnummer, Firmenbuchgericht) steht gesammelt oben; „Unternehmensgegenstand" folgt danach.
+6. Rich-Text in den JSON-Collections wird als Markdown-String gespeichert (Tina-Standard für `type: rich-text` in JSON-Format); die GraphQL-Query liefert daraus den AST, den `TinaMarkdown` rendert.
+7. Die Screenshot-Verifikation (vorher/nachher) lief über ein eigenes Playwright-Skript statt über eine Headless-CLI, da die Playwright-MCP-Tools in der Ausführungsumgebung nicht verfügbar waren.
+8. Title-Fix: Unterseiten (`kontakt`, `impressum`, `datenschutz`) setzen `title: { absolute: fullTitle }` (in `src/lib/metadata.ts`, `createMetadata`) statt eines einfachen Strings, damit das `template: '%s | Taxi Graz GU'` aus dem Root-Layout den Seitennamen nicht ein zweites Mal anhängt.
+9. ESLint ignoriert generierte/Tina-eigene Verzeichnisse (`tina/__generated__`, `public/admin`), damit deren Auto-Code nicht gegen die Projekt-Lint-Regeln verstößt.
+10. Nachforderung als eigener Task 11: Navigation, Kontakt-Beschriftungen (Telefon/WhatsApp/E-Mail) und die Footer-Texte wurden zusätzlich in die Einstellungen verschoben; der Footer-Credit („Design by Unicorn Factory") bleibt fest im Code.
