@@ -1,0 +1,46 @@
+{
+  "contact": {
+    "phone": "+43 660 1083003",
+    "whatsapp": "436601083003",
+    "email": "info@taxigraz-gu.at"
+  },
+  "address": {
+    "street": "Walter-Goldschmidt-Gasse 31",
+    "zip": "8042",
+    "city": "Graz",
+    "country": "Österreich"
+  },
+  "company": {
+    "legal": "Aktas Erol e.U.",
+    "owner": "Erol Aktas",
+    "uid": "",
+    "register": "FN 523619 d",
+    "court": "Landesgericht für ZRS Graz"
+  },
+  "google": {
+    "rating": 4.9,
+    "reviews": 673,
+    "mapsUrl": "https://www.google.com/maps/place/Taxi+Graz+%2F%2FGU/"
+  },
+  "seo": {
+    "siteName": "Taxi Graz GU",
+    "url": "https://taxigraz-gu.at",
+    "defaultTitle": "Taxi Graz | Taxi Graz GU - 24/7 Taxiservice, Flughafentransfer & Stretchlimousinen",
+    "description": "Taxi Graz GU – Ihr 24/7 Taxiservice in Graz & Umgebung. Flughafentransfer, Stretchlimousinen, Botenfahrten. ☎ {phone}. {rating}★ Google ({reviews} Bewertungen). Jetzt anrufen!",
+    "keywords": [
+      "Taxi Graz", "Taxi Graz GU", "Taxi Graz Flughafen", "Taxi Graz Flughafen Preis", "Flughafentransfer Graz",
+      "Taxi bestellen Graz", "Taxi Graz bestellen", "Stretchlimousine Graz", "Limousine mieten Graz", "Taxi Graz 24h",
+      "Taxi Graz Nummer", "Taxi Graz Telefonnummer", "Taxi Graz Preise", "Taxi Graz Kosten", "Taxiunternehmen Graz",
+      "Taxi Graz Umgebung", "Taxi Graz Andritz", "Taxi Graz Eggenberg", "Taxi Graz Nord", "Taxi Graz Don Bosco",
+      "Taxi Feldkirchen bei Graz", "Taxi Kalsdorf bei Graz", "Taxi Seiersberg", "Taxi Gratkorn", "Botenfahrten Graz",
+      "Günstigstes Taxi Graz"
+    ]
+  },
+  "footer": {
+    "description": "Ihr zuverlässiges Taxiunternehmen in Graz und Graz-Umgebung. 24/7 erreichbar für alle Ihre Fahrten."
+  },
+  "design": {
+    "accentColor": "#E8B931",
+    "heroImage": "/uploads/hero-taxi.jpg"
+  }
+}
