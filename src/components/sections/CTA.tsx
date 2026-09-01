@@ -6,7 +6,7 @@ import { tinaField } from 'tinacms/dist/react'
 import type { HomeQuery } from '@tina/__generated__/types'
 import { Container } from '@/components/layout/Container'
 import { useSettings } from '@/components/SettingsProvider'
-import { phoneRaw, whatsappLink } from '@/lib/site'
+import { interpolate, phoneRaw, whatsappLink } from '@/lib/site'
 
 export type CtaData = NonNullable<HomeQuery['home']['cta']>
 
@@ -51,7 +51,7 @@ export function CTA({ data }: { data: CtaData }) {
             className="mt-4 text-lg text-[var(--color-gray-400)]"
             data-tina-field={tinaField(data, 'text')}
           >
-            {data.text}
+            {interpolate(data.text, settings)}
           </motion.p>
         </div>
 

@@ -26,7 +26,7 @@ export const home: Collection = {
       type: 'object', name: 'hero', label: 'Hero (oberster Bereich)', required: true,
       fields: [
         str('badge', 'Badge-Text', 'z. B. „Jetzt verfügbar"'),
-        str('headline', 'Überschrift (Teil 1)', 'z. B. „Ihr Taxi in"'),
+        str('headline', 'Überschrift (Teil 1)', 'Mindestens zwei Wörter – das letzte Wort steht in der zweiten Zeile (z. B. „Ihr Taxi in")'),
         str('headlineHighlight', 'Überschrift (hervorgehoben)', 'z. B. „Graz"'),
         str('subline', 'Unterzeile'),
         {
@@ -59,7 +59,7 @@ export const home: Collection = {
         str('eyebrow', 'Kleine Überschrift'),
         str('heading', 'Überschrift (Teil 1)'),
         str('headingHighlight', 'Überschrift (hervorgehoben)'),
-        textarea('intro', 'Einleitungstext'),
+        textarea('intro', 'Einleitungstext', PLATZHALTER),
         {
           type: 'object', name: 'items', label: 'Leistungen', list: true, required: true,
           ui: { itemProps: (item) => ({ label: item?.title }) },
@@ -96,12 +96,12 @@ export const home: Collection = {
       fields: [
         str('eyebrow', 'Kleine Überschrift'),
         str('heading', 'Überschrift'),
-        textarea('text', 'Text'),
+        textarea('text', 'Text', PLATZHALTER),
         str('ctaCall', 'Button „Anrufen"'),
         str('ctaWhatsapp', 'Button „WhatsApp"'),
         str('boxTitle', 'Titel der Vorteile-Box'),
         { type: 'string', name: 'benefits', label: 'Vorteile', list: true, required: true },
-        str('boxCtaText', 'Text über der Telefonnummer'),
+        str('boxCtaText', 'Text über der Telefonnummer', PLATZHALTER),
       ],
     },
     {
@@ -158,7 +158,7 @@ export const home: Collection = {
       fields: [
         str('eyebrow', 'Kleine Überschrift'),
         str('heading', 'Überschrift'),
-        textarea('text', 'Text'),
+        textarea('text', 'Text', PLATZHALTER),
         str('formLinkLabel', 'Linktext zum Kontaktformular'),
       ],
     },

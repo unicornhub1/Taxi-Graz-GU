@@ -44,13 +44,18 @@ export interface AccentPalette {
 
 const clamp = (v: number, min: number, max: number) => Math.min(max, Math.max(min, v))
 
-/** Leitet Hell-/Dunkel-Variante der Akzentfarbe ab (entspricht dem Verhältnis #E8B931 → #F5D668 / #C99B1D). */
+/** Handgetunte Standardpalette des Designs (globals.css). Für die Standardfarbe wird sie exakt verwendet. */
+export const DEFAULT_ACCENT: AccentPalette = { base: '#E8B931', light: '#F5D668', dark: '#C99B1D' }
+
+/** Für die Standardfarbe die Originaltöne; für andere Farben Ableitung (Sättigung und Helligkeit verschoben, Farbton bleibt). */
 export function deriveAccentPalette(hex: string): AccentPalette {
-  const hsl = hexToHsl(hex)
+  const base = normalizeHex(hex)
+  if (base === DEFAULT_ACCENT.base) return { ...DEFAULT_ACCENT }
+  const hsl = hexToHsl(base)
   return {
-    base: normalizeHex(hex),
-    light: hslToHex({ ...hsl, l: clamp(hsl.l + 0.13, 0, 0.95) }),
-    dark: hslToHex({ ...hsl, l: clamp(hsl.l - 0.1, 0.05, 1) }),
+    base,
+    light: hslToHex({ h: hsl.h, s: clamp(hsl.s + 0.077, 0, 1), l: clamp(hsl.l + 0.13, 0, 0.95) }),
+    dark: hslToHex({ h: hsl.h, s: clamp(hsl.s - 0.05, 0, 1), l: clamp(hsl.l - 0.1, 0.05, 1) }),
   }
 }
 

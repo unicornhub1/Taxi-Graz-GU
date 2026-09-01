@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { compact, interpolate, phoneRaw, required, whatsappLink, type SiteSettings } from '@/lib/site'
+import { compact, interpolate, phoneRaw, whatsappLink, type SiteSettings } from '@/lib/site'
 
 const settings = {
   contact: { phone: '+43 660 1083003', whatsapp: '436601083003', email: 'info@taxigraz-gu.at' },
@@ -36,12 +36,5 @@ describe('compact', () => {
     expect(compact([1, null, 2, undefined])).toEqual([1, 2])
     expect(compact(null)).toEqual([])
     expect(compact(undefined)).toEqual([])
-  })
-})
-
-describe('required', () => {
-  it('gibt den Wert zurück oder wirft mit Namen', () => {
-    expect(required('x', 'feld')).toBe('x')
-    expect(() => required(null, 'home.hero')).toThrow('home.hero')
   })
 })

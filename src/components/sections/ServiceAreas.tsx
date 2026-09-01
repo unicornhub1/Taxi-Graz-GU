@@ -30,9 +30,9 @@ function AreaGroup({ group, delay }: { group: AreaGroupData; delay: number }) {
         </span>
       </div>
       <div className="flex flex-wrap justify-center gap-2">
-        {areas.map((area) => (
+        {areas.map((area, i) => (
           <span
-            key={area}
+            key={i}
             className="group inline-flex items-center gap-1.5 rounded-full border border-[var(--color-border)] bg-white px-4 py-2 text-sm font-medium text-[var(--color-gray-600)] transition-all duration-300 hover:border-[var(--color-gold)]/50 hover:bg-[var(--color-gold)]/5 hover:text-[var(--color-black)]"
           >
             <MapPin className="h-3.5 w-3.5 text-[var(--color-gold)] transition-transform group-hover:scale-110" />

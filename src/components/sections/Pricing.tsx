@@ -6,7 +6,7 @@ import { tinaField } from 'tinacms/dist/react'
 import type { HomeQuery } from '@tina/__generated__/types'
 import { Section } from '@/components/layout/Section'
 import { useSettings } from '@/components/SettingsProvider'
-import { compact, phoneRaw, whatsappLink } from '@/lib/site'
+import { compact, interpolate, phoneRaw, whatsappLink } from '@/lib/site'
 
 export type PricingData = NonNullable<HomeQuery['home']['pricing']>
 
@@ -46,7 +46,7 @@ export function Pricing({ data }: { data: PricingData }) {
             className="mt-4 text-[var(--color-gray-500)] leading-relaxed"
             data-tina-field={tinaField(data, 'text')}
           >
-            {data.text}
+            {interpolate(data.text, settings)}
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -87,7 +87,7 @@ export function Pricing({ data }: { data: PricingData }) {
           <div className="mt-6 space-y-4" data-tina-field={tinaField(data, 'benefits')}>
             {benefits.map((benefit, i) => (
               <motion.div
-                key={benefit}
+                key={i}
                 initial={{ opacity: 0, x: 10 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -103,7 +103,7 @@ export function Pricing({ data }: { data: PricingData }) {
           </div>
           <div className="mt-8 rounded-xl bg-[var(--color-gold)]/10 px-5 py-4 text-center">
             <p className="text-sm font-bold text-[var(--color-gold-dark)]" data-tina-field={tinaField(data, 'boxCtaText')}>
-              {data.boxCtaText}
+              {interpolate(data.boxCtaText, settings)}
             </p>
             <a
               href={tel}

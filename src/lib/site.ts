@@ -27,11 +27,3 @@ export function interpolate(text: string, settings: SiteSettings): string {
 export function compact<T>(list: ReadonlyArray<T | null | undefined> | null | undefined): T[] {
   return (list ?? []).filter((item): item is T => item !== null && item !== undefined)
 }
-
-/** Erzwingt Pflichtinhalte aus dem CMS mit sprechender Fehlermeldung. */
-export function required<T>(value: T | null | undefined, name: string): T {
-  if (value === null || value === undefined) {
-    throw new Error(`CMS-Inhalt fehlt: ${name}`)
-  }
-  return value
-}

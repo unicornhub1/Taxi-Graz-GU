@@ -45,13 +45,13 @@ export function CompanyBlock() {
       </div>
 
       {s.company.uid && (
-        <div>
+        <div data-tina-field={tinaField(s.company, 'uid')}>
           <h2 className={h2}>UID-Nummer</h2>
           <p className="mt-3">{s.company.uid}</p>
         </div>
       )}
 
-      <div>
+      <div data-tina-field={tinaField(s.company, 'register')}>
         <h2 className={h2}>Firmenbuchnummer &amp; Firmenbuchgericht</h2>
         <div className="mt-3 space-y-1">
           <p>Firmenbuchnummer: {s.company.register}</p>

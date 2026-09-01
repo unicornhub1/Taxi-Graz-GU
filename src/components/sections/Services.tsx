@@ -6,13 +6,15 @@ import { tinaField } from 'tinacms/dist/react'
 import type { HomeQuery } from '@tina/__generated__/types'
 import { Section } from '@/components/layout/Section'
 import { Card } from '@/components/ui'
-import { compact } from '@/lib/site'
+import { useSettings } from '@/components/SettingsProvider'
+import { compact, interpolate } from '@/lib/site'
 
 export type ServicesData = NonNullable<HomeQuery['home']['services']>
 
 const iconMap: Record<string, LucideIcon> = { Plane, Crown, Package, Car, CalendarClock, Accessibility, MapPin, Clock, Shield, Star }
 
 export function Services({ data }: { data: ServicesData }) {
+  const settings = useSettings()
   const items = compact(data.items)
 
   return (
@@ -46,7 +48,7 @@ export function Services({ data }: { data: ServicesData }) {
           className="mx-auto mt-4 max-w-2xl text-[var(--color-gray-500)] md:text-lg"
           data-tina-field={tinaField(data, 'intro')}
         >
-          {data.intro}
+          {interpolate(data.intro, settings)}
         </motion.p>
       </div>
 

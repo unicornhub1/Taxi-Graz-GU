@@ -16,6 +16,7 @@ export const legal: Collection = {
     { type: 'boolean', name: 'showCompanyBlock', label: 'Firmenblock aus den Einstellungen oben anzeigen' },
     {
       type: 'rich-text', name: 'body', label: 'Inhalt', isBody: true,
+      description: 'Achtung: Firmen- und Kontaktdaten im Text werden NICHT automatisch aus den Einstellungen übernommen – bei Änderungen (Telefon, E-Mail, Adresse) hier mitpflegen.',
       overrides: { toolbar: ['heading', 'bold', 'italic', 'link', 'ul', 'ol'], headingLevels: ['h2', 'h3'] },
     },
   ],

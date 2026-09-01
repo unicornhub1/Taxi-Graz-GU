@@ -1,9 +1,12 @@
 import type { Collection, TinaField } from 'tinacms'
 
-const str = (name: string, label: string): TinaField => ({ type: 'string', name, label, required: true })
-const textarea = (name: string, label: string): TinaField => ({
-  type: 'string', name, label, required: true, ui: { component: 'textarea' },
+const str = (name: string, label: string, description?: string): TinaField => ({
+  type: 'string', name, label, required: true, description,
 })
+const textarea = (name: string, label: string, description?: string): TinaField => ({
+  type: 'string', name, label, required: true, description, ui: { component: 'textarea' },
+})
+const PLATZHALTER = 'Platzhalter erlaubt: {phone}, {email}, {rating}, {reviews}'
 
 export const kontakt: Collection = {
   name: 'kontakt',
@@ -18,11 +21,11 @@ export const kontakt: Collection = {
   fields: [
     {
       type: 'object', name: 'seo', label: 'SEO', required: true,
-      fields: [str('title', 'Seitentitel'), textarea('description', 'Beschreibung (Google-Snippet)')],
+      fields: [str('title', 'Seitentitel'), textarea('description', 'Beschreibung (Google-Snippet)', PLATZHALTER)],
     },
     {
       type: 'object', name: 'hero', label: 'Kopfbereich', required: true,
-      fields: [str('eyebrow', 'Kleine Überschrift'), str('heading', 'Überschrift'), textarea('text', 'Text')],
+      fields: [str('eyebrow', 'Kleine Überschrift'), str('heading', 'Überschrift'), textarea('text', 'Text', PLATZHALTER)],
     },
     {
       type: 'object', name: 'cards', label: 'Kontaktkarten', required: true,
@@ -36,7 +39,7 @@ export const kontakt: Collection = {
     },
     {
       type: 'object', name: 'form', label: 'Formular', required: true,
-      fields: [str('heading', 'Überschrift'), textarea('text', 'Text')],
+      fields: [str('heading', 'Überschrift'), textarea('text', 'Text', PLATZHALTER)],
     },
   ],
 }

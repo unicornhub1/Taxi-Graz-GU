@@ -26,12 +26,16 @@ describe('deriveAccentPalette', () => {
   })
 
   it('hellt light auf und dunkelt dark ab, Farbton bleibt', () => {
-    const p = deriveAccentPalette('#E8B931')
+    const p = deriveAccentPalette('#2E86DE')
     const base = hexToHsl(p.base), light = hexToHsl(p.light), dark = hexToHsl(p.dark)
     expect(light.l).toBeGreaterThan(base.l)
     expect(dark.l).toBeLessThan(base.l)
     expect(Math.abs(light.h - base.h)).toBeLessThan(2)
     expect(Math.abs(dark.h - base.h)).toBeLessThan(2)
+  })
+
+  it('liefert für die Standardfarbe exakt die Originaltöne', () => {
+    expect(deriveAccentPalette('#e8b931')).toEqual({ base: '#E8B931', light: '#F5D668', dark: '#C99B1D' })
   })
 
   it('clamped an den Rändern', () => {
@@ -45,7 +49,7 @@ describe('accentCssVars', () => {
     const vars = accentCssVars('#E8B931')
     expect(vars['--color-gold']).toBe('#E8B931')
     expect(vars['--accent']).toBe('#E8B931')
-    expect(vars['--color-gold-light']).toMatch(/^#[0-9A-F]{6}$/)
-    expect(vars['--color-gold-dark']).toMatch(/^#[0-9A-F]{6}$/)
+    expect(vars['--color-gold-light']).toBe('#F5D668')
+    expect(vars['--color-gold-dark']).toBe('#C99B1D')
   })
 })

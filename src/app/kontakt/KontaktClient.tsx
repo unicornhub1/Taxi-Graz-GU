@@ -6,7 +6,7 @@ import { Phone, MessageCircle, Mail, MapPin, Clock } from 'lucide-react'
 import { Section } from '@/components/layout/Section'
 import { ContactForm } from '@/components/sections/ContactForm'
 import { useSettings } from '@/components/SettingsProvider'
-import { phoneRaw, whatsappLink } from '@/lib/site'
+import { interpolate, phoneRaw, whatsappLink } from '@/lib/site'
 import { goldGridStyle } from '@/lib/styles'
 import { GoogleMap } from './GoogleMap'
 
@@ -48,7 +48,7 @@ export function KontaktClient(props: KontaktClientProps) {
             className="mx-auto mt-4 max-w-xl text-[var(--color-gray-400)] md:text-lg"
             data-tina-field={tinaField(page.hero, 'text')}
           >
-            {page.hero.text}
+            {interpolate(page.hero.text, settings)}
           </p>
         </div>
       </section>
@@ -164,7 +164,7 @@ export function KontaktClient(props: KontaktClientProps) {
                 className="mt-2 text-[var(--color-gray-500)]"
                 data-tina-field={tinaField(page.form, 'text')}
               >
-                {page.form.text}
+                {interpolate(page.form.text, settings)}
               </p>
               <div className="mt-6">
                 <ContactForm />
