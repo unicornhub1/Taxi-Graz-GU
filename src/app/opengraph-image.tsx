@@ -2,6 +2,9 @@ import { ImageResponse } from 'next/og'
 import client from '@tina/__generated__/client'
 import { deriveAccentPalette } from '@/lib/color'
 
+// ISR: Inhalte zur Laufzeit aus Tina Cloud, Cache alle 60 s bzw. per /api/revalidate (Tina-Webhook).
+export const revalidate = 60
+
 export const alt = 'Taxi Graz GU – 24/7 Taxiservice in Graz & Umgebung'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'

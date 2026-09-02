@@ -1,6 +1,9 @@
 import type { MetadataRoute } from 'next'
 import client from '@tina/__generated__/client'
 
+// ISR: Inhalte zur Laufzeit aus Tina Cloud, Cache alle 60 s bzw. per /api/revalidate (Tina-Webhook).
+export const revalidate = 60
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const { data } = await client.queries.settings({ relativePath: 'site.json' })
   const baseUrl = data.settings.seo.url

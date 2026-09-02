@@ -7,6 +7,9 @@ import { SiteShell } from '@/components/SiteShell'
 import { StructuredData } from '@/components/sections/StructuredData'
 import './globals.css'
 
+// ISR: Inhalte zur Laufzeit aus Tina Cloud, Cache alle 60 s bzw. per /api/revalidate (Tina-Webhook).
+export const revalidate = 60
+
 const loadSettings = () => client.queries.settings({ relativePath: 'site.json' })
 const loadHome = () => client.queries.home({ relativePath: 'home.json' })
 
