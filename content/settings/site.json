@@ -28,11 +28,31 @@
     "defaultTitle": "Taxi Graz | Taxi Graz GU - 24/7 Taxiservice, Flughafentransfer & Stretchlimousinen",
     "description": "Taxi Graz GU – Ihr 24/7 Taxiservice in Graz & Umgebung. Flughafentransfer, Stretchlimousinen, Botenfahrten. ☎ {phone}. {rating}★ Google ({reviews} Bewertungen). Jetzt anrufen!",
     "keywords": [
-      "Taxi Graz", "Taxi Graz GU", "Taxi Graz Flughafen", "Taxi Graz Flughafen Preis", "Flughafentransfer Graz",
-      "Taxi bestellen Graz", "Taxi Graz bestellen", "Stretchlimousine Graz", "Limousine mieten Graz", "Taxi Graz 24h",
-      "Taxi Graz Nummer", "Taxi Graz Telefonnummer", "Taxi Graz Preise", "Taxi Graz Kosten", "Taxiunternehmen Graz",
-      "Taxi Graz Umgebung", "Taxi Graz Andritz", "Taxi Graz Eggenberg", "Taxi Graz Nord", "Taxi Graz Don Bosco",
-      "Taxi Feldkirchen bei Graz", "Taxi Kalsdorf bei Graz", "Taxi Seiersberg", "Taxi Gratkorn", "Botenfahrten Graz",
+      "Taxi Graz",
+      "Taxi Graz GU",
+      "Taxi Graz Flughafen",
+      "Taxi Graz Flughafen Preis",
+      "Flughafentransfer Graz",
+      "Taxi bestellen Graz",
+      "Taxi Graz bestellen",
+      "Stretchlimousine Graz",
+      "Limousine mieten Graz",
+      "Taxi Graz 24h",
+      "Taxi Graz Nummer",
+      "Taxi Graz Telefonnummer",
+      "Taxi Graz Preise",
+      "Taxi Graz Kosten",
+      "Taxiunternehmen Graz",
+      "Taxi Graz Umgebung",
+      "Taxi Graz Andritz",
+      "Taxi Graz Eggenberg",
+      "Taxi Graz Nord",
+      "Taxi Graz Don Bosco",
+      "Taxi Feldkirchen bei Graz",
+      "Taxi Kalsdorf bei Graz",
+      "Taxi Seiersberg",
+      "Taxi Gratkorn",
+      "Botenfahrten Graz",
       "Günstigstes Taxi Graz"
     ]
   },
@@ -45,19 +65,40 @@
   },
   "navigation": {
     "main": [
-      { "label": "Leistungen", "href": "/#leistungen" },
-      { "label": "Service-Gebiete", "href": "/#gebiete" },
-      { "label": "Bewertungen", "href": "/#bewertungen" },
-      { "label": "FAQ", "href": "/#faq" },
-      { "label": "Kontakt", "href": "/kontakt" }
+      {
+        "label": "Leistungen",
+        "href": "/#leistungen"
+      },
+      {
+        "label": "Service-Gebiete",
+        "href": "/#gebiete"
+      },
+      {
+        "label": "Bewertungen",
+        "href": "/#bewertungen"
+      },
+      {
+        "label": "FAQ",
+        "href": "/#faq"
+      },
+      {
+        "label": "Kontakt",
+        "href": "/kontakt"
+      }
     ],
     "legal": [
-      { "label": "Impressum", "href": "/impressum" },
-      { "label": "Datenschutz", "href": "/datenschutz" }
+      {
+        "label": "Impressum",
+        "href": "/impressum"
+      },
+      {
+        "label": "Datenschutz",
+        "href": "/datenschutz"
+      }
     ]
   },
   "labels": {
-    "phone": "Telefon",
+    "phone": "Telefon!",
     "phoneSub": "24/7 erreichbar",
     "whatsapp": "WhatsApp",
     "whatsappSub": "Nachricht senden",
