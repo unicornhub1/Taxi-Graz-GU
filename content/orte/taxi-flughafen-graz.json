@@ -1,0 +1,86 @@
+{
+  "name": "Flughafen Graz",
+  "region": "spezial",
+  "seo": {
+    "title": "Taxi Flughafen Graz – Festpreis & 24/7",
+    "description": "Taxi zum Flughafen Graz und zurück: Festpreise, Abholung zu jeder Uhrzeit, auch für Frühflüge. ☎ {phone}"
+  },
+  "hero": {
+    "badge": "Flughafentransfer 24/7",
+    "headline": "Ihr Taxi zum",
+    "headlineHighlight": "Flughafen Graz",
+    "subline": "Festpreis, pünktlich, rund um die Uhr",
+    "description": "**Flughafentransfer Graz** zum **Festpreis** – wir holen Sie zu Hause ab und bringen Sie direkt vor das Terminal, auch zu Frühflügen und spät in der Nacht."
+  },
+  "local": {
+    "eyebrow": "Taxi Flughafen Graz",
+    "heading": "Entspannt zum Flughafen und wieder nach Hause",
+    "body": "Der Flughafen Graz liegt südlich der Stadt auf dem Gebiet der Gemeinden Feldkirchen bei Graz und Kalsdorf – vom Grazer Hauptplatz sind es knapp 11 Kilometer, ohne Verkehr rund 20 Minuten. Mit dem Taxi fahren Sie ohne Umsteigen von der Haustür direkt vor das Terminal und nach der Landung genauso bequem wieder nach Hause.\n\n### Warum mit dem Taxi zum Flughafen?\n\nZwar hält die S-Bahn am Bahnhof Flughafen Graz-Feldkirchen, einige Minuten Fußweg vom Terminal entfernt. Doch mit schwerem Gepäck, mit Kindern oder zu einem Abflug am frühen Morgen ist die direkte Fahrt deutlich angenehmer. Sie müssen keinen Fahrplan beachten, keinen Parkplatz suchen und keine Parkgebühren bezahlen – wir bringen Sie hin und holen Sie wieder ab.\n\n### Flughafentransfer zum Festpreis\n\nFür Fahrten zum Flughafen Graz bieten wir Festpreise an. Den Preis nennen wir Ihnen vorab, abhängig von Ihrem Abholort – so gibt es am Ende der Fahrt keine Überraschung. Wir fahren aus ganz Graz und dem Bezirk Graz-Umgebung zum Flughafen, etwa aus [Raaba-Grambach](/taxi-raaba-grambach), [Hart bei Graz](/taxi-hart-bei-graz) oder [Gratkorn](/taxi-gratkorn). Bezahlen können Sie bar oder mit Karte.\n\n### Früh- und Nachtflüge\n\nGerade bei Abflügen am frühen Morgen fährt oft noch keine passende Verbindung. Wir sind rund um die Uhr erreichbar – bestellen Sie Ihr Taxi am besten schon am Vortag mit Abholzeit, Adresse und Anzahl der Koffer. Für die Abholung nach der Landung geben Sie uns Ihre Flugnummer und die geplante Ankunftszeit.\n\nAuch Geschäftsreisende und Gäste von Hotels in Graz bringen wir zuverlässig zum Terminal. Für besondere Anlässe steht zudem eine Stretchlimousine zur Verfügung.",
+    "facts": [
+      {
+        "label": "Graz Hauptplatz",
+        "value": "10,8 km · ca. 20 Min."
+      },
+      {
+        "label": "Graz Hauptbahnhof",
+        "value": "9,9 km · ca. 20 Min."
+      },
+      {
+        "label": "Erreichbar",
+        "value": "24/7 – auch für Frühflüge"
+      }
+    ]
+  },
+  "order": {
+    "heading": "So bestellen Sie Ihr Taxi zum Flughafen Graz",
+    "intro": "Am besten reservieren Sie Ihren Flughafentransfer schon am Vortag – rund um die Uhr unter {phone} oder per WhatsApp.",
+    "steps": [
+      {
+        "title": "Flug und Abholzeit nennen",
+        "text": "Sagen Sie uns Ihr Abflugdatum, die gewünschte Abholzeit und wie viele Personen und Koffer mitfahren."
+      },
+      {
+        "title": "Festpreis erhalten",
+        "text": "Wir nennen Ihnen den Festpreis für Ihre Strecke zum Flughafen Graz und bestätigen die Abholung."
+      },
+      {
+        "title": "Abholung vor der Haustür",
+        "text": "Zur vereinbarten Zeit stehen wir vor Ihrer Tür und bringen Sie direkt vor das Terminal. Bezahlt wird bar oder mit Karte."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "heading": "Taxi Flughafen Graz – häufige Fragen",
+    "items": [
+      {
+        "question": "Was kostet ein Taxi zum Flughafen Graz?",
+        "answer": "Für Flughafentransfers bieten wir Festpreise an. Der Preis hängt von Ihrem Abholort ab – rufen Sie uns unter {phone} an, und wir nennen Ihnen den Preis vorab."
+      },
+      {
+        "question": "Wie lange dauert die Fahrt vom Grazer Zentrum zum Flughafen?",
+        "answer": "Vom Hauptplatz sind es knapp 11 Kilometer, ohne Verkehr etwa 20 Minuten. Planen Sie im Berufsverkehr etwas mehr Zeit ein."
+      },
+      {
+        "question": "Holen Sie mich auch am Flughafen Graz ab?",
+        "answer": "Ja. Geben Sie uns bei der Bestellung Ihre Flugnummer und die geplante Ankunftszeit, dann holen wir Sie am Terminal ab und bringen Sie nach Hause oder ins Hotel."
+      },
+      {
+        "question": "Kann ich ein Taxi für einen Frühflug bestellen?",
+        "answer": "Ja, wir sind rund um die Uhr erreichbar. Für Abflüge am frühen Morgen empfehlen wir, das Taxi schon am Vortag zu reservieren."
+      }
+    ]
+  },
+  "nearbyIntro": "Zum Flughafen fahren wir aus ganz Graz und Graz-Umgebung – besonders häufig aus den Gemeinden südöstlich der Stadt.",
+  "nearby": [
+    {
+      "ort": "content/orte/taxi-raaba-grambach.json"
+    },
+    {
+      "ort": "content/orte/taxi-hart-bei-graz.json"
+    },
+    {
+      "ort": "content/orte/taxi-vasoldsberg.json"
+    }
+  ]
+}

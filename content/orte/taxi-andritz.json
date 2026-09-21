@@ -1,0 +1,86 @@
+{
+  "name": "Andritz",
+  "region": "graz-stadt",
+  "seo": {
+    "title": "Taxi Graz-Andritz – 24/7 & Flughafen",
+    "description": "Taxi Graz-Andritz rund um die Uhr: schnell in die Innenstadt, zum Hauptbahnhof und zum Flughafen Graz. ☎ {phone}"
+  },
+  "hero": {
+    "badge": "24/7 in Andritz",
+    "headline": "Ihr Taxi in",
+    "headlineHighlight": "Graz-Andritz",
+    "subline": "Im Grazer Norden rund um die Uhr",
+    "description": "**Taxi Graz-Andritz** – vom Andritzer Hauptplatz in die **Innenstadt**, zum **Hauptbahnhof** oder zum **Flughafen Graz**."
+  },
+  "local": {
+    "eyebrow": "Taxi Graz-Andritz",
+    "heading": "Ihr Taxi im Grazer Norden",
+    "body": "Andritz ist der 12. Grazer Stadtbezirk und liegt ganz im Norden der Stadt. Zum Bezirk gehören neben Ober- und Unterandritz auch St. Veit, Schattleiten und Weinitzen – vom belebten Zentrum rund um den Andritzer Hauptplatz bis zu den ruhigen Wohngebieten am Stadtrand.\n\n### Wann das Taxi praktischer ist\n\nTagsüber verbinden die Straßenbahnlinien 3 und 5 Andritz mit der Innenstadt. Doch nachts, mit Gepäck, nach einem Arztbesuch oder wenn Sie aus den Randlagen kommen, ist das Taxi oft die bessere Wahl: Wir holen Sie direkt vor der Haustür ab, ohne Umsteigen und ohne Warten an der Haltestelle.\n\n### Kurze Wege in die Stadt\n\nBis zum Hauptplatz sind es rund 4 Kilometer, ohne Verkehr etwa 10 Minuten. Zum Hauptbahnhof sind es gut 5 Kilometer – ideal für den frühen Zug oder die späte Ankunft. Auch Fahrten zu Veranstaltungen, zum Einkaufen oder zurück nach einem Abend in der Innenstadt übernehmen wir gerne, ebenso Fahrten ins benachbarte [Gratkorn](/taxi-gratkorn).\n\nAndritz ist auch ein Wirtschaftsstandort: 1852 wurde hier das Technologieunternehmen Andritz AG gegründet, das bis heute den Namen des Bezirks trägt. Für Geschäftsgäste, die vom Hauptbahnhof oder vom Flughafen kommen, ist das Taxi die direkte Verbindung – gerne bestellen Sie die Fahrt auch für Ihre Besucherinnen und Besucher. Und auch für den Weg zu Terminen in den Grazer Kliniken sind wir da.\n\n### Zum Flughafen Graz\n\nVon Andritz zum Flughafen sind es knapp 15 Kilometer quer durch die Stadt. Für den [Flughafentransfer](/taxi-flughafen-graz) bieten wir Festpreise an, die wir Ihnen vorab nennen. Wir sind rund um die Uhr erreichbar, und Sie bezahlen bar oder mit Karte.",
+    "facts": [
+      {
+        "label": "Graz Hauptplatz",
+        "value": "4,2 km · ca. 10 Min."
+      },
+      {
+        "label": "Graz Hauptbahnhof",
+        "value": "5,3 km · ca. 10 Min."
+      },
+      {
+        "label": "Flughafen Graz",
+        "value": "14,9 km · ca. 25 Min."
+      }
+    ]
+  },
+  "order": {
+    "heading": "So bestellen Sie Ihr Taxi in Graz-Andritz",
+    "intro": "Vom Hauptplatz bis an den Stadtrand: Ihr Taxi in Andritz ist in drei Schritten bestellt – rund um die Uhr unter {phone}.",
+    "steps": [
+      {
+        "title": "Anrufen oder WhatsApp",
+        "text": "Rufen Sie uns an oder schreiben Sie eine WhatsApp-Nachricht – auch mitten in der Nacht."
+      },
+      {
+        "title": "Abholort in Andritz nennen",
+        "text": "Nennen Sie uns Ihre Adresse in Andritz, die gewünschte Uhrzeit und wie viele Personen mitfahren."
+      },
+      {
+        "title": "Direkt ans Ziel",
+        "text": "Wir holen Sie vor der Tür ab und fahren Sie ohne Umwege ans Ziel. Bezahlt wird bar oder mit Karte."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "heading": "Taxi Graz-Andritz – häufige Fragen",
+    "items": [
+      {
+        "question": "Wie schnell bin ich mit dem Taxi von Andritz in der Innenstadt?",
+        "answer": "Bis zum Hauptplatz sind es rund 4 Kilometer, ohne Verkehr etwa 10 Minuten."
+      },
+      {
+        "question": "Fahren Sie auch nachts nach Andritz?",
+        "answer": "Ja, wir sind rund um die Uhr erreichbar und bringen Sie auch spät in der Nacht nach Hause. Bestellen Sie unter {phone}."
+      },
+      {
+        "question": "Was kostet ein Taxi von Andritz zum Flughafen Graz?",
+        "answer": "Für Flughafentransfers bieten wir Festpreise an. Die Strecke ist knapp 15 Kilometer lang – wir nennen Ihnen den Preis vorab."
+      },
+      {
+        "question": "Holen Sie mich auch in St. Veit oder Weinitzen ab?",
+        "answer": "Ja, wir fahren im ganzen Bezirk Andritz, auch in die Randlagen wie St. Veit, Schattleiten oder Weinitzen."
+      }
+    ]
+  },
+  "nearbyIntro": "Im Grazer Norden sind wir auch in Gösting, Mariatrost und in Gratkorn für Sie unterwegs.",
+  "nearby": [
+    {
+      "ort": "content/orte/taxi-goesting.json"
+    },
+    {
+      "ort": "content/orte/taxi-mariatrost.json"
+    },
+    {
+      "ort": "content/orte/taxi-gratkorn.json"
+    }
+  ]
+}

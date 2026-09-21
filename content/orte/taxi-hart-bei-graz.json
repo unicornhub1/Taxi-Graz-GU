@@ -1,0 +1,86 @@
+{
+  "name": "Hart bei Graz",
+  "region": "graz-umgebung",
+  "seo": {
+    "title": "Taxi Hart bei Graz – 24/7 & Flughafen",
+    "description": "Taxi Hart bei Graz und Pachern rund um die Uhr: nach Graz, zum Hauptbahnhof und Flughafen, Festpreise auf Anfrage. ☎ {phone}"
+  },
+  "hero": {
+    "badge": "24/7 in Hart bei Graz",
+    "headline": "Ihr Taxi in",
+    "headlineHighlight": "Hart bei Graz",
+    "subline": "Auch in Pachern und Umgebung",
+    "description": "**Taxi Hart bei Graz** – schnell nach Graz, zum **Hauptbahnhof** oder zum **Flughafen Graz**, mit Festpreisen für Flughafentransfers."
+  },
+  "local": {
+    "eyebrow": "Taxi Hart bei Graz",
+    "heading": "Unterwegs in Hart bei Graz, Pachern und Umgebung",
+    "body": "Hart bei Graz grenzt im Osten direkt an die Landeshauptstadt. Viele Wege führen von hier täglich nach Graz – zur Arbeit, zum Einkaufen, zu Terminen oder am Abend in die Innenstadt. Wir holen Sie überall in der Gemeinde ab: im Ortszentrum ebenso wie in Pachern, Autal, Hohenrain, Reintal, Sternleiten oder am Klinzelweg.\n\n### Von Hart bei Graz in die Stadt\n\nBis zum Grazer Hauptplatz sind es rund 11 Kilometer, ohne Verkehr etwa 20 Minuten. Ähnlich weit ist es zum Hauptbahnhof – praktisch, wenn Sie früh am Morgen einen Zug erreichen müssen oder spätabends mit Gepäck zurückkommen und nicht umsteigen möchten. Auch für Fahrten zu Arztterminen, ins Krankenhaus oder zu Veranstaltungen in Graz ist das Taxi die bequeme Lösung.\n\nDie Gemeinde besteht aus den Katastralgemeinden Hart bei St. Peter und Messendorf, die direkt an den Grazer Bezirk St. Peter grenzen. Entsprechend kurz sind die Wege in den Grazer Osten – etwa zu Terminen, zum Einkaufen oder zu Freunden in der Stadt.\n\n### Nah am Flughafen Graz\n\nVon Hart bei Graz zum Flughafen sind es gut 11 Kilometer, ohne Verkehr rund 15 Minuten. Für den [Flughafentransfer](/taxi-flughafen-graz) nennen wir Ihnen vorab einen Festpreis. Bei Frühflügen bestellen Sie am besten schon am Vortag – wir sind rund um die Uhr erreichbar und stehen zur vereinbarten Zeit vor Ihrer Tür.\n\n### Taxi für Pachern\n\nPachern gehört zur Gemeinde Hart bei Graz, und auch hier sind wir für Sie unterwegs – ob für eine einzelne Fahrt nach Graz, eine Botenfahrt oder die Abholung vom Bahnhof. Nennen Sie uns einfach Ihre Adresse, die gewünschte Uhrzeit und die Anzahl der Personen. Bezahlen können Sie bar oder mit Karte.",
+    "facts": [
+      {
+        "label": "Graz Hauptplatz",
+        "value": "11,1 km · ca. 20 Min."
+      },
+      {
+        "label": "Graz Hauptbahnhof",
+        "value": "11,2 km · ca. 20 Min."
+      },
+      {
+        "label": "Flughafen Graz",
+        "value": "11,2 km · ca. 15 Min."
+      }
+    ]
+  },
+  "order": {
+    "heading": "So bestellen Sie Ihr Taxi in Hart bei Graz",
+    "intro": "Ob sofort, später am Tag oder für den Flug am nächsten Morgen: Ihr Taxi in Hart bei Graz ist in drei Schritten bestellt – unter {phone}.",
+    "steps": [
+      {
+        "title": "Anrufen oder WhatsApp",
+        "text": "Rufen Sie uns an oder schreiben Sie uns per WhatsApp – wir sind Tag und Nacht erreichbar."
+      },
+      {
+        "title": "Adresse in Hart oder Pachern nennen",
+        "text": "Nennen Sie uns Ihre Abholadresse in Hart bei Graz oder Pachern, die Uhrzeit und die Anzahl der Personen."
+      },
+      {
+        "title": "Losfahren",
+        "text": "Wir holen Sie ab und fahren Sie ans Ziel, ob nach Graz, zum Hauptbahnhof oder zum Flughafen. Bezahlen können Sie bar oder mit Karte."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "heading": "Taxi Hart bei Graz – häufige Fragen",
+    "items": [
+      {
+        "question": "Fahren Sie auch nach Pachern?",
+        "answer": "Ja. Pachern gehört zur Gemeinde Hart bei Graz, und wir holen Sie dort genauso ab wie im Ortszentrum. Bestellen Sie einfach unter {phone}."
+      },
+      {
+        "question": "Was kostet ein Taxi von Hart bei Graz zum Flughafen?",
+        "answer": "Für Flughafentransfers bieten wir Festpreise an. Die Strecke ist gut 11 Kilometer lang – rufen Sie uns an, und wir nennen Ihnen den Preis vorab."
+      },
+      {
+        "question": "Wie lange brauche ich von Hart bei Graz in die Grazer Innenstadt?",
+        "answer": "Bis zum Hauptplatz sind es rund 11 Kilometer, ohne Verkehr etwa 20 Minuten. Im Berufsverkehr kann die Fahrt länger dauern."
+      },
+      {
+        "question": "Kann ich mit Karte bezahlen?",
+        "answer": "Ja, Sie können bar oder mit Karte bezahlen – mit Bankomatkarte, Visa, Mastercard oder kontaktlos."
+      }
+    ]
+  },
+  "nearbyIntro": "Rund um Hart bei Graz sind wir auch in Raaba-Grambach, Vasoldsberg und im Grazer Osten für Sie unterwegs.",
+  "nearby": [
+    {
+      "ort": "content/orte/taxi-raaba-grambach.json"
+    },
+    {
+      "ort": "content/orte/taxi-ragnitz.json"
+    },
+    {
+      "ort": "content/orte/taxi-vasoldsberg.json"
+    }
+  ]
+}

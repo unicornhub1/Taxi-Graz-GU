@@ -1,0 +1,86 @@
+{
+  "name": "Mariatrost",
+  "region": "graz-stadt",
+  "seo": {
+    "title": "Taxi Graz-Mariatrost – 24/7 & Flughafen",
+    "description": "Taxi Graz-Mariatrost rund um die Uhr: zur Basilika, in die Innenstadt, zum Hauptbahnhof und zum Flughafen. ☎ {phone}"
+  },
+  "hero": {
+    "badge": "24/7 in Mariatrost",
+    "headline": "Ihr Taxi in",
+    "headlineHighlight": "Graz-Mariatrost",
+    "subline": "Rund um die Basilika und darüber hinaus",
+    "description": "**Taxi Graz-Mariatrost** – von der **Basilika** und den Wohngebieten im Grazer Nordosten in die **Innenstadt**, zum **Hauptbahnhof** oder zum **Flughafen**."
+  },
+  "local": {
+    "eyebrow": "Taxi Graz-Mariatrost",
+    "heading": "Ihr Taxi im Grazer Nordosten",
+    "body": "Mariatrost ist der 11. Grazer Stadtbezirk und liegt im Nordosten der Stadt, eingebettet in grüne Hügel. Wahrzeichen ist die Basilika Mariatrost, eine der bekanntesten Wallfahrtskirchen der Steiermark, hoch über dem Tal. An der Endstation der Straßenbahnlinie 1 befindet sich zudem das Tramway Museum Graz in der ehemaligen Remise der Kleinbahn Graz–Mariatrost.\n\n### Hochzeit, Taufe oder Besuch\n\nOb Hochzeit, Taufe oder Gottesdienst in der Basilika: Wir bringen Sie und Ihre Gäste hin und nach der Feier sicher nach Hause. Für Brautpaare bieten wir auf Wunsch auch eine Stretchlimousine an. Auch für Besuche und Ausflüge zum Tramway Museum sind wir gerne Ihr Fahrdienst.\n\nDas Tramway Museum zeigt fast 40 historische Straßenbahnfahrzeuge aus Graz und anderen Städten – ein schönes Ausflugsziel für Familien. Wer von außerhalb anreist, kommt mit dem Taxi direkt vom Hauptbahnhof oder vom Hotel ohne Umsteigen ans Ziel. Und für Besucherinnen und Besucher der Basilika, die nicht gut zu Fuß sind, ist die Fahrt bis nah an die Kirche besonders praktisch.\n\n### Von Mariatrost in die Stadt\n\nBis zum Hauptplatz sind es gut 6 Kilometer, zum Hauptbahnhof knapp 7 – ohne Verkehr jeweils etwa 15 Minuten. Tagsüber fährt die Linie 1 in die Innenstadt; nachts, mit Gepäck oder aus den höher gelegenen Wohngebieten ist das Taxi oft die bequemere Lösung. Auch in die benachbarte [Ragnitz](/taxi-ragnitz) und nach Andritz sind wir schnell unterwegs.\n\n### Zum Flughafen Graz\n\nZum Flughafen sind es rund 18 Kilometer quer durch die Stadt. Für den [Flughafentransfer](/taxi-flughafen-graz) bieten wir Festpreise an, die wir Ihnen vorab nennen. Wir sind rund um die Uhr erreichbar, und Sie bezahlen bar oder mit Karte.",
+    "facts": [
+      {
+        "label": "Graz Hauptplatz",
+        "value": "6,2 km · ca. 15 Min."
+      },
+      {
+        "label": "Graz Hauptbahnhof",
+        "value": "6,7 km · ca. 15 Min."
+      },
+      {
+        "label": "Flughafen Graz",
+        "value": "18,4 km · ca. 30 Min."
+      }
+    ]
+  },
+  "order": {
+    "heading": "So bestellen Sie Ihr Taxi in Graz-Mariatrost",
+    "intro": "Für den Gottesdienst, die Feier oder den Heimweg: Ihr Taxi in Mariatrost ist in drei Schritten bestellt – rund um die Uhr unter {phone}.",
+    "steps": [
+      {
+        "title": "Anrufen oder schreiben",
+        "text": "Rufen Sie uns an oder schreiben Sie per WhatsApp – bei Hochzeiten und Feiern gerne schon einige Tage vorher."
+      },
+      {
+        "title": "Abholort in Mariatrost nennen",
+        "text": "Nennen Sie uns Ihre Adresse oder den Treffpunkt, etwa an der Basilika, dazu Uhrzeit und Personenzahl."
+      },
+      {
+        "title": "Sicher ankommen",
+        "text": "Wir holen Sie ab und bringen Sie ans Ziel, ob in die Innenstadt, zum Hauptbahnhof oder nach Hause. Bezahlt wird bar oder mit Karte."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "heading": "Taxi Graz-Mariatrost – häufige Fragen",
+    "items": [
+      {
+        "question": "Bringen Sie Hochzeitsgäste von der Basilika Mariatrost nach Hause?",
+        "answer": "Ja. Sagen Sie uns Datum, Uhrzeit und die ungefähre Zahl der Gäste – wir planen die Fahrten gerne im Voraus. Erreichbar sind wir unter {phone}."
+      },
+      {
+        "question": "Gibt es auch eine Stretchlimousine für die Hochzeit?",
+        "answer": "Ja, für besondere Anlässe wie Hochzeiten bieten wir Stretchlimousinen an. Kontaktieren Sie uns für ein Angebot."
+      },
+      {
+        "question": "Wie lange dauert die Fahrt von Mariatrost in die Innenstadt?",
+        "answer": "Bis zum Hauptplatz sind es gut 6 Kilometer, ohne Verkehr etwa 15 Minuten."
+      },
+      {
+        "question": "Was kostet ein Taxi von Mariatrost zum Flughafen Graz?",
+        "answer": "Für Flughafentransfers bieten wir Festpreise an. Rufen Sie uns an, und wir nennen Ihnen den Preis vorab."
+      }
+    ]
+  },
+  "nearbyIntro": "Im Grazer Nordosten sind wir auch in Ragnitz, Andritz und Gösting für Sie unterwegs.",
+  "nearby": [
+    {
+      "ort": "content/orte/taxi-ragnitz.json"
+    },
+    {
+      "ort": "content/orte/taxi-andritz.json"
+    },
+    {
+      "ort": "content/orte/taxi-goesting.json"
+    }
+  ]
+}

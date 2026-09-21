@@ -1,0 +1,86 @@
+{
+  "name": "Eggenberg",
+  "region": "graz-stadt",
+  "seo": {
+    "title": "Taxi Graz-Eggenberg – 24/7 & Flughafen",
+    "description": "Taxi Graz-Eggenberg rund um die Uhr: in wenigen Minuten zum Hauptbahnhof, in die Innenstadt und zum Flughafen. ☎ {phone}"
+  },
+  "hero": {
+    "badge": "24/7 in Eggenberg",
+    "headline": "Ihr Taxi in",
+    "headlineHighlight": "Graz-Eggenberg",
+    "subline": "Nah am Hauptbahnhof",
+    "description": "**Taxi Graz-Eggenberg** – in wenigen Minuten zum **Hauptbahnhof**, in die **Innenstadt** oder zum **Flughafen Graz**, rund um die Uhr."
+  },
+  "local": {
+    "eyebrow": "Taxi Graz-Eggenberg",
+    "heading": "Ihr Taxi im Grazer Westen",
+    "body": "Eggenberg ist der 14. Grazer Stadtbezirk und liegt im Westen der Stadt. Bekannt ist der Bezirk vor allem für Schloss Eggenberg an der Eggenberger Allee – die barocke Schlossanlage gehört seit 2010 gemeinsam mit der Grazer Altstadt zum UNESCO-Welterbe. Rundherum liegen vor allem Wohnviertel, die gut an die Innenstadt angebunden sind.\n\n### Nah am Hauptbahnhof\n\nKaum ein Bezirk liegt so nah am Grazer Hauptbahnhof: Gut 2 Kilometer sind es, ohne Verkehr nur rund 5 Minuten. Wer mit Koffer oder Kinderwagen unterwegs ist, einen frühen Zug erreichen muss oder spät in der Nacht ankommt, fährt mit dem Taxi bequem direkt vor die Haustür.\n\nKommen Sie mit dem Zug in Graz an und wohnen in Eggenberg, rufen Sie uns an, sobald Sie wissen, wann Ihr Zug ankommt – wir holen Sie am Hauptbahnhof ab und sind in wenigen Minuten mit Ihnen zu Hause. Das gilt genauso für Gäste, die Sie vom Zug abholen lassen möchten.\n\n### Besuch im Schloss Eggenberg\n\nAuch Gäste, die Schloss Eggenberg und den Schlosspark besuchen, bringen wir hin und holen sie wieder ab – etwa vom Hotel, vom Bahnhof oder aus der Innenstadt. Bis zum Hauptplatz sind es rund 4 Kilometer, ohne Verkehr etwa 10 Minuten. Für Ausflüge ins westliche Umland, etwa nach [Hitzendorf](/taxi-hitzendorf), sind wir ebenfalls Ihr Fahrdienst.\n\n### Zum Flughafen Graz\n\nZum Flughafen fahren Sie von Eggenberg rund 11,5 Kilometer. Für den [Flughafentransfer](/taxi-flughafen-graz) bieten wir Festpreise an – den Preis nennen wir Ihnen vorab. Wir sind rund um die Uhr erreichbar, und Sie bezahlen bar oder mit Karte.",
+    "facts": [
+      {
+        "label": "Graz Hauptplatz",
+        "value": "4 km · ca. 10 Min."
+      },
+      {
+        "label": "Graz Hauptbahnhof",
+        "value": "2,3 km · ca. 5 Min."
+      },
+      {
+        "label": "Flughafen Graz",
+        "value": "11,5 km · ca. 20 Min."
+      }
+    ]
+  },
+  "order": {
+    "heading": "So bestellen Sie Ihr Taxi in Graz-Eggenberg",
+    "intro": "Ob zum Zug, ins Schloss oder nach Hause: Ihr Taxi in Eggenberg ist in drei Schritten bestellt – rund um die Uhr unter {phone}.",
+    "steps": [
+      {
+        "title": "Anrufen oder schreiben",
+        "text": "Rufen Sie uns an oder schreiben Sie per WhatsApp – wir sind rund um die Uhr erreichbar."
+      },
+      {
+        "title": "Abholort nennen",
+        "text": "Nennen Sie uns Ihre Adresse in Eggenberg oder den Treffpunkt, etwa am Schloss, dazu Uhrzeit und Personenzahl."
+      },
+      {
+        "title": "Losfahren",
+        "text": "Wir holen Sie ab und bringen Sie ans Ziel, ob zum Hauptbahnhof, in die Innenstadt oder zum Flughafen. Bezahlt wird bar oder mit Karte."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "heading": "Taxi Graz-Eggenberg – häufige Fragen",
+    "items": [
+      {
+        "question": "Wie lange dauert die Fahrt von Eggenberg zum Hauptbahnhof?",
+        "answer": "Die Strecke ist gut 2 Kilometer lang, ohne Verkehr rund 5 Minuten."
+      },
+      {
+        "question": "Fahren Sie auch zum Schloss Eggenberg?",
+        "answer": "Ja. Wir bringen Sie zum Schloss Eggenberg an der Eggenberger Allee und holen Sie nach Ihrem Besuch auf Wunsch wieder ab. Bestellen Sie unter {phone}."
+      },
+      {
+        "question": "Was kostet ein Taxi von Eggenberg zum Flughafen Graz?",
+        "answer": "Für Flughafentransfers bieten wir Festpreise an. Rufen Sie uns an, und wir nennen Ihnen den Preis vorab."
+      },
+      {
+        "question": "Kann ich mit Karte bezahlen?",
+        "answer": "Ja, Sie bezahlen bar oder mit Karte – Bankomatkarte, Visa, Mastercard oder kontaktlos."
+      }
+    ]
+  },
+  "nearbyIntro": "Im Grazer Westen und Norden sind wir auch in Gösting, Andritz und in Hitzendorf für Sie unterwegs.",
+  "nearby": [
+    {
+      "ort": "content/orte/taxi-goesting.json"
+    },
+    {
+      "ort": "content/orte/taxi-andritz.json"
+    },
+    {
+      "ort": "content/orte/taxi-hitzendorf.json"
+    }
+  ]
+}

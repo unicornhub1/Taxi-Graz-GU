@@ -1,0 +1,86 @@
+{
+  "name": "Raaba-Grambach",
+  "region": "graz-umgebung",
+  "seo": {
+    "title": "Taxi Raaba-Grambach – 24/7 & Flughafen",
+    "description": "Taxi Raaba-Grambach rund um die Uhr: nach Graz, zum Flughafen und zu Geschäftsterminen, Festpreise auf Anfrage. ☎ {phone}"
+  },
+  "hero": {
+    "badge": "24/7 in Raaba-Grambach",
+    "headline": "Ihr Taxi in",
+    "headlineHighlight": "Raaba-Grambach",
+    "subline": "Für Beruf, Alltag und Flughafen",
+    "description": "**Taxi Raaba-Grambach** – schnell zum **Flughafen Graz**, in die Stadt oder zum nächsten **Geschäftstermin**, rund um die Uhr."
+  },
+  "local": {
+    "eyebrow": "Taxi Raaba-Grambach",
+    "heading": "Ihr Taxi zwischen Raaba, Grambach und Graz",
+    "body": "Raaba-Grambach liegt südöstlich direkt an der Grazer Stadtgrenze und ist 2015 aus den Gemeinden Raaba und Grambach entstanden. Hier treffen Wohngebiete auf Betriebe und Büros – der Technologiepark in Grambach und die Anbindung an die A2 Südautobahn machen die Gemeinde zu einem wichtigen Wirtschaftsstandort im Grazer Umland.\n\n### Geschäftsfahrten und Termine\n\nViele Fahrten in Raaba-Grambach sind beruflich: Kundinnen und Kunden, die zu einem Termin gebracht werden, Mitarbeitende auf dem Weg zum Bahnhof oder Gäste, die vom Flughafen kommen. Wir holen Sie direkt beim Betrieb ab und fahren Sie ans Ziel. Auch Botenfahrten für Dokumente oder kleine Pakete übernehmen wir – schnell und zuverlässig.\n\nFür Betriebe im Technologiepark und in den Gewerbegebieten übernehmen wir auch wiederkehrende Fahrten: Mitarbeitende zum Bahnhof, Gäste vom Flughafen, Unterlagen zum Kunden. Rufen Sie uns an, wenn Sie regelmäßige Fahrten planen – wir besprechen gerne, wie wir Sie am besten unterstützen.\n\n### Kurzer Weg zum Flughafen Graz\n\nVon Raaba-Grambach zum Flughafen Graz sind es nur rund 9,5 Kilometer, ohne Verkehr etwa 15 Minuten. Für den [Flughafentransfer](/taxi-flughafen-graz) bieten wir Festpreise an, die wir Ihnen vorab nennen. Für Frühflüge reservieren Sie am besten schon am Vortag.\n\n### In die Grazer Innenstadt\n\nBis zum Hauptplatz sind es knapp 12 Kilometer, zum Hauptbahnhof ebenso – ohne Verkehr jeweils etwa 20 Minuten. Ob Arzttermin, Einkauf oder ein Abend in der Stadt: Wir sind rund um die Uhr erreichbar, holen Sie vor der Haustür ab, und Sie bezahlen bar oder mit Karte.\n\nÜber die Anschlussstelle Graz-Ost an der A2 sind wir von Raaba-Grambach aus schnell in beide Richtungen unterwegs.",
+    "facts": [
+      {
+        "label": "Graz Hauptplatz",
+        "value": "11,7 km · ca. 20 Min."
+      },
+      {
+        "label": "Graz Hauptbahnhof",
+        "value": "11,8 km · ca. 20 Min."
+      },
+      {
+        "label": "Flughafen Graz",
+        "value": "9,5 km · ca. 15 Min."
+      }
+    ]
+  },
+  "order": {
+    "heading": "So bestellen Sie Ihr Taxi in Raaba-Grambach",
+    "intro": "Für Sie privat oder für Ihre Gäste: Ihr Taxi in Raaba-Grambach ist in drei Schritten bestellt – rund um die Uhr unter {phone}.",
+    "steps": [
+      {
+        "title": "Anrufen oder WhatsApp",
+        "text": "Rufen Sie uns an oder schreiben Sie uns eine WhatsApp-Nachricht – auch für Fahrten, die Sie für Gäste oder Kunden bestellen."
+      },
+      {
+        "title": "Abholort in Raaba-Grambach nennen",
+        "text": "Nennen Sie uns die Adresse – Wohnung, Büro oder Betrieb –, die Uhrzeit und die Anzahl der Personen."
+      },
+      {
+        "title": "Pünktlich ans Ziel",
+        "text": "Wir holen Sie zur vereinbarten Zeit ab und bringen Sie zum Flughafen, nach Graz oder zum nächsten Termin. Bezahlt wird bar oder mit Karte."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "heading": "Taxi Raaba-Grambach – häufige Fragen",
+    "items": [
+      {
+        "question": "Was kostet ein Taxi von Raaba-Grambach zum Flughafen Graz?",
+        "answer": "Für Flughafentransfers bieten wir Festpreise an. Die Strecke ist rund 9,5 Kilometer lang – rufen Sie uns unter {phone} an, und wir nennen Ihnen den Preis vorab."
+      },
+      {
+        "question": "Kann ich ein Taxi für Geschäftspartner oder Gäste bestellen?",
+        "answer": "Ja. Nennen Sie uns Name, Abholort und Uhrzeit – wir holen Ihre Gäste ab und bringen sie ans Ziel."
+      },
+      {
+        "question": "Übernehmen Sie auch Botenfahrten?",
+        "answer": "Ja, wir übernehmen Botenfahrten in Graz und Umgebung – etwa für Dokumente, Pakete oder Medikamente."
+      },
+      {
+        "question": "Wie lange dauert die Fahrt von Raaba-Grambach nach Graz?",
+        "answer": "Bis zum Hauptplatz sind es knapp 12 Kilometer, ohne Verkehr etwa 20 Minuten."
+      }
+    ]
+  },
+  "nearbyIntro": "Rund um Raaba-Grambach sind wir auch in Hart bei Graz, Vasoldsberg und am Flughafen Graz für Sie unterwegs.",
+  "nearby": [
+    {
+      "ort": "content/orte/taxi-hart-bei-graz.json"
+    },
+    {
+      "ort": "content/orte/taxi-vasoldsberg.json"
+    },
+    {
+      "ort": "content/orte/taxi-flughafen-graz.json"
+    }
+  ]
+}

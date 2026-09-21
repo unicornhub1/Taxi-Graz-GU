@@ -1,0 +1,86 @@
+{
+  "name": "Gratkorn",
+  "region": "graz-umgebung",
+  "seo": {
+    "title": "Taxi Gratkorn – 24/7 & Flughafentransfer",
+    "description": "Taxi Gratkorn rund um die Uhr: Fahrten nach Graz, zum Hauptbahnhof und Flughafen, Festpreise auf Anfrage. ☎ {phone}"
+  },
+  "hero": {
+    "badge": "24/7 in Gratkorn unterwegs",
+    "headline": "Ihr Taxi in",
+    "headlineHighlight": "Gratkorn",
+    "subline": "Rund um die Uhr – Tag und Nacht",
+    "description": "**Taxi Gratkorn** für Fahrten nach Graz, zum **Hauptbahnhof** und zum **Flughafen Graz** – mit Festpreisen für Flughafentransfers und Kartenzahlung im Fahrzeug."
+  },
+  "local": {
+    "eyebrow": "Taxi Gratkorn",
+    "heading": "Ihr Taxi zwischen Gratkorn, Mur und Graz",
+    "body": "Gratkorn liegt direkt nördlich von Graz im Murtal – nah genug an der Landeshauptstadt, dass viele Wege täglich hin und zurück führen, und doch so weit draußen, dass abends oder nachts nicht immer eine passende Verbindung fährt. Genau dafür sind wir da: Taxi Graz GU holt Sie in Gratkorn ab, ob im Ortszentrum, in der Nähe des Sappi-Werks an der Mur oder in den Siedlungen am Ortsrand, und bringt Sie sicher ans Ziel.\n\n### Typische Fahrten ab Gratkorn\n\nDie Strecke ins Grazer Zentrum ist rund 11 Kilometer lang, bis zum Hauptplatz sind Sie ohne Verkehr in etwa 20 Minuten. Zum Grazer Hauptbahnhof sind es gut 10 Kilometer – praktisch, wenn Sie einen frühen Zug erreichen müssen oder spätabends mit Gepäck ankommen. Zwar gibt es mit dem Bahnhof Gratwein-Gratkorn eine S-Bahn-Verbindung, doch der Bahnhof liegt in der Nachbargemeinde Gratwein, und gerade nachts oder mit Koffern ist das Taxi oft die entspanntere Lösung.\n\nHäufig gefragt sind außerdem Fahrten zu Arztterminen und ins Krankenhaus nach Graz, zum Einkaufen, zu Veranstaltungen in der Stadt und nach einem Abend in Graz wieder zurück nach Gratkorn. Über die A9 Pyhrnautobahn mit den Anschlussstellen Gratkorn-Nord und Gratkorn-Süd sind wir in beide Richtungen schnell unterwegs.\n\n### Flughafentransfer von Gratkorn\n\nZum Flughafen Graz sind es von Gratkorn rund 21 Kilometer. Für den [Flughafentransfer](/taxi-flughafen-graz) bieten wir Festpreise an – so wissen Sie vorher, was die Fahrt kostet. Bestellen Sie Ihr Taxi am besten schon am Vortag, besonders bei Frühflügen: Wir sind rund um die Uhr erreichbar und holen Sie pünktlich zu Hause ab.",
+    "facts": [
+      {
+        "label": "Graz Hauptplatz",
+        "value": "11,3 km · ca. 20 Min."
+      },
+      {
+        "label": "Graz Hauptbahnhof",
+        "value": "10,4 km · ca. 15 Min."
+      },
+      {
+        "label": "Flughafen Graz",
+        "value": "21,4 km · ca. 25 Min."
+      }
+    ]
+  },
+  "order": {
+    "heading": "So bestellen Sie Ihr Taxi in Gratkorn",
+    "intro": "Ob sofort oder für den nächsten Morgen: Ihr Taxi in Gratkorn ist in drei Schritten bestellt – rund um die Uhr unter {phone}.",
+    "steps": [
+      {
+        "title": "Anrufen oder schreiben",
+        "text": "Rufen Sie uns an oder schicken Sie eine WhatsApp-Nachricht. Wir sind 24 Stunden am Tag, 7 Tage die Woche erreichbar."
+      },
+      {
+        "title": "Abholort in Gratkorn nennen",
+        "text": "Sagen Sie uns Ihre Adresse in Gratkorn, die gewünschte Uhrzeit und wie viele Personen mitfahren – für sofort oder als Vorbestellung."
+      },
+      {
+        "title": "Einsteigen und ankommen",
+        "text": "Wir holen Sie ab und bringen Sie sicher ans Ziel, ob nach Graz, zum Hauptbahnhof oder zum Flughafen. Bezahlt wird bar oder mit Karte."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "heading": "Taxi Gratkorn – häufige Fragen",
+    "items": [
+      {
+        "question": "Holen Sie mich auch am Bahnhof Gratwein-Gratkorn ab?",
+        "answer": "Ja. Sagen Sie uns einfach, mit welchem Zug Sie ankommen – wir warten am Bahnhof Gratwein-Gratkorn und bringen Sie nach Gratkorn, nach Graz oder zum Flughafen. Erreichbar sind wir rund um die Uhr unter {phone}."
+      },
+      {
+        "question": "Was kostet ein Taxi von Gratkorn zum Flughafen Graz?",
+        "answer": "Für Flughafentransfers bieten wir Festpreise an. Die Strecke von Gratkorn zum Flughafen Graz ist rund 21 Kilometer lang – rufen Sie uns unter {phone} an, und wir nennen Ihnen den Preis vorab."
+      },
+      {
+        "question": "Wie lange dauert die Fahrt von Gratkorn nach Graz?",
+        "answer": "Bis zum Grazer Hauptplatz sind es rund 11 Kilometer, ohne Verkehr etwa 20 Minuten. Zum Hauptbahnhof brauchen Sie ungefähr 15 Minuten – im Berufsverkehr kann es länger dauern."
+      },
+      {
+        "question": "Fahren Sie auch nachts und am Wochenende in Gratkorn?",
+        "answer": "Ja. Unser Taxiservice ist rund um die Uhr erreichbar – auch nachts, an Wochenenden und an Feiertagen. Für frühe Termine können Sie Ihr Taxi gerne im Voraus bestellen."
+      }
+    ]
+  },
+  "nearby": [
+    {
+      "ort": "content/orte/taxi-goesting.json"
+    },
+    {
+      "ort": "content/orte/taxi-andritz.json"
+    },
+    {
+      "ort": "content/orte/taxi-eggenberg.json"
+    }
+  ],
+  "nearbyIntro": "Auch in den Nachbarorten wie Graz-Gösting und Graz-Andritz sowie im gesamten Bezirk Graz-Umgebung sind wir für Sie unterwegs."
+}
