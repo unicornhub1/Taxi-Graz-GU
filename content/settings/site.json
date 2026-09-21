@@ -24,7 +24,7 @@
   },
   "seo": {
     "siteName": "Taxi Graz GU",
-    "url": "https://taxigraz-gu.at",
+    "url": "https://www.taxigraz-gu.at",
     "defaultTitle": "Taxi Graz | Taxi Graz GU - 24/7 Taxiservice, Flughafentransfer & Stretchlimousinen",
     "description": "Taxi Graz GU – Ihr 24/7 Taxiservice in Graz & Umgebung. Flughafentransfer, Stretchlimousinen, Botenfahrten. ☎ {phone}. {rating}★ Google ({reviews} Bewertungen). Jetzt anrufen!",
     "keywords": [
@@ -98,7 +98,7 @@
     ]
   },
   "labels": {
-    "phone": "Telefon!",
+    "phone": "Telefon",
     "phoneSub": "24/7 erreichbar",
     "whatsapp": "WhatsApp",
     "whatsappSub": "Nachricht senden",
