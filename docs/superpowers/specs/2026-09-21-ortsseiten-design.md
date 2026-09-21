@@ -196,3 +196,16 @@ Dropdown-/Mega-Menü, eigene Bilder pro Ort (das Feld gibt es, befüllt wird es 
 | Hausmannstätten | 100 | 7,4 |
 
 Diese Orte haben mehr Nachfrage als Hitzendorf, Gösting und Ragnitz (dort 0 Impressionen). Wir bieten sie dem Kunden als Erweiterung an. Per CMS ist das reiner Inhaltsaufwand.
+
+## Abweichungen in der Umsetzung (2026-09-21)
+
+1. **Neue Sektion „So bestellen Sie Ihr Taxi in <Ort>“** (`OrderSteps`, Felix-Wunsch): drei Schritte als Route auf Anthrazit, H2 mit Keyword und Ort, `<ol>` mit H3, einmalig fahrendes Taxi-Dachschild (mit reduzierter Bewegung statisch). Pro Ort im CMS: `order { heading, intro, steps[3] }`. Zahlungsarten und Zusatzleistungen liegen zentral in `settings.orderLabels`. Reihenfolge der Ortsseite: … LocalInfo → **OrderSteps** → Richtpreise → Leistungen …
+2. Der Satz zu den Nachbarorten ist als Feld `nearbyIntro` in die Sektion „Nachbarorte“ gewandert. Deshalb gilt die Textgrenze für den Fließtext jetzt mit **250–500 Wörtern** (statt 300–500), zusätzlich zur Bestell-Sektion und den FAQ.
+3. Die **Fakten-Kacheln scrollen ab Desktop mit** (`lg:sticky lg:top-28`), bis der Text endet.
+4. Die **Flughafen-Seite** hat als dritte Kachel „Erreichbar – 24/7, auch für Frühflüge“ statt einer Entfernung zum Flughafen.
+5. **Nachbarorte** sind nicht strikt die drei nächsten laut Skript, sondern sinnvoll gegenseitig verknüpft (z. B. Eggenberg ↔ Hitzendorf, Gösting ↔ Gratkorn).
+6. `CTA.tsx`: Der Kontakt-Link nutzt `next/link` statt `<a>`. Mit der neuen Route `[slug]` hätte ESLint sonst einen Fehler gemeldet.
+7. Die **Startseiten-Chips** sind verknüpft. Neu dazugekommen sind „Taxi Graz Ragnitz“, „Taxi Vasoldsberg“ und „Taxi Hitzendorf“. „Taxi Raaba“ heißt jetzt „Taxi Raaba-Grambach“.
+8. **Geklärte offene Punkte:** Ragnitz ist der Grazer Stadtteil (Katastralgemeinde Ragnitz, Bezirk Ries). „GU-Taxi Gratkorn (das Original seit 2013)“ ist gu-taxi.at, ein anderer Anbieter; ein Test schließt die Marke in den Inhalten aus. Pachern liegt in Hart bei Graz (dort ein eigener Abschnitt).
+9. Der Screenshot-/Browser-Check lief über ein eigenes Playwright-Skript (lokales Chromium), weil das Playwright-MCP kein Chrome findet.
+10. Vorab-Fix (Canonical auf www, Label) ist bereits am 21.09. live gegangen (Commit `5d51976`).

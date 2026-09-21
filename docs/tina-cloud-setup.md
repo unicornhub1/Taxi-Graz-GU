@@ -50,6 +50,7 @@ Tina Cloud → Projekt → **Collaborators → Invite** → E-Mail des Kunden, R
 - Bilder: unter 1 MB halten (Media-Limit 100 MB im Free-Plan). Ordner im Repo: `public/uploads/`. Live liefert Tina Cloud Bilder von `https://assets.tina.io/<clientId>/…` aus – deshalb steht `assets.tina.io` in `next.config.ts` unter `images.remotePatterns`. Ohne den Eintrag bleibt z. B. das Hero-Bild leer (400 `INVALID_IMAGE_OPTIMIZE_REQUEST`).
 - Neue Felder/Sektionen = Schema-Änderung in `tina/collections/*.ts` → committen, Vercel-Build aktualisiert das Schema automatisch in Tina Cloud.
 - **Rechtstexte:** Impressum-Body (§ 25 MedienG) und Datenschutz (Verantwortliche Stelle, E-Mail bei den Betroffenenrechten) enthalten Firmen-/Kontaktdaten als Text – bei Änderungen in den Einstellungen dort mitpflegen.
+- **Ortsseiten:** Den Ortsnamen kann man nach dem Anlegen ändern, die Adresse (Dateiname) nicht. Für eine neue Adresse: Seite neu anlegen, alte löschen und eine Weiterleitung einrichten lassen. Recherche-Hilfe für Entfernungen: `node scripts/ort-distanzen.mjs "Name=Suchbegriff"`.
 - **Bekannte Grenzen:** Favicon (`src/app/icon.svg`) bleibt goldfarben (statisches SVG); die E-Mail-Vorlagen des Kontaktformulars (`src/app/api/contact/route.ts`) enthalten Telefonnummer/URL fest – bei Änderung im Code nachziehen.
 
 ## 6. Kurzanleitung für den Kunden
@@ -60,6 +61,8 @@ Tina Cloud → Projekt → **Collaborators → Invite** → E-Mail des Kunden, R
 4. Platzhalter `{phone}`, `{email}`, `{rating}`, `{reviews}` funktionieren in: SEO-Beschreibung, Vertrauensleiste, Zahlen-Zusatz (Warum wir), Leistungen-Einleitung, Preise-Text und -Hinweis, Kundenstimmen-Einleitung und Google-Linktext, FAQ-Antworten, Abschluss-Aufruf-Text, Kontaktseite (Kopftext, Formulartext, SEO-Beschreibung). Nicht in Rich-Text (Hero-Beschreibung, Rechtstexte).
 5. „Save" klicken – nach wenigen Sekunden (spätestens einer Minute) ist die Änderung online. Nichts kaputtmachen können: Layout und Design sind fest, nur Inhalte ändern sich.
 6. Navigation, Beschriftungen neben Telefon/WhatsApp/E-Mail und die Footer-Überschriften stehen ebenfalls unter „Einstellungen".
+7. **Neue Ortsseite anlegen:** Links „Ortsseiten" → „Add File" → Ortsname eintragen (daraus entsteht automatisch die Adresse, z. B. „Premstätten" → /taxi-premstaetten), Region wählen und alle Felder ausfüllen: Text mit 250–500 Wörtern über den Ort, 3 Fakten-Kacheln (Entfernung/Fahrzeit), 3 Bestell-Schritte, 3–5 Fragen, 2–4 Nachbarorte → „Save". Die Seite erscheint nach spätestens einer Minute unter „Einsatzgebiete", im Footer und in der Sitemap. Damit sie auch auf der Startseite verlinkt ist: Startseite → Service-Gebiete → Eintrag wählen → „Verknüpfte Ortsseite" setzen. Bitte keine Seiten anlegen, in denen nur der Ortsname ausgetauscht ist – Google wertet das als Spam.
+8. Zahlungsarten und Zusatzleistungen der Bestell-Sektion sowie die Texte rund um die Ortsseiten (Footer-Überschrift, „Alle Einsatzgebiete", Brotkrumen) stehen unter „Einstellungen".
 
 ## 7. Inhalte ohne Vercel-Build live (ISR + Webhook)
 

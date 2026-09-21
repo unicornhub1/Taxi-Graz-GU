@@ -1,0 +1,410 @@
+{
+  "Flughafen Graz": {
+    "gefunden": "Flughafen Graz, Flughafenstraße, Katastralgemeinde Lebern, Lebern, Feldkirchen bei Graz, Bezirk Graz-Umgebung, Steiermark, 8073, Österreich",
+    "fahrten": {
+      "Graz Hauptplatz": {
+        "km": 10.8,
+        "min": 20,
+        "text": "10,8 km · ca. 20 Min."
+      },
+      "Graz Hauptbahnhof": {
+        "km": 9.9,
+        "min": 20,
+        "text": "9,9 km · ca. 20 Min."
+      },
+      "Flughafen Graz": {
+        "km": 0,
+        "min": 0,
+        "text": "0 km · ca. 0 Min."
+      }
+    },
+    "nachbarn": [
+      {
+        "name": "Raaba-Grambach",
+        "km": 6.4
+      },
+      {
+        "name": "Hart bei Graz",
+        "km": 8.5
+      },
+      {
+        "name": "Vasoldsberg",
+        "km": 9.2
+      }
+    ]
+  },
+  "Gratkorn": {
+    "gefunden": "Gratkorn, Bezirk Graz-Umgebung, Steiermark, 8101, Österreich",
+    "fahrten": {
+      "Graz Hauptplatz": {
+        "km": 11.3,
+        "min": 20,
+        "text": "11,3 km · ca. 20 Min."
+      },
+      "Graz Hauptbahnhof": {
+        "km": 10.4,
+        "min": 15,
+        "text": "10,4 km · ca. 15 Min."
+      },
+      "Flughafen Graz": {
+        "km": 21.4,
+        "min": 25,
+        "text": "21,4 km · ca. 25 Min."
+      }
+    },
+    "nachbarn": [
+      {
+        "name": "Gösting",
+        "km": 6.4
+      },
+      {
+        "name": "Andritz",
+        "km": 7.1
+      },
+      {
+        "name": "Eggenberg",
+        "km": 8.2
+      }
+    ]
+  },
+  "Hart bei Graz": {
+    "gefunden": "Hart bei Graz, Bezirk Graz-Umgebung, Steiermark, 8075, Österreich",
+    "fahrten": {
+      "Graz Hauptplatz": {
+        "km": 11.1,
+        "min": 20,
+        "text": "11,1 km · ca. 20 Min."
+      },
+      "Graz Hauptbahnhof": {
+        "km": 11.2,
+        "min": 20,
+        "text": "11,2 km · ca. 20 Min."
+      },
+      "Flughafen Graz": {
+        "km": 11.2,
+        "min": 15,
+        "text": "11,2 km · ca. 15 Min."
+      }
+    },
+    "nachbarn": [
+      {
+        "name": "Raaba-Grambach",
+        "km": 2.7
+      },
+      {
+        "name": "Ragnitz",
+        "km": 4.2
+      },
+      {
+        "name": "Vasoldsberg",
+        "km": 4.9
+      }
+    ]
+  },
+  "Laßnitzhöhe": {
+    "gefunden": "Laßnitzhöhe, Bezirk Graz-Umgebung, Steiermark, 8301, Österreich",
+    "fahrten": {
+      "Graz Hauptplatz": {
+        "km": 16.1,
+        "min": 25,
+        "text": "16,1 km · ca. 25 Min."
+      },
+      "Graz Hauptbahnhof": {
+        "km": 22.2,
+        "min": 25,
+        "text": "22,2 km · ca. 25 Min."
+      },
+      "Flughafen Graz": {
+        "km": 19.6,
+        "min": 20,
+        "text": "19,6 km · ca. 20 Min."
+      }
+    },
+    "nachbarn": [
+      {
+        "name": "Hart bei Graz",
+        "km": 6.2
+      },
+      {
+        "name": "Ragnitz",
+        "km": 6.6
+      },
+      {
+        "name": "Vasoldsberg",
+        "km": 7.3
+      }
+    ]
+  },
+  "Raaba-Grambach": {
+    "gefunden": "Raaba-Grambach, Bezirk Graz-Umgebung, Steiermark, 8074, Österreich",
+    "fahrten": {
+      "Graz Hauptplatz": {
+        "km": 11.7,
+        "min": 20,
+        "text": "11,7 km · ca. 20 Min."
+      },
+      "Graz Hauptbahnhof": {
+        "km": 11.8,
+        "min": 20,
+        "text": "11,8 km · ca. 20 Min."
+      },
+      "Flughafen Graz": {
+        "km": 9.5,
+        "min": 15,
+        "text": "9,5 km · ca. 15 Min."
+      }
+    },
+    "nachbarn": [
+      {
+        "name": "Hart bei Graz",
+        "km": 2.7
+      },
+      {
+        "name": "Vasoldsberg",
+        "km": 3.6
+      },
+      {
+        "name": "Flughafen Graz",
+        "km": 6.4
+      }
+    ]
+  },
+  "Vasoldsberg": {
+    "gefunden": "Vasoldsberg, Bezirk Graz-Umgebung, Steiermark, 8076, Österreich",
+    "fahrten": {
+      "Graz Hauptplatz": {
+        "km": 18.2,
+        "min": 25,
+        "text": "18,2 km · ca. 25 Min."
+      },
+      "Graz Hauptbahnhof": {
+        "km": 18.4,
+        "min": 25,
+        "text": "18,4 km · ca. 25 Min."
+      },
+      "Flughafen Graz": {
+        "km": 13.7,
+        "min": 20,
+        "text": "13,7 km · ca. 20 Min."
+      }
+    },
+    "nachbarn": [
+      {
+        "name": "Raaba-Grambach",
+        "km": 3.6
+      },
+      {
+        "name": "Hart bei Graz",
+        "km": 4.9
+      },
+      {
+        "name": "Laßnitzhöhe",
+        "km": 7.3
+      }
+    ]
+  },
+  "Hitzendorf": {
+    "gefunden": "Hitzendorf, Bezirk Graz-Umgebung, Steiermark, 8151, Österreich",
+    "fahrten": {
+      "Graz Hauptplatz": {
+        "km": 16.2,
+        "min": 25,
+        "text": "16,2 km · ca. 25 Min."
+      },
+      "Graz Hauptbahnhof": {
+        "km": 14.6,
+        "min": 20,
+        "text": "14,6 km · ca. 20 Min."
+      },
+      "Flughafen Graz": {
+        "km": 27.2,
+        "min": 25,
+        "text": "27,2 km · ca. 25 Min."
+      }
+    },
+    "nachbarn": [
+      {
+        "name": "Eggenberg",
+        "km": 8.3
+      },
+      {
+        "name": "Gösting",
+        "km": 10.1
+      },
+      {
+        "name": "Gratkorn",
+        "km": 11.3
+      }
+    ]
+  },
+  "Andritz": {
+    "gefunden": "Andritz, Graz, Steiermark, Österreich",
+    "fahrten": {
+      "Graz Hauptplatz": {
+        "km": 4.2,
+        "min": 10,
+        "text": "4,2 km · ca. 10 Min."
+      },
+      "Graz Hauptbahnhof": {
+        "km": 5.3,
+        "min": 10,
+        "text": "5,3 km · ca. 10 Min."
+      },
+      "Flughafen Graz": {
+        "km": 14.9,
+        "min": 25,
+        "text": "14,9 km · ca. 25 Min."
+      }
+    },
+    "nachbarn": [
+      {
+        "name": "Gösting",
+        "km": 1.9
+      },
+      {
+        "name": "Eggenberg",
+        "km": 4.1
+      },
+      {
+        "name": "Mariatrost",
+        "km": 4.4
+      }
+    ]
+  },
+  "Eggenberg": {
+    "gefunden": "Eggenberg, Graz, Steiermark, Österreich",
+    "fahrten": {
+      "Graz Hauptplatz": {
+        "km": 4,
+        "min": 10,
+        "text": "4 km · ca. 10 Min."
+      },
+      "Graz Hauptbahnhof": {
+        "km": 2.3,
+        "min": 5,
+        "text": "2,3 km · ca. 5 Min."
+      },
+      "Flughafen Graz": {
+        "km": 11.5,
+        "min": 20,
+        "text": "11,5 km · ca. 20 Min."
+      }
+    },
+    "nachbarn": [
+      {
+        "name": "Gösting",
+        "km": 2.6
+      },
+      {
+        "name": "Andritz",
+        "km": 4.1
+      },
+      {
+        "name": "Mariatrost",
+        "km": 7.1
+      }
+    ]
+  },
+  "Gösting": {
+    "gefunden": "Gösting, Graz, Steiermark, 8051, Österreich",
+    "fahrten": {
+      "Graz Hauptplatz": {
+        "km": 4.5,
+        "min": 10,
+        "text": "4,5 km · ca. 10 Min."
+      },
+      "Graz Hauptbahnhof": {
+        "km": 3.2,
+        "min": 10,
+        "text": "3,2 km · ca. 10 Min."
+      },
+      "Flughafen Graz": {
+        "km": 12.8,
+        "min": 25,
+        "text": "12,8 km · ca. 25 Min."
+      }
+    },
+    "nachbarn": [
+      {
+        "name": "Andritz",
+        "km": 1.9
+      },
+      {
+        "name": "Eggenberg",
+        "km": 2.6
+      },
+      {
+        "name": "Mariatrost",
+        "km": 6
+      }
+    ]
+  },
+  "Mariatrost": {
+    "gefunden": "Mariatrost, Graz, Steiermark, Österreich",
+    "fahrten": {
+      "Graz Hauptplatz": {
+        "km": 6.2,
+        "min": 15,
+        "text": "6,2 km · ca. 15 Min."
+      },
+      "Graz Hauptbahnhof": {
+        "km": 6.7,
+        "min": 15,
+        "text": "6,7 km · ca. 15 Min."
+      },
+      "Flughafen Graz": {
+        "km": 18.4,
+        "min": 30,
+        "text": "18,4 km · ca. 30 Min."
+      }
+    },
+    "nachbarn": [
+      {
+        "name": "Ragnitz",
+        "km": 2.4
+      },
+      {
+        "name": "Andritz",
+        "km": 4.4
+      },
+      {
+        "name": "Gösting",
+        "km": 6
+      }
+    ]
+  },
+  "Ragnitz": {
+    "gefunden": "Katastralgemeinde Ragnitz, Ries, Graz, Steiermark, Österreich",
+    "fahrten": {
+      "Graz Hauptplatz": {
+        "km": 7.1,
+        "min": 15,
+        "text": "7,1 km · ca. 15 Min."
+      },
+      "Graz Hauptbahnhof": {
+        "km": 7.5,
+        "min": 15,
+        "text": "7,5 km · ca. 15 Min."
+      },
+      "Flughafen Graz": {
+        "km": 17,
+        "min": 25,
+        "text": "17 km · ca. 25 Min."
+      }
+    },
+    "nachbarn": [
+      {
+        "name": "Mariatrost",
+        "km": 2.4
+      },
+      {
+        "name": "Hart bei Graz",
+        "km": 4.2
+      },
+      {
+        "name": "Andritz",
+        "km": 6
+      }
+    ]
+  }
+}
