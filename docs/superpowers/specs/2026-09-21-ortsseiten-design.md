@@ -72,13 +72,12 @@ Button-Beschriftungen, Bewertungskarte und Scroll-Hinweis des Hero kommen von de
 
 ### 2.2 Collection `einsatzgebiete` – `content/pages/einsatzgebiete.json` (eine einzelne Seite)
 
-`seo {title, description}`, `hero {eyebrow, heading, text}`, `groupLabels {grazStadt, grazUmgebung, spezial}`. Die Liste der Orte wird nicht gepflegt, sondern kommt automatisch aus der Collection `ort`.
+`seo {title, description}`, `hero {eyebrow, heading, text}`, `groupLabels {grazStadt, grazUmgebung, spezial}`, `cardLinkLabel`. Die Liste der Orte wird nicht gepflegt, sondern kommt automatisch aus der Collection `ort`. **Title, H1 und Text der Übersicht zielen nicht auf „Taxi Graz“ oder „Taxi Graz Umgebung“**, damit sie der Startseite (Position 1,5 bzw. 1,6) keine Konkurrenz macht. Beispiel: „Einsatzgebiete – alle Orte im Überblick“.
 
 ### 2.3 Änderungen an bestehenden Collections
 
 - **`home.serviceAreas.groups[].areas`:** Aus der String-Liste wird eine Objekt-Liste `{label, ort?: reference → ort}`. Ein Chip mit Verweis wird zum Link. Die bestehenden Einträge werden 1:1 als `{label}` migriert, danach werden die Verweise für die 12 Orte gesetzt.
-- **`home.serviceAreas`:** neues Feld `allAreasLabel` („Alle Einsatzgebiete“) für den Link unter der Liste.
-- **`settings.footer`:** neues Feld `areasHeading` („Einsatzgebiete“).
+- **`settings.areaLabels`** (neue Gruppe „Beschriftungen Einsatzgebiete“): `footerHeading`, `allAreas`, `nearbyEyebrow`, `nearbyHeading`, `breadcrumbHome`, `breadcrumbHub`. Die Texte liegen in den Einstellungen, weil diese auf jeder Seite verfügbar sind (Startseite, Ortsseite, Footer). Das ersetzt die ursprünglich geplanten Felder `home.serviceAreas.allAreasLabel` und `settings.footer.areasHeading`.
 - **Inhaltsänderung in `settings.navigation.main`:** „Service-Gebiete“ `/#gebiete` → `/einsatzgebiete`.
 
 ## 3. Seitenaufbau
