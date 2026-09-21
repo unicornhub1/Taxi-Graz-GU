@@ -42,7 +42,9 @@ describe('groupByRegion', () => {
 })
 
 describe('ortLinkLabel', () => {
-  it('stellt „Taxi“ voran', () => {
+  it('stellt das Präfix voran (Standard „Taxi“)', () => {
     expect(ortLinkLabel('Gratkorn')).toBe('Taxi Gratkorn')
+    expect(ortLinkLabel('Gratkorn', 'Taxiservice')).toBe('Taxiservice Gratkorn')
+    expect(ortLinkLabel('Gratkorn', '')).toBe('Gratkorn')
   })
 })

@@ -38,7 +38,7 @@ export function groupByRegion(orte: OrtSummary[]): { region: Region; orte: OrtSu
   })).filter((group) => group.orte.length > 0)
 }
 
-/** Ankertext für Links auf Ortsseiten (Footer, Übersicht, Nachbarorte). */
-export function ortLinkLabel(name: string): string {
-  return `Taxi ${name}`
+/** Ankertext für Links auf Ortsseiten (Footer, Übersicht, Nachbarorte); Präfix aus den Einstellungen. */
+export function ortLinkLabel(name: string, prefix = 'Taxi'): string {
+  return `${prefix} ${name}`.trim()
 }

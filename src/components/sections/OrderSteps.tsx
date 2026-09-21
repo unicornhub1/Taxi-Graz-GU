@@ -73,7 +73,7 @@ export function OrderSteps({ data }: { data: OrderStepsData }) {
               viewport={{ once: true, amount: 0.8 }}
               transition={{ duration: reduceMotion ? 0 : 2.8, delay: 0.3, ease: [0.65, 0, 0.35, 1] }}
             >
-              TAXI
+              {orderLabels.taxiSign}
             </motion.div>
           </div>
           <div aria-hidden className="absolute bottom-10 left-[27px] top-10 w-3 rounded-full bg-white/[0.07] md:hidden">

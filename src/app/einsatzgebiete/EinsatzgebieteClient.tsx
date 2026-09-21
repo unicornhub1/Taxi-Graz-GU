@@ -5,6 +5,7 @@ import { ArrowRight, MapPin } from 'lucide-react'
 import { useTina, tinaField } from 'tinacms/dist/react'
 import type { EinsatzgebieteQuery, HomeQuery } from '@tina/__generated__/types'
 import { Section } from '@/components/layout/Section'
+import { Breadcrumbs } from '@/components/sections/Breadcrumbs'
 import { CTA } from '@/components/sections/CTA'
 import { useSettings } from '@/components/SettingsProvider'
 import { groupByRegion, ortLinkLabel, type OrtSummary, type Region } from '@/lib/ort'
@@ -50,7 +51,8 @@ export function EinsatzgebieteClient({ orte, cta, ...tina }: EinsatzgebieteClien
         </div>
       </section>
 
-      <Section className="bg-[var(--color-cream)]">
+      <Breadcrumbs items={[{ label: settings.areaLabels.breadcrumbHome, href: '/' }, { label: settings.areaLabels.breadcrumbHub }]} />
+      <Section className="bg-[var(--color-cream)] pt-10 md:pt-12">
         <div className="space-y-14">
           {groupByRegion(orte).map((group) => (
             <div key={group.region}>
@@ -69,7 +71,7 @@ export function EinsatzgebieteClient({ orte, cta, ...tina }: EinsatzgebieteClien
                     >
                       <span className="flex items-center gap-2 font-[var(--font-display)] text-2xl font-bold text-[var(--color-black)]">
                         <MapPin className="h-5 w-5 shrink-0 text-[var(--color-gold)]" />
-                        {ortLinkLabel(ort.name)}
+                        {ortLinkLabel(ort.name, settings.areaLabels.linkPrefix)}
                       </span>
                       {ort.fact && <span className="mt-2 text-sm text-[var(--color-gray-500)]">{ort.fact}</span>}
                       <span

@@ -111,6 +111,7 @@
   },
   "areaLabels": {
     "footerHeading": "Einsatzgebiete",
+    "linkPrefix": "Taxi",
     "allAreas": "Alle Einsatzgebiete",
     "nearbyEyebrow": "In der Nähe",
     "nearbyHeading": "Taxi auch in den Nachbarorten",
@@ -118,6 +119,7 @@
     "breadcrumbHub": "Einsatzgebiete"
   },
   "orderLabels": {
+    "taxiSign": "TAXI",
     "paymentsHeading": "Bezahlen",
     "payments": [
       "Bar",

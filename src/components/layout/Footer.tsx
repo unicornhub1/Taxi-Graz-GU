@@ -130,7 +130,7 @@ export function Footer() {
               {orte.map((ort) => (
                 <li key={ort.slug}>
                   <Link href={`/${ort.slug}`} className="text-sm text-[var(--color-gray-300)] transition-colors hover:text-[var(--color-gold)]">
-                    {ortLinkLabel(ort.name)}
+                    {ortLinkLabel(ort.name, settings.areaLabels.linkPrefix)}
                   </Link>
                 </li>
               ))}

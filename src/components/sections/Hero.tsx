@@ -28,7 +28,17 @@ const inlineMarkdown = {
   bold: (props?: { children?: React.ReactNode }) => <strong className="text-white">{props?.children}</strong>,
 }
 
-export function Hero({ data, imageSrc, imageField }: { data: HeroData; imageSrc?: string | null; imageField?: string }) {
+export function Hero({
+  data,
+  imageSrc,
+  imageField,
+  imageAlt = 'Taxi in der Stadt',
+}: {
+  data: HeroData
+  imageSrc?: string | null
+  imageField?: string
+  imageAlt?: string
+}) {
   const settings = useSettings()
   const { labels } = settings
   const tel = `tel:${phoneRaw(settings.contact.phone)}`
@@ -40,7 +50,7 @@ export function Hero({ data, imageSrc, imageField }: { data: HeroData; imageSrc?
       <div className="absolute inset-0 z-0" data-tina-field={imageField ?? tinaField(settings.design, 'heroImage')}>
         <Image
           src={imageSrc || settings.design.heroImage}
-          alt="Taxi in der Stadt"
+          alt={imageAlt}
           fill
           priority
           className="object-cover"

@@ -42,7 +42,7 @@ export function NearbyAreas({
       </div>
       <div className="mt-10 flex flex-wrap justify-center gap-2">
         {items.map((item) => (
-          <AreaChip key={item.slug} label={ortLinkLabel(item.name)} href={`/${item.slug}`} />
+          <AreaChip key={item.slug} label={ortLinkLabel(item.name, areaLabels.linkPrefix)} href={`/${item.slug}`} />
         ))}
       </div>
       <div className="mt-8 text-center">

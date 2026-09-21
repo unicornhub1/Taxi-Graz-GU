@@ -14,6 +14,7 @@ import { FAQ } from '@/components/sections/FAQ'
 import { NearbyAreas } from '@/components/sections/NearbyAreas'
 import { CTA } from '@/components/sections/CTA'
 import { useSettings } from '@/components/SettingsProvider'
+import { ortLinkLabel } from '@/lib/ort'
 import { compact } from '@/lib/site'
 
 export interface OrtClientProps {
@@ -33,7 +34,12 @@ export function OrtClient({ home, ...tina }: OrtClientProps) {
 
   return (
     <>
-      <Hero data={hero} imageSrc={ort.heroImage} imageField={tinaField(ort, 'heroImage')} />
+      <Hero
+        data={hero}
+        imageSrc={ort.heroImage}
+        imageField={tinaField(ort, 'heroImage')}
+        imageAlt={ortLinkLabel(ort.name, areaLabels.linkPrefix)}
+      />
       <TrustBar data={home.trustBar} />
       <Breadcrumbs
         items={[

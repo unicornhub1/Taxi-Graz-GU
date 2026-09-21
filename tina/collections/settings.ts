@@ -109,6 +109,7 @@ export const settings: Collection = {
       description: 'Texte rund um die Ortsseiten (Footer, Startseite, Ortsseiten).',
       fields: [
         { type: 'string', name: 'footerHeading', label: 'Überschrift im Footer', required: true },
+        { type: 'string', name: 'linkPrefix', label: 'Wort vor Ortsnamen in Links', required: true, description: 'z. B. „Taxi“ → „Taxi Gratkorn“ (Footer, Übersicht, Nachbarorte)' },
         { type: 'string', name: 'allAreas', label: 'Link „Alle Einsatzgebiete“', required: true },
         { type: 'string', name: 'nearbyEyebrow', label: 'Ortsseiten: kleine Überschrift „Nachbarorte“', required: true },
         { type: 'string', name: 'nearbyHeading', label: 'Ortsseiten: Überschrift „Nachbarorte“', required: true },
@@ -119,6 +120,7 @@ export const settings: Collection = {
     {
       type: 'object', name: 'orderLabels', label: 'Beschriftungen „So bestellen Sie“ (Ortsseiten)', required: true,
       fields: [
+        { type: 'string', name: 'taxiSign', label: 'Text auf dem fahrenden Taxi-Schild', required: true },
         { type: 'string', name: 'paymentsHeading', label: 'Überschrift Zahlungsarten', required: true },
         { type: 'string', name: 'payments', label: 'Zahlungsarten', list: true, required: true },
         { type: 'string', name: 'extrasHeading', label: 'Überschrift Zusatzleistungen', required: true },

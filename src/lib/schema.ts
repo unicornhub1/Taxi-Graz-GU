@@ -103,7 +103,7 @@ export function ortServiceSchema(s: SiteSettings, ort: { name: string; slug: str
     '@context': CONTEXT,
     '@type': 'Service',
     serviceType: 'Taxi',
-    name: ortLinkLabel(ort.name),
+    name: ortLinkLabel(ort.name, s.areaLabels?.linkPrefix),
     url: `${s.seo.url}/${ort.slug}`,
     areaServed: { '@type': 'Place', name: ort.name },
     provider: { '@id': taxiServiceId(s) },
