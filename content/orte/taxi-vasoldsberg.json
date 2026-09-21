@@ -1,0 +1,86 @@
+{
+  "name": "Vasoldsberg",
+  "region": "graz-umgebung",
+  "seo": {
+    "title": "Taxi Vasoldsberg – 24/7 & Flughafen",
+    "description": "Taxi Vasoldsberg rund um die Uhr: nach Graz, zum Hauptbahnhof und Flughafen Graz, auch nachts und am Wochenende. ☎ {phone}"
+  },
+  "hero": {
+    "badge": "24/7 in Vasoldsberg",
+    "headline": "Ihr Taxi in",
+    "headlineHighlight": "Vasoldsberg",
+    "subline": "Auch nachts im Hügelland",
+    "description": "**Taxi Vasoldsberg** – vom Hügelland südöstlich von Graz in die Stadt, zum **Hauptbahnhof** oder zum **Flughafen Graz**, rund um die Uhr."
+  },
+  "local": {
+    "eyebrow": "Taxi Vasoldsberg",
+    "heading": "Ihr Taxi im Hügelland südöstlich von Graz",
+    "body": "Vasoldsberg liegt rund 10 Kilometer südöstlich von Graz im oststeirischen Hügelland. Die Gemeinde mit Breitenhilm, Premstätten bei Vasoldsberg und Wagersbach ist weitläufig, viele Häuser liegen verstreut an Hängen und Seitenstraßen. Gerade abends und nachts fährt hier kaum ein öffentliches Verkehrsmittel – dann ist das Taxi oft die einzige bequeme Verbindung.\n\nDie Gemeinde grenzt an Raaba-Grambach, Laßnitzhöhe, Nestelbach bei Graz, Empersdorf und Hausmannstätten. Für Feiern im Ort, etwa Hochzeiten oder Geburtstage, bringen wir Gäste sicher nach Hause – auf Wunsch auch mit mehreren Fahrten nacheinander.\n\n### Von Vasoldsberg nach Graz\n\nBis zum Grazer Hauptplatz sind es rund 18 Kilometer, ohne Verkehr etwa 25 Minuten, zum Hauptbahnhof genauso weit. Ob Arbeit, Arzttermin, Einkauf oder ein Abend in der Stadt: Wir bringen Sie hin und auf Wunsch auch wieder nach Hause. Nennen Sie uns bei der Bestellung einfach Ihre genaue Adresse, damit wir Sie auch abseits der Hauptstraße schnell finden.\n\nDas Taxi ist außerdem ein praktischer Zubringer: zum Hauptbahnhof für die Weiterreise mit dem Zug, zum Flughafen oder zu Terminen in den Grazer Kliniken. Bestellen Sie Ihre Fahrt im Voraus, dann holen wir Sie zur vereinbarten Zeit ab.\n\n### Zum Flughafen Graz\n\nZum Flughafen sind es knapp 14 Kilometer, ohne Verkehr rund 20 Minuten. Für den [Flughafentransfer](/taxi-flughafen-graz) bieten wir Festpreise an – so wissen Sie vorher, was die Fahrt kostet. Bei Frühflügen reservieren Sie Ihr Taxi am besten schon am Vortag.\n\n### Unterwegs in der Umgebung\n\nAuch Fahrten in die Nachbargemeinden übernehmen wir, etwa nach [Raaba-Grambach](/taxi-raaba-grambach), Laßnitzhöhe oder Hausmannstätten. Sie bezahlen bar oder mit Karte, und barrierefreie Fahrten sind ebenfalls möglich.",
+    "facts": [
+      {
+        "label": "Graz Hauptplatz",
+        "value": "18,2 km · ca. 25 Min."
+      },
+      {
+        "label": "Graz Hauptbahnhof",
+        "value": "18,4 km · ca. 25 Min."
+      },
+      {
+        "label": "Flughafen Graz",
+        "value": "13,7 km · ca. 20 Min."
+      }
+    ]
+  },
+  "order": {
+    "heading": "So bestellen Sie Ihr Taxi in Vasoldsberg",
+    "intro": "Gerade dort, wo kein Bus mehr fährt: Ihr Taxi in Vasoldsberg ist in drei Schritten bestellt – rund um die Uhr unter {phone}.",
+    "steps": [
+      {
+        "title": "Anrufen oder schreiben",
+        "text": "Rufen Sie uns an oder schicken Sie eine WhatsApp-Nachricht – Tag und Nacht."
+      },
+      {
+        "title": "Genaue Adresse nennen",
+        "text": "Sagen Sie uns Ihre Adresse in Vasoldsberg und bei abgelegenen Häusern einen Orientierungspunkt, dazu Uhrzeit und Personenzahl."
+      },
+      {
+        "title": "Einsteigen und ankommen",
+        "text": "Wir holen Sie vor der Haustür ab und bringen Sie ans Ziel. Bezahlt wird bar oder mit Karte."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "heading": "Taxi Vasoldsberg – häufige Fragen",
+    "items": [
+      {
+        "question": "Fahren Sie auch nachts nach Vasoldsberg?",
+        "answer": "Ja. Wir sind rund um die Uhr erreichbar und holen Sie auch spät abends in Graz ab, um Sie nach Vasoldsberg zu bringen. Bestellen Sie unter {phone}."
+      },
+      {
+        "question": "Was kostet ein Taxi von Vasoldsberg zum Flughafen Graz?",
+        "answer": "Für Flughafentransfers bieten wir Festpreise an. Die Strecke ist knapp 14 Kilometer lang – wir nennen Ihnen den Preis vorab."
+      },
+      {
+        "question": "Wie lange dauert die Fahrt von Vasoldsberg nach Graz?",
+        "answer": "Bis zum Hauptplatz sind es rund 18 Kilometer, ohne Verkehr etwa 25 Minuten."
+      },
+      {
+        "question": "Finden Sie auch abgelegene Adressen?",
+        "answer": "Nennen Sie uns bei der Bestellung Ihre genaue Adresse und am besten einen Orientierungspunkt – dann finden wir Sie auch abseits der Hauptstraße."
+      }
+    ]
+  },
+  "nearbyIntro": "Rund um Vasoldsberg sind wir auch in Raaba-Grambach, Hart bei Graz und Laßnitzhöhe für Sie unterwegs.",
+  "nearby": [
+    {
+      "ort": "content/orte/taxi-raaba-grambach.json"
+    },
+    {
+      "ort": "content/orte/taxi-hart-bei-graz.json"
+    },
+    {
+      "ort": "content/orte/taxi-lassnitzhoehe.json"
+    }
+  ]
+}

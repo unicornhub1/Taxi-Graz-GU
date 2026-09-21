@@ -105,6 +105,29 @@ export const settings: Collection = {
       ],
     },
     {
+      type: 'object', name: 'areaLabels', label: 'Beschriftungen Einsatzgebiete', required: true,
+      description: 'Texte rund um die Ortsseiten (Footer, Startseite, Ortsseiten).',
+      fields: [
+        { type: 'string', name: 'footerHeading', label: 'Überschrift im Footer', required: true },
+        { type: 'string', name: 'linkPrefix', label: 'Wort vor Ortsnamen in Links', required: true, description: 'z. B. „Taxi“ → „Taxi Gratkorn“ (Footer, Übersicht, Nachbarorte)' },
+        { type: 'string', name: 'allAreas', label: 'Link „Alle Einsatzgebiete“', required: true },
+        { type: 'string', name: 'nearbyEyebrow', label: 'Ortsseiten: kleine Überschrift „Nachbarorte“', required: true },
+        { type: 'string', name: 'nearbyHeading', label: 'Ortsseiten: Überschrift „Nachbarorte“', required: true },
+        { type: 'string', name: 'breadcrumbHome', label: 'Brotkrumen: Startseite', required: true },
+        { type: 'string', name: 'breadcrumbHub', label: 'Brotkrumen: Einsatzgebiete', required: true },
+      ],
+    },
+    {
+      type: 'object', name: 'orderLabels', label: 'Beschriftungen „So bestellen Sie“ (Ortsseiten)', required: true,
+      fields: [
+        { type: 'string', name: 'taxiSign', label: 'Text auf dem fahrenden Taxi-Schild', required: true },
+        { type: 'string', name: 'paymentsHeading', label: 'Überschrift Zahlungsarten', required: true },
+        { type: 'string', name: 'payments', label: 'Zahlungsarten', list: true, required: true },
+        { type: 'string', name: 'extrasHeading', label: 'Überschrift Zusatzleistungen', required: true },
+        { type: 'string', name: 'extras', label: 'Zusatzleistungen', list: true, required: true },
+      ],
+    },
+    {
       type: 'object', name: 'design', label: 'Design', required: true,
       fields: [
         { type: 'string', name: 'accentColor', label: 'Akzentfarbe', required: true, ui: { component: 'color', colorFormat: 'hex' } },

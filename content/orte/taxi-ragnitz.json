@@ -1,0 +1,86 @@
+{
+  "name": "Ragnitz",
+  "region": "graz-stadt",
+  "seo": {
+    "title": "Taxi Graz-Ragnitz – 24/7 & Flughafen",
+    "description": "Taxi Graz-Ragnitz rund um die Uhr: vom Ragnitztal in die Innenstadt, zum Hauptbahnhof und zum Flughafen. ☎ {phone}"
+  },
+  "hero": {
+    "badge": "24/7 in der Ragnitz",
+    "headline": "Ihr Taxi in",
+    "headlineHighlight": "Graz-Ragnitz",
+    "subline": "Im Ragnitztal im Grazer Osten",
+    "description": "**Taxi Graz-Ragnitz** – aus dem Ragnitztal in die **Innenstadt**, zum **Hauptbahnhof** oder zum **Flughafen Graz**, rund um die Uhr."
+  },
+  "local": {
+    "eyebrow": "Taxi Graz-Ragnitz",
+    "heading": "Ihr Taxi im Ragnitztal",
+    "body": "Die Ragnitz liegt im Osten von Graz und gehört als Katastralgemeinde zum 10. Stadtbezirk Ries. Die Häuser verteilen sich im Ragnitztal entlang des Ragnitzbachs und an den Hängen darüber. Die Ragnitzstraße führt von der Riesstraße hinaus Richtung Kainbach, wo die Äußere Ragnitz über die Stadtgrenze hinausreicht.\n\n### Ruhig wohnen, schnell in der Stadt\n\nViele Wohngebiete in der Ragnitz liegen ruhig und etwas abseits. Bis zum Hauptplatz sind es rund 7 Kilometer, zum Hauptbahnhof etwa 7,5 – ohne Verkehr jeweils rund 15 Minuten. Wir holen Sie direkt vor der Haustür ab, ob für den Weg zur Arbeit, zum Arzt, zum Einkaufen oder für den Abend in der Innenstadt.\n\nNeben der Ragnitz gehört auch das Stiftingtal zum Bezirk Ries; der Riesrücken trennt die beiden Täler. Wir fahren selbstverständlich auch dorthin und in die angrenzenden Gebiete von Kainbach. Für Menschen, die nicht mehr selbst Auto fahren, sind wir der verlässliche Fahrdienst zum Arzt, zur Apotheke oder zum Besuch bei der Familie.\n\n### Späte Heimfahrten\n\nGerade abends und nachts ist das Taxi die bequemste Verbindung ins Ragnitztal. Wir sind rund um die Uhr erreichbar – bestellen Sie Ihre Heimfahrt einfach telefonisch oder per WhatsApp und nennen Sie uns Ihren Abholort in der Stadt. Auch ins benachbarte [Mariatrost](/taxi-mariatrost) und nach Hart bei Graz fahren wir Sie gerne.\n\n### Zum Flughafen Graz\n\nZum Flughafen fahren Sie von der Ragnitz rund 17 Kilometer. Für den [Flughafentransfer](/taxi-flughafen-graz) bieten wir Festpreise an, die wir Ihnen vorab nennen. Sie bezahlen bar oder mit Karte, und barrierefreie Fahrten sind ebenfalls möglich.",
+    "facts": [
+      {
+        "label": "Graz Hauptplatz",
+        "value": "7,1 km · ca. 15 Min."
+      },
+      {
+        "label": "Graz Hauptbahnhof",
+        "value": "7,5 km · ca. 15 Min."
+      },
+      {
+        "label": "Flughafen Graz",
+        "value": "17 km · ca. 25 Min."
+      }
+    ]
+  },
+  "order": {
+    "heading": "So bestellen Sie Ihr Taxi in Graz-Ragnitz",
+    "intro": "Ob ins Zentrum oder spät nach Hause: Ihr Taxi in der Ragnitz ist in drei Schritten bestellt – rund um die Uhr unter {phone}.",
+    "steps": [
+      {
+        "title": "Anrufen oder schreiben",
+        "text": "Rufen Sie uns an oder schreiben Sie per WhatsApp – rund um die Uhr."
+      },
+      {
+        "title": "Adresse im Ragnitztal nennen",
+        "text": "Nennen Sie uns Ihre Adresse in der Ragnitz, die Uhrzeit und die Anzahl der Personen."
+      },
+      {
+        "title": "Einsteigen und ankommen",
+        "text": "Wir holen Sie ab und bringen Sie ans Ziel, ob in die Innenstadt, zum Hauptbahnhof oder zum Flughafen. Bezahlt wird bar oder mit Karte."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "heading": "Taxi Graz-Ragnitz – häufige Fragen",
+    "items": [
+      {
+        "question": "Fahren Sie auch in die Äußere Ragnitz nach Kainbach?",
+        "answer": "Ja. Wir holen Sie in der Inneren Ragnitz in Graz ebenso ab wie in der Äußeren Ragnitz in Kainbach. Bestellen Sie unter {phone}."
+      },
+      {
+        "question": "Wie lange dauert die Fahrt von der Ragnitz in die Innenstadt?",
+        "answer": "Bis zum Hauptplatz sind es rund 7 Kilometer, ohne Verkehr etwa 15 Minuten."
+      },
+      {
+        "question": "Was kostet ein Taxi von der Ragnitz zum Flughafen Graz?",
+        "answer": "Für Flughafentransfers bieten wir Festpreise an. Rufen Sie uns an, und wir nennen Ihnen den Preis vorab."
+      },
+      {
+        "question": "Kann ich meine Heimfahrt vorbestellen?",
+        "answer": "Ja, Sie können Ihr Taxi per Telefon oder WhatsApp für eine bestimmte Uhrzeit vorbestellen."
+      }
+    ]
+  },
+  "nearbyIntro": "Im Grazer Osten sind wir auch in Mariatrost, Hart bei Graz und Laßnitzhöhe für Sie unterwegs.",
+  "nearby": [
+    {
+      "ort": "content/orte/taxi-mariatrost.json"
+    },
+    {
+      "ort": "content/orte/taxi-hart-bei-graz.json"
+    },
+    {
+      "ort": "content/orte/taxi-lassnitzhoehe.json"
+    }
+  ]
+}

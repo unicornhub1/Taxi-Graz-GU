@@ -4,6 +4,8 @@ import { useEffect } from 'react'
 import { useTina } from 'tinacms/dist/react'
 import type { SettingsQuery } from '@tina/__generated__/types'
 import { SettingsProvider } from '@/components/SettingsProvider'
+import { OrteProvider } from '@/components/OrteProvider'
+import type { OrtSummary } from '@/lib/ort'
 import { accentCssVars } from '@/lib/color'
 import { ContactBar } from '@/components/sections/ContactBar'
 import { Header } from '@/components/layout/Header'
@@ -14,10 +16,11 @@ import { CookieConsentProvider } from '@/components/ui/CookieConsent'
 
 export interface SiteShellProps {
   settings: { data: SettingsQuery; query: string; variables: { relativePath: string } }
+  orte: OrtSummary[]
   children: React.ReactNode
 }
 
-export function SiteShell({ settings, children }: SiteShellProps) {
+export function SiteShell({ settings, orte, children }: SiteShellProps) {
   const { data } = useTina(settings)
   const site = data.settings
 
@@ -31,14 +34,16 @@ export function SiteShell({ settings, children }: SiteShellProps) {
 
   return (
     <SettingsProvider settings={site}>
-      <CookieConsentProvider>
-        <ContactBar />
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <FloatingContact />
-        <BackToTop />
-      </CookieConsentProvider>
+      <OrteProvider orte={orte}>
+        <CookieConsentProvider>
+          <ContactBar />
+          <Header />
+          <main>{children}</main>
+          <Footer />
+          <FloatingContact />
+          <BackToTop />
+        </CookieConsentProvider>
+      </OrteProvider>
     </SettingsProvider>
   )
 }

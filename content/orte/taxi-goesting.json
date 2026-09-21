@@ -1,0 +1,86 @@
+{
+  "name": "Gösting",
+  "region": "graz-stadt",
+  "seo": {
+    "title": "Taxi Graz-Gösting – 24/7 & Flughafen",
+    "description": "Taxi Graz-Gösting rund um die Uhr: in die Innenstadt, zum Hauptbahnhof und zum Flughafen Graz – auch nachts. ☎ {phone}"
+  },
+  "hero": {
+    "badge": "24/7 in Gösting",
+    "headline": "Ihr Taxi in",
+    "headlineHighlight": "Graz-Gösting",
+    "subline": "Zwischen Mur und Plabutsch",
+    "description": "**Taxi Graz-Gösting** – zwischen Mur und Plabutsch schnell in die **Innenstadt**, zum **Hauptbahnhof** oder zum **Flughafen Graz**."
+  },
+  "local": {
+    "eyebrow": "Taxi Graz-Gösting",
+    "heading": "Ihr Taxi zwischen Mur und Plabutsch",
+    "body": "Gösting ist der 13. Grazer Stadtbezirk und liegt im Nordwesten der Stadt zwischen der Mur und dem Plabutsch. Über dem Bezirk thront die Burgruine Gösting, rund 200 Meter über der Stadt, mit dem Aussichtsfelsen Jungfernsprung in der Nähe. Im Tal verläuft die Wiener Straße, westlich davon beginnt das obere Gösting.\n\n### Unterwegs in Gösting\n\nVon den Wohngebieten an den Hängen bis hinunter zur Wiener Straße: Wir holen Sie überall im Bezirk ab. Besonders gefragt sind Fahrten zum Hauptbahnhof, der nur gut 3 Kilometer entfernt liegt, und in die Innenstadt – bis zum Hauptplatz sind es rund 4,5 Kilometer, ohne Verkehr etwa 10 Minuten. Auch ins benachbarte [Gratkorn](/taxi-gratkorn) ist es nicht weit.\n\n### Nach der Wanderung zur Burgruine\n\nWer zur Burgruine Gösting oder über den Plabutsch wandert, braucht oft eine Fahrt zurück – etwa zum Hotel, zum Bahnhof oder nach Hause. Rufen Sie uns einfach an, wenn Sie wieder unten sind, und nennen Sie uns Ihren Standort.\n\nUnter dem bewaldeten Plabutsch verläuft der Plabutschtunnel der Pyhrnautobahn, dessen Nordportal in Gösting liegt. Über die A9 sind wir von hier schnell im Grazer Süden und am Flughafen. Und wenn Sie abends von einer Veranstaltung in der Stadt zurückkommen, bringen wir Sie bis vor die Haustür am Hang – auch ins westliche Umland wie [Hitzendorf](/taxi-hitzendorf).\n\n### Zum Flughafen Graz\n\nZum Flughafen fahren Sie von Gösting knapp 13 Kilometer. Für den [Flughafentransfer](/taxi-flughafen-graz) bieten wir Festpreise an, die wir Ihnen vorab nennen. Wir sind rund um die Uhr erreichbar, und Sie bezahlen bar oder mit Karte.",
+    "facts": [
+      {
+        "label": "Graz Hauptplatz",
+        "value": "4,5 km · ca. 10 Min."
+      },
+      {
+        "label": "Graz Hauptbahnhof",
+        "value": "3,2 km · ca. 10 Min."
+      },
+      {
+        "label": "Flughafen Graz",
+        "value": "12,8 km · ca. 25 Min."
+      }
+    ]
+  },
+  "order": {
+    "heading": "So bestellen Sie Ihr Taxi in Graz-Gösting",
+    "intro": "Ob vom Hang, aus dem Tal oder nach der Wanderung: Ihr Taxi in Gösting ist in drei Schritten bestellt – rund um die Uhr unter {phone}.",
+    "steps": [
+      {
+        "title": "Anrufen oder schreiben",
+        "text": "Rufen Sie uns an oder schicken Sie eine WhatsApp-Nachricht – wir sind Tag und Nacht erreichbar."
+      },
+      {
+        "title": "Standort in Gösting nennen",
+        "text": "Nennen Sie uns Ihre Adresse oder einen Treffpunkt in Gösting, die Uhrzeit und die Anzahl der Personen."
+      },
+      {
+        "title": "Einsteigen und ankommen",
+        "text": "Wir holen Sie ab und bringen Sie ans Ziel, ob zum Hauptbahnhof, in die Innenstadt oder zum Flughafen. Bezahlt wird bar oder mit Karte."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "heading": "Taxi Graz-Gösting – häufige Fragen",
+    "items": [
+      {
+        "question": "Wie lange brauche ich von Gösting zum Hauptbahnhof?",
+        "answer": "Die Strecke ist gut 3 Kilometer lang, ohne Verkehr etwa 10 Minuten."
+      },
+      {
+        "question": "Holen Sie mich nach einer Wanderung am Plabutsch ab?",
+        "answer": "Ja. Rufen Sie uns unter {phone} an, wenn Sie wieder im Tal sind, und nennen Sie uns Ihren Standort – wir holen Sie dort ab."
+      },
+      {
+        "question": "Was kostet ein Taxi von Gösting zum Flughafen Graz?",
+        "answer": "Für Flughafentransfers bieten wir Festpreise an. Die Strecke ist knapp 13 Kilometer lang – wir nennen Ihnen den Preis vorab."
+      },
+      {
+        "question": "Fahren Sie auch nachts?",
+        "answer": "Ja, wir sind rund um die Uhr erreichbar – auch nachts, am Wochenende und an Feiertagen."
+      }
+    ]
+  },
+  "nearbyIntro": "Im Grazer Norden und Westen sind wir auch in Andritz, Eggenberg und in Gratkorn für Sie unterwegs.",
+  "nearby": [
+    {
+      "ort": "content/orte/taxi-andritz.json"
+    },
+    {
+      "ort": "content/orte/taxi-eggenberg.json"
+    },
+    {
+      "ort": "content/orte/taxi-gratkorn.json"
+    }
+  ]
+}

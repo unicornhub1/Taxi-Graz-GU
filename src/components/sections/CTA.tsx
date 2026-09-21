@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Phone, MessageCircle, Mail, ArrowRight } from 'lucide-react'
 import { tinaField } from 'tinacms/dist/react'
@@ -116,13 +117,13 @@ export function CTA({ data }: { data: CtaData }) {
           transition={{ delay: 0.5 }}
           className="mt-8 text-center"
         >
-          <a
+          <Link
             href="/kontakt"
             className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-gold)] transition-colors hover:text-[var(--color-gold-light)]"
           >
             <span data-tina-field={tinaField(data, 'formLinkLabel')}>{data.formLinkLabel}</span>
             <ArrowRight className="h-4 w-4" />
-          </a>
+          </Link>
         </motion.div>
       </Container>
     </section>

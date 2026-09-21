@@ -1,0 +1,86 @@
+{
+  "name": "Laßnitzhöhe",
+  "region": "graz-umgebung",
+  "seo": {
+    "title": "Taxi Laßnitzhöhe – 24/7 & Flughafen",
+    "description": "Taxi Laßnitzhöhe rund um die Uhr: Fahrten zur Privatklinik, nach Graz, zum Hauptbahnhof und Flughafen. ☎ {phone}"
+  },
+  "hero": {
+    "badge": "24/7 in Laßnitzhöhe",
+    "headline": "Ihr Taxi in",
+    "headlineHighlight": "Laßnitzhöhe",
+    "subline": "Im Kurort und rund um die Klinik",
+    "description": "**Taxi Laßnitzhöhe** für Fahrten zur **Privatklinik**, nach Graz, zum **Hauptbahnhof** und zum **Flughafen Graz** – rund um die Uhr erreichbar."
+  },
+  "local": {
+    "eyebrow": "Taxi Laßnitzhöhe",
+    "heading": "Ihr Taxi im Kurort Laßnitzhöhe",
+    "body": "Laßnitzhöhe liegt östlich von Graz auf einer Anhöhe im Hügelland und ist als heilklimatischer Kurort bekannt. Viele unserer Fahrten hierher haben mit Gesundheit zu tun: Patientinnen und Patienten der Privatklinik Laßnitzhöhe, die zur Rehabilitation anreisen oder nach Hause fahren, und Angehörige, die zu Besuch kommen.\n\n### Fahrten zur Privatklinik Laßnitzhöhe\n\nWer mit Gepäck vom Grazer Hauptbahnhof anreist, hat rund 22 Kilometer vor sich – mit dem Taxi ohne Verkehr etwa 25 Minuten, direkt bis vor den Eingang. Das ist oft angenehmer als der Fußweg vom Bahnhof Laßnitzhöhe, besonders nach einer Operation oder mit schwerem Koffer. Auch die Heimfahrt am Ende des Aufenthalts können Sie im Voraus bestellen. Barrierefreie Fahrten sind ebenfalls möglich.\n\n### Von Laßnitzhöhe nach Graz und zum Flughafen\n\nBis zum Grazer Hauptplatz sind es rund 16 Kilometer, ohne Verkehr etwa 25 Minuten. Zum Flughafen Graz fahren Sie knapp 20 Kilometer – für den [Flughafentransfer](/taxi-flughafen-graz) nennen wir Ihnen vorab einen Festpreis. Bei frühen Flügen reservieren Sie am besten schon am Vortag.\n\n### Rund um die Uhr erreichbar\n\nOb Arzttermin, Einkauf in Graz, ein Abend in der Stadt oder der Besuch in der Klinik: Wir sind 24 Stunden am Tag für Sie da und holen Sie direkt vor der Haustür ab. Bezahlen können Sie bar oder mit Karte.\n\nLaßnitzhöhe hat knapp 3.000 Einwohnerinnen und Einwohner, dazu kommen viele Kur- und Klinikgäste. Wer ohne eigenes Auto anreist, ist auf gute Verbindungen angewiesen – mit dem Taxi kommen Sie auch am Abend und am Wochenende ohne Fahrplan ans Ziel, etwa zu einem Termin in Graz oder zurück zum Bahnhof.",
+    "facts": [
+      {
+        "label": "Graz Hauptplatz",
+        "value": "16,1 km · ca. 25 Min."
+      },
+      {
+        "label": "Graz Hauptbahnhof",
+        "value": "22,2 km · ca. 25 Min."
+      },
+      {
+        "label": "Flughafen Graz",
+        "value": "19,6 km · ca. 20 Min."
+      }
+    ]
+  },
+  "order": {
+    "heading": "So bestellen Sie Ihr Taxi in Laßnitzhöhe",
+    "intro": "Für die Anreise zur Klinik, den Heimweg oder den Flug: Ihr Taxi in Laßnitzhöhe ist in drei Schritten bestellt – unter {phone}.",
+    "steps": [
+      {
+        "title": "Anrufen oder schreiben",
+        "text": "Rufen Sie uns an oder schreiben Sie per WhatsApp. Wir sind rund um die Uhr erreichbar."
+      },
+      {
+        "title": "Abholort und Zeit nennen",
+        "text": "Sagen Sie uns, wo wir Sie in Laßnitzhöhe abholen – etwa an der Privatklinik oder am Bahnhof – und wann."
+      },
+      {
+        "title": "Bequem ankommen",
+        "text": "Wir holen Sie ab und bringen Sie ans Ziel, ob nach Graz, zum Hauptbahnhof oder zum Flughafen. Bezahlt wird bar oder mit Karte."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "heading": "Taxi Laßnitzhöhe – häufige Fragen",
+    "items": [
+      {
+        "question": "Bringen Sie mich vom Hauptbahnhof Graz zur Privatklinik Laßnitzhöhe?",
+        "answer": "Ja. Die Strecke ist rund 22 Kilometer lang, ohne Verkehr etwa 25 Minuten. Nennen Sie uns Ihre Ankunftszeit, dann holen wir Sie am Hauptbahnhof ab."
+      },
+      {
+        "question": "Kann ich die Heimfahrt nach der Reha im Voraus bestellen?",
+        "answer": "Gerne. Reservieren Sie Ihr Taxi telefonisch unter {phone} oder per WhatsApp mit Datum, Uhrzeit und Zieladresse."
+      },
+      {
+        "question": "Was kostet ein Taxi von Laßnitzhöhe zum Flughafen Graz?",
+        "answer": "Für Flughafentransfers bieten wir Festpreise an. Rufen Sie uns an, und wir nennen Ihnen den Preis vorab."
+      },
+      {
+        "question": "Sind barrierefreie Fahrten möglich?",
+        "answer": "Ja, barrierefreie Fahrten sind möglich. Sagen Sie uns bei der Bestellung, welche Unterstützung Sie brauchen."
+      }
+    ]
+  },
+  "nearbyIntro": "Rund um Laßnitzhöhe sind wir auch in Hart bei Graz, Vasoldsberg und im Grazer Osten für Sie unterwegs.",
+  "nearby": [
+    {
+      "ort": "content/orte/taxi-hart-bei-graz.json"
+    },
+    {
+      "ort": "content/orte/taxi-ragnitz.json"
+    },
+    {
+      "ort": "content/orte/taxi-vasoldsberg.json"
+    }
+  ]
+}

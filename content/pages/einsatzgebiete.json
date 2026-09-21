@@ -1,0 +1,17 @@
+{
+  "seo": {
+    "title": "Einsatzgebiete – alle Orte im Überblick",
+    "description": "Alle Einsatzgebiete von Taxi Graz GU: Grazer Bezirke, Umlandgemeinden und Flughafen Graz – 24/7 erreichbar unter {phone}."
+  },
+  "hero": {
+    "eyebrow": "Einsatzgebiete",
+    "heading": "Hier sind wir für Sie unterwegs",
+    "text": "Ob Grazer Bezirk, Nachbargemeinde oder Flughafen: Wählen Sie Ihren Ort – rund um die Uhr erreichbar unter {phone}."
+  },
+  "groupLabels": {
+    "grazStadt": "Graz Stadt",
+    "grazUmgebung": "Graz-Umgebung",
+    "spezial": "Flughafen"
+  },
+  "cardLinkLabel": "Zur Ortsseite"
+}

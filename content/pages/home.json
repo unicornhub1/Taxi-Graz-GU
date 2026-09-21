@@ -12,17 +12,41 @@
   },
   "trustBar": {
     "items": [
-      { "value": "24/7", "label": "Taxi-Service Graz" },
-      { "value": "{rating} ★", "label": "{reviews} Google Bewertungen" },
-      { "value": "Seit 2010", "label": "Erfahrung & Vertrauen" },
-      { "value": "100%", "label": "Barrierefrei" }
+      {
+        "value": "24/7",
+        "label": "Taxi-Service Graz"
+      },
+      {
+        "value": "{rating} ★",
+        "label": "{reviews} Google Bewertungen"
+      },
+      {
+        "value": "Seit 2010",
+        "label": "Erfahrung & Vertrauen"
+      },
+      {
+        "value": "100%",
+        "label": "Barrierefrei"
+      }
     ]
   },
   "marquee": {
     "items": [
-      "Flughafentransfer Graz", "Stretchlimousinen", "Limousine mieten Graz", "Botenfahrten", "Taxi vorbestellen",
-      "Barrierefreie Fahrten", "24/7 Service", "Kartenzahlung möglich", "WhatsApp Buchung", "Taxi Graz Andritz",
-      "Taxi Graz Eggenberg", "Taxi Feldkirchen", "Taxi Kalsdorf", "Taxi Seiersberg", "Taxi Gratkorn"
+      "Flughafentransfer Graz",
+      "Stretchlimousinen",
+      "Limousine mieten Graz",
+      "Botenfahrten",
+      "Taxi vorbestellen",
+      "Barrierefreie Fahrten",
+      "24/7 Service",
+      "Kartenzahlung möglich",
+      "WhatsApp Buchung",
+      "Taxi Graz Andritz",
+      "Taxi Graz Eggenberg",
+      "Taxi Feldkirchen",
+      "Taxi Kalsdorf",
+      "Taxi Seiersberg",
+      "Taxi Gratkorn"
     ]
   },
   "services": {
@@ -31,12 +55,36 @@
     "headingHighlight": "Graz & Umgebung",
     "intro": "Von Flughafentransfers bis Stretchlimousinen: Taxi Graz GU ist Ihr zuverlässiger Partner für alle Fahrten in Graz und darüber hinaus.",
     "items": [
-      { "icon": "Plane", "title": "Flughafentransfer", "description": "Zuverlässiger Transfer zum Flughafen Graz und zurück. Pünktliche Abholung garantiert – auch bei Frühflügen. Festpreise auf Anfrage." },
-      { "icon": "Crown", "title": "Stretchlimousinen", "description": "Für besondere Anlässe bieten wir stilvolle Stretchlimousinen. Hochzeiten, Geburtstage oder Geschäftsfahrten – fahren Sie mit Klasse." },
-      { "icon": "Package", "title": "Botenfahrten", "description": "Schnelle und zuverlässige Kurier- und Botenfahrten in Graz und Umgebung. Dokumente, Pakete und Medikamente sicher transportiert." },
-      { "icon": "Car", "title": "Taxi-Service 24/7", "description": "Rund um die Uhr für Sie da. Ob Tag oder Nacht – rufen Sie an und wir bringen Sie sicher an Ihr Ziel. Komfortabel und pünktlich." },
-      { "icon": "CalendarClock", "title": "Taxi vorbestellen", "description": "Planen Sie Ihre Fahrt im Voraus. Bestellen Sie Ihr Taxi bequem per Telefon oder WhatsApp vor – wir sind zur vereinbarten Zeit da." },
-      { "icon": "Accessibility", "title": "Barrierefreie Fahrten", "description": "Rollstuhlgerechte Fahrzeuge für mobilitätseingeschränkte Fahrgäste. Barrierefreier Einstieg und professionelle Unterstützung." }
+      {
+        "icon": "Plane",
+        "title": "Flughafentransfer",
+        "description": "Zuverlässiger Transfer zum Flughafen Graz und zurück. Pünktliche Abholung garantiert – auch bei Frühflügen. Festpreise auf Anfrage."
+      },
+      {
+        "icon": "Crown",
+        "title": "Stretchlimousinen",
+        "description": "Für besondere Anlässe bieten wir stilvolle Stretchlimousinen. Hochzeiten, Geburtstage oder Geschäftsfahrten – fahren Sie mit Klasse."
+      },
+      {
+        "icon": "Package",
+        "title": "Botenfahrten",
+        "description": "Schnelle und zuverlässige Kurier- und Botenfahrten in Graz und Umgebung. Dokumente, Pakete und Medikamente sicher transportiert."
+      },
+      {
+        "icon": "Car",
+        "title": "Taxi-Service 24/7",
+        "description": "Rund um die Uhr für Sie da. Ob Tag oder Nacht – rufen Sie an und wir bringen Sie sicher an Ihr Ziel. Komfortabel und pünktlich."
+      },
+      {
+        "icon": "CalendarClock",
+        "title": "Taxi vorbestellen",
+        "description": "Planen Sie Ihre Fahrt im Voraus. Bestellen Sie Ihr Taxi bequem per Telefon oder WhatsApp vor – wir sind zur vereinbarten Zeit da."
+      },
+      {
+        "icon": "Accessibility",
+        "title": "Barrierefreie Fahrten",
+        "description": "Rollstuhlgerechte Fahrzeuge für mobilitätseingeschränkte Fahrgäste. Barrierefreier Einstieg und professionelle Unterstützung."
+      }
     ]
   },
   "whyUs": {
@@ -44,10 +92,30 @@
     "heading": "Graz vertraut auf",
     "headingHighlight": "uns",
     "stats": [
-      { "value": 24, "suffix": "/7", "label": "Erreichbar", "sub": "Tag & Nacht" },
-      { "value": 673, "suffix": "+", "label": "Bewertungen", "sub": "{rating}★ auf Google" },
-      { "value": 15, "suffix": "+", "label": "Jahre Erfahrung", "sub": "Seit 2010 in Graz" },
-      { "value": 10, "suffix": " Min", "label": "Vor Ort", "sub": "Durchschnittliche Ankunft" }
+      {
+        "value": 24,
+        "suffix": "/7",
+        "label": "Erreichbar",
+        "sub": "Tag & Nacht"
+      },
+      {
+        "value": 673,
+        "suffix": "+",
+        "label": "Bewertungen",
+        "sub": "{rating}★ auf Google"
+      },
+      {
+        "value": 15,
+        "suffix": "+",
+        "label": "Jahre Erfahrung",
+        "sub": "Seit 2010 in Graz"
+      },
+      {
+        "value": 10,
+        "suffix": " Min",
+        "label": "Vor Ort",
+        "sub": "Durchschnittliche Ankunft"
+      }
     ],
     "ctaLabel": "Jetzt Taxi bestellen",
     "ctaWhatsappLabel": "per WhatsApp schreiben"
@@ -60,8 +128,12 @@
     "ctaWhatsapp": "Per WhatsApp anfragen",
     "boxTitle": "Ihre Vorteile bei Taxi Graz GU",
     "benefits": [
-      "Transparente Festpreise auf Anfrage", "Keine versteckten Kosten", "Flughafentransfer zum Fixpreis",
-      "Sonderkonditionen für Stammkunden", "Barzahlung & Kartenzahlung möglich", "Kostenlose Angebotserstellung"
+      "Transparente Festpreise auf Anfrage",
+      "Keine versteckten Kosten",
+      "Flughafentransfer zum Fixpreis",
+      "Sonderkonditionen für Stammkunden",
+      "Barzahlung & Kartenzahlung möglich",
+      "Kostenlose Angebotserstellung"
     ],
     "boxCtaText": "Jetzt anrufen & individuelles Angebot erhalten"
   },
@@ -71,25 +143,138 @@
     "intro": "Taxi Graz GU ist Ihr lokaler Partner für Taxifahrten in Graz und Umgebung. Wir sind in folgenden Gebieten für Sie unterwegs:",
     "groups": [
       {
-        "title": "Graz Stadt", "icon": "Building2",
+        "title": "Graz Stadt",
+        "icon": "Building2",
         "areas": [
-          "Taxi Graz", "Taxi Graz Andritz", "Taxi Graz Eggenberg", "Taxi Graz Nord", "Taxi Graz Don Bosco",
-          "Taxi Graz St. Peter", "Taxi Graz Mariatrost", "Taxi Graz Liebenau", "Taxi Graz Jakomini", "Taxi Graz Lend",
-          "Taxi Graz Gries", "Taxi Graz Gösting", "Taxi Graz Wetzelsdorf", "Taxi Graz Straßgang", "Taxi Graz Puntigam"
+          {
+            "label": "Taxi Graz"
+          },
+          {
+            "label": "Taxi Graz Andritz",
+            "ort": "content/orte/taxi-andritz.json"
+          },
+          {
+            "label": "Taxi Graz Eggenberg",
+            "ort": "content/orte/taxi-eggenberg.json"
+          },
+          {
+            "label": "Taxi Graz Nord"
+          },
+          {
+            "label": "Taxi Graz Don Bosco"
+          },
+          {
+            "label": "Taxi Graz St. Peter"
+          },
+          {
+            "label": "Taxi Graz Mariatrost",
+            "ort": "content/orte/taxi-mariatrost.json"
+          },
+          {
+            "label": "Taxi Graz Liebenau"
+          },
+          {
+            "label": "Taxi Graz Jakomini"
+          },
+          {
+            "label": "Taxi Graz Lend"
+          },
+          {
+            "label": "Taxi Graz Gries"
+          },
+          {
+            "label": "Taxi Graz Gösting",
+            "ort": "content/orte/taxi-goesting.json"
+          },
+          {
+            "label": "Taxi Graz Wetzelsdorf"
+          },
+          {
+            "label": "Taxi Graz Straßgang"
+          },
+          {
+            "label": "Taxi Graz Puntigam"
+          },
+          {
+            "label": "Taxi Graz Ragnitz",
+            "ort": "content/orte/taxi-ragnitz.json"
+          }
         ]
       },
       {
-        "title": "Graz-Umgebung", "icon": "Trees",
+        "title": "Graz-Umgebung",
+        "icon": "Trees",
         "areas": [
-          "Taxi Feldkirchen bei Graz", "Taxi Kalsdorf bei Graz", "Taxi Seiersberg", "Taxi Gratkorn", "Taxi Hart bei Graz",
-          "Taxi Hausmannstätten", "Taxi Raaba", "Taxi Laßnitzhöhe", "Taxi Premstätten", "Taxi Kumberg"
+          {
+            "label": "Taxi Feldkirchen bei Graz"
+          },
+          {
+            "label": "Taxi Kalsdorf bei Graz"
+          },
+          {
+            "label": "Taxi Seiersberg"
+          },
+          {
+            "label": "Taxi Gratkorn",
+            "ort": "content/orte/taxi-gratkorn.json"
+          },
+          {
+            "label": "Taxi Hart bei Graz",
+            "ort": "content/orte/taxi-hart-bei-graz.json"
+          },
+          {
+            "label": "Taxi Hausmannstätten"
+          },
+          {
+            "label": "Taxi Raaba-Grambach",
+            "ort": "content/orte/taxi-raaba-grambach.json"
+          },
+          {
+            "label": "Taxi Laßnitzhöhe",
+            "ort": "content/orte/taxi-lassnitzhoehe.json"
+          },
+          {
+            "label": "Taxi Premstätten"
+          },
+          {
+            "label": "Taxi Kumberg"
+          },
+          {
+            "label": "Taxi Vasoldsberg",
+            "ort": "content/orte/taxi-vasoldsberg.json"
+          },
+          {
+            "label": "Taxi Hitzendorf",
+            "ort": "content/orte/taxi-hitzendorf.json"
+          }
         ]
       },
       {
-        "title": "Spezial-Routen", "icon": "MapPin",
+        "title": "Spezial-Routen",
+        "icon": "MapPin",
         "areas": [
-          "Taxi Graz Flughafen", "Flughafentransfer Graz", "Taxi Graz Hauptbahnhof", "Taxi Graz Umgebung",
-          "Taxi Graz GU", "Taxi Graz 24h", "Taxi Steiermark"
+          {
+            "label": "Taxi Graz Flughafen",
+            "ort": "content/orte/taxi-flughafen-graz.json"
+          },
+          {
+            "label": "Flughafentransfer Graz"
+          },
+          {
+            "label": "Taxi Graz Hauptbahnhof"
+          },
+          {
+            "label": "Taxi Graz Umgebung"
+          },
+          {
+            "label": "Taxi Graz GU"
+          },
+          {
+            "label": "Taxi Graz 24h"
+          },
+          {
+            "label": "Taxi Steiermark"
+          }
         ]
       }
     ]
@@ -100,12 +285,42 @@
     "headingHighlight": "Taxi Graz GU",
     "intro": "Überzeugen Sie sich selbst: Über {reviews} zufriedene Kunden bewerten uns mit durchschnittlich {rating} Sternen auf Google.",
     "items": [
-      { "name": "Lukas Sacher", "rating": 5, "text": "Danke für die Fahrt, sehr bequem, gute Unterhaltung, Bankomat Taxi... Top!", "date": "vor einem Monat" },
-      { "name": "Eva Schultz", "rating": 5, "text": "Sehr freundlich und super Preis. Würden ihn wieder buchen :)", "date": "vor 3 Monaten" },
-      { "name": "Lars Maschkow", "rating": 5, "text": "Spontan von der Straße aufgenommen, cooler Fahrer!", "date": "vor 2 Monaten" },
-      { "name": "Christoph Wagner", "rating": 5, "text": "Super Service, pünktlich gekommen! Kann ich nur weiterempfehlen.", "date": "vor 2 Monaten" },
-      { "name": "Ramona Koller", "rating": 5, "text": "Danke für den guten Service! Immer zuverlässig und freundlich.", "date": "vor einem Monat" },
-      { "name": "Diyar Pekmezci", "rating": 5, "text": "Vielen Dank für die angenehme Fahrt. Sehr empfehlenswert!", "date": "vor 3 Monaten" }
+      {
+        "name": "Lukas Sacher",
+        "rating": 5,
+        "text": "Danke für die Fahrt, sehr bequem, gute Unterhaltung, Bankomat Taxi... Top!",
+        "date": "vor einem Monat"
+      },
+      {
+        "name": "Eva Schultz",
+        "rating": 5,
+        "text": "Sehr freundlich und super Preis. Würden ihn wieder buchen :)",
+        "date": "vor 3 Monaten"
+      },
+      {
+        "name": "Lars Maschkow",
+        "rating": 5,
+        "text": "Spontan von der Straße aufgenommen, cooler Fahrer!",
+        "date": "vor 2 Monaten"
+      },
+      {
+        "name": "Christoph Wagner",
+        "rating": 5,
+        "text": "Super Service, pünktlich gekommen! Kann ich nur weiterempfehlen.",
+        "date": "vor 2 Monaten"
+      },
+      {
+        "name": "Ramona Koller",
+        "rating": 5,
+        "text": "Danke für den guten Service! Immer zuverlässig und freundlich.",
+        "date": "vor einem Monat"
+      },
+      {
+        "name": "Diyar Pekmezci",
+        "rating": 5,
+        "text": "Vielen Dank für die angenehme Fahrt. Sehr empfehlenswert!",
+        "date": "vor 3 Monaten"
+      }
     ],
     "googleLinkLabel": "Alle {reviews} Bewertungen auf Google ansehen"
   },
@@ -113,16 +328,46 @@
     "eyebrow": "Häufige Fragen",
     "heading": "Häufig gestellte Fragen",
     "items": [
-      { "question": "Wie bestelle ich am schnellsten ein Taxi in Graz?", "answer": "Am schnellsten erreichen Sie uns telefonisch unter {phone} – wir sind 24 Stunden am Tag, 7 Tage die Woche erreichbar. Alternativ können Sie uns auch per WhatsApp kontaktieren. In der Regel ist ein Taxi innerhalb weniger Minuten bei Ihnen." },
-      { "question": "Kann ich bei Taxi Graz GU auch mit Karte bezahlen?", "answer": "Selbstverständlich. Unsere Fahrzeuge sind mit modernen Kartenterminals ausgestattet. Wir akzeptieren Bankomatkarte, Visa und Mastercard sowie kontaktlose Zahlung. Natürlich ist auch Barzahlung möglich." },
-      { "question": "Was kostet ein Flughafentransfer zum Flughafen Graz?", "answer": "Für Flughafentransfers bieten wir transparente Festpreise an – so wissen Sie vorher genau, was die Fahrt kostet. Rufen Sie uns an unter {phone} für ein individuelles Angebot." },
-      { "question": "Kann ich ein Taxi im Voraus bestellen?", "answer": "Ja, Sie können Ihr Taxi ganz bequem per Telefon oder WhatsApp vorbestellen. Geben Sie einfach das gewünschte Datum, die Uhrzeit und den Abholort an – wir sind pünktlich zur vereinbarten Zeit da." },
-      { "question": "Bieten Sie auch Stretchlimousinen an?", "answer": "Ja! Für besondere Anlässe wie Hochzeiten, Geburtstage oder Geschäftsveranstaltungen bieten wir stilvolle Stretchlimousinen an. Kontaktieren Sie uns für ein individuelles Angebot." },
-      { "question": "Sind Ihre Fahrzeuge barrierefrei?", "answer": "Ja, wir verfügen über rollstuhlgerechte Fahrzeuge mit barrierefreiem Eingang. Unsere Fahrer sind geschult und helfen Ihnen gerne beim Ein- und Aussteigen." },
-      { "question": "Was kostet ein Taxi in Graz?", "answer": "Die Taxipreise in Graz richten sich nach dem offiziellen Steiermärkischen Taxitarif. Der Preis hängt von Strecke, Tageszeit und Zuschlägen ab. Für Festpreisangebote und genaue Preisauskunft rufen Sie uns einfach an unter {phone} – wir erstellen Ihnen gerne ein unverbindliches Angebot." },
-      { "question": "Wie viel kostet ein Taxi zum Flughafen Graz?", "answer": "Der Preis für einen Flughafentransfer zum Flughafen Graz hängt vom Abholort ab. Wir bieten transparente Festpreise für Flughafentransfers an – rufen Sie uns an unter {phone} für Ihr individuelles Angebot." },
-      { "question": "Kann ich eine Limousine oder Stretchlimousine in Graz mieten?", "answer": "Ja! Taxi Graz GU bietet stilvolle Stretchlimousinen für besondere Anlässe wie Hochzeiten, Geburtstage, JGA oder Geschäftsfahrten. Kontaktieren Sie uns für ein unverbindliches Angebot und Verfügbarkeit." },
-      { "question": "Fahren Sie auch in die Graz-Umgebung und umliegende Gemeinden?", "answer": "Selbstverständlich! Wir bedienen ganz Graz und den gesamten Bezirk Graz-Umgebung, einschließlich Feldkirchen bei Graz, Kalsdorf, Seiersberg, Gratkorn, Hart bei Graz, Hausmannstätten, Raaba, Laßnitzhöhe und viele weitere Gemeinden." }
+      {
+        "question": "Wie bestelle ich am schnellsten ein Taxi in Graz?",
+        "answer": "Am schnellsten erreichen Sie uns telefonisch unter {phone} – wir sind 24 Stunden am Tag, 7 Tage die Woche erreichbar. Alternativ können Sie uns auch per WhatsApp kontaktieren. In der Regel ist ein Taxi innerhalb weniger Minuten bei Ihnen."
+      },
+      {
+        "question": "Kann ich bei Taxi Graz GU auch mit Karte bezahlen?",
+        "answer": "Selbstverständlich. Unsere Fahrzeuge sind mit modernen Kartenterminals ausgestattet. Wir akzeptieren Bankomatkarte, Visa und Mastercard sowie kontaktlose Zahlung. Natürlich ist auch Barzahlung möglich."
+      },
+      {
+        "question": "Was kostet ein Flughafentransfer zum Flughafen Graz?",
+        "answer": "Für Flughafentransfers bieten wir transparente Festpreise an – so wissen Sie vorher genau, was die Fahrt kostet. Rufen Sie uns an unter {phone} für ein individuelles Angebot."
+      },
+      {
+        "question": "Kann ich ein Taxi im Voraus bestellen?",
+        "answer": "Ja, Sie können Ihr Taxi ganz bequem per Telefon oder WhatsApp vorbestellen. Geben Sie einfach das gewünschte Datum, die Uhrzeit und den Abholort an – wir sind pünktlich zur vereinbarten Zeit da."
+      },
+      {
+        "question": "Bieten Sie auch Stretchlimousinen an?",
+        "answer": "Ja! Für besondere Anlässe wie Hochzeiten, Geburtstage oder Geschäftsveranstaltungen bieten wir stilvolle Stretchlimousinen an. Kontaktieren Sie uns für ein individuelles Angebot."
+      },
+      {
+        "question": "Sind Ihre Fahrzeuge barrierefrei?",
+        "answer": "Ja, wir verfügen über rollstuhlgerechte Fahrzeuge mit barrierefreiem Eingang. Unsere Fahrer sind geschult und helfen Ihnen gerne beim Ein- und Aussteigen."
+      },
+      {
+        "question": "Was kostet ein Taxi in Graz?",
+        "answer": "Die Taxipreise in Graz richten sich nach dem offiziellen Steiermärkischen Taxitarif. Der Preis hängt von Strecke, Tageszeit und Zuschlägen ab. Für Festpreisangebote und genaue Preisauskunft rufen Sie uns einfach an unter {phone} – wir erstellen Ihnen gerne ein unverbindliches Angebot."
+      },
+      {
+        "question": "Wie viel kostet ein Taxi zum Flughafen Graz?",
+        "answer": "Der Preis für einen Flughafentransfer zum Flughafen Graz hängt vom Abholort ab. Wir bieten transparente Festpreise für Flughafentransfers an – rufen Sie uns an unter {phone} für Ihr individuelles Angebot."
+      },
+      {
+        "question": "Kann ich eine Limousine oder Stretchlimousine in Graz mieten?",
+        "answer": "Ja! Taxi Graz GU bietet stilvolle Stretchlimousinen für besondere Anlässe wie Hochzeiten, Geburtstage, JGA oder Geschäftsfahrten. Kontaktieren Sie uns für ein unverbindliches Angebot und Verfügbarkeit."
+      },
+      {
+        "question": "Fahren Sie auch in die Graz-Umgebung und umliegende Gemeinden?",
+        "answer": "Selbstverständlich! Wir bedienen ganz Graz und den gesamten Bezirk Graz-Umgebung, einschließlich Feldkirchen bei Graz, Kalsdorf, Seiersberg, Gratkorn, Hart bei Graz, Hausmannstätten, Raaba, Laßnitzhöhe und viele weitere Gemeinden."
+      }
     ]
   },
   "cta": {

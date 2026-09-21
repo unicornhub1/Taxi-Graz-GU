@@ -1,0 +1,86 @@
+{
+  "name": "Hitzendorf",
+  "region": "graz-umgebung",
+  "seo": {
+    "title": "Taxi Hitzendorf – 24/7 & Flughafen",
+    "description": "Taxi Hitzendorf rund um die Uhr: nach Graz, zum Hauptbahnhof und Flughafen Graz – Festpreise auf Anfrage. ☎ {phone}"
+  },
+  "hero": {
+    "badge": "24/7 in Hitzendorf",
+    "headline": "Ihr Taxi in",
+    "headlineHighlight": "Hitzendorf",
+    "subline": "Im Hügelland westlich von Graz",
+    "description": "**Taxi Hitzendorf** – aus Attendorf, Rohrbach-Steinberg und Hitzendorf nach Graz, zum **Hauptbahnhof** oder zum **Flughafen Graz**."
+  },
+  "local": {
+    "eyebrow": "Taxi Hitzendorf",
+    "heading": "Unterwegs zwischen Liebochtal und Graz",
+    "body": "Hitzendorf liegt rund 10 Kilometer westlich von Graz im Hügelland zwischen Liebochtal und Södingtal. Seit 2015 gehören auch die früheren Gemeinden Attendorf und Rohrbach-Steinberg dazu – mit über 6.800 Einwohnerinnen und Einwohnern ist Hitzendorf eine der größten Gemeinden im Bezirk Graz-Umgebung.\n\n### Adressen ohne Straßennamen\n\nEine Besonderheit: In Hitzendorf gibt es keine Straßennamen. Die Häuser sind in 26 Ortschaften nach Hausnummern geordnet. Nennen Sie uns bei der Bestellung deshalb Ortschaft und Hausnummer, am besten mit einem Orientierungspunkt – dann stehen wir ohne Umwege vor Ihrer Tür.\n\nSeit der Fusion ist die Gemeinde weitläufig: Von Attendorf bis Rohrbach-Steinberg liegen die Ortschaften verstreut im Hügelland. Umso wichtiger ist eine flexible Verbindung – wir holen Sie in jeder Ortschaft ab, ob für den täglichen Weg nach Graz, eine Feier im Ort oder die Fahrt zum Bahnhof. Auch ins benachbarte [Graz-Eggenberg](/taxi-eggenberg) ist es nicht weit.\n\n### Von Hitzendorf nach Graz\n\nZum Grazer Hauptbahnhof sind es knapp 15 Kilometer, ohne Verkehr etwa 20 Minuten, bis zum Hauptplatz rund 16 Kilometer. Ob Zug, Arzttermin, Einkauf oder ein Abend in der Stadt: Wir bringen Sie hin und holen Sie auf Wunsch auch wieder ab. Gerade am Abend und in der Nacht ist das Taxi aus dem Hügelland oft die bequemste Verbindung.\n\n### Flughafentransfer ab Hitzendorf\n\nZum Flughafen Graz sind es rund 27 Kilometer. Für den [Flughafentransfer](/taxi-flughafen-graz) nennen wir Ihnen vorab einen Festpreis. Bei Frühflügen reservieren Sie Ihr Taxi am besten schon am Vortag – wir sind rund um die Uhr erreichbar, und Sie bezahlen bar oder mit Karte.",
+    "facts": [
+      {
+        "label": "Graz Hauptplatz",
+        "value": "16,2 km · ca. 25 Min."
+      },
+      {
+        "label": "Graz Hauptbahnhof",
+        "value": "14,6 km · ca. 20 Min."
+      },
+      {
+        "label": "Flughafen Graz",
+        "value": "27,2 km · ca. 25 Min."
+      }
+    ]
+  },
+  "order": {
+    "heading": "So bestellen Sie Ihr Taxi in Hitzendorf",
+    "intro": "Ob Attendorf, Rohrbach-Steinberg oder Hitzendorf selbst: Ihr Taxi ist in drei Schritten bestellt – rund um die Uhr unter {phone}.",
+    "steps": [
+      {
+        "title": "Anrufen oder schreiben",
+        "text": "Rufen Sie uns an oder schreiben Sie per WhatsApp – wir sind Tag und Nacht erreichbar."
+      },
+      {
+        "title": "Ortschaft und Hausnummer nennen",
+        "text": "Da es in Hitzendorf keine Straßennamen gibt, brauchen wir Ortschaft und Hausnummer, dazu Uhrzeit und Personenzahl."
+      },
+      {
+        "title": "Abholen lassen",
+        "text": "Wir holen Sie vor der Haustür ab und bringen Sie ans Ziel. Bezahlt wird bar oder mit Karte."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "heading": "Taxi Hitzendorf – häufige Fragen",
+    "items": [
+      {
+        "question": "Wie finden Sie meine Adresse in Hitzendorf ohne Straßennamen?",
+        "answer": "Nennen Sie uns Ortschaft und Hausnummer und am besten einen Orientierungspunkt, etwa eine Kirche, ein Gasthaus oder eine Abzweigung. Dann finden wir Sie zuverlässig."
+      },
+      {
+        "question": "Wie lange dauert die Fahrt von Hitzendorf zum Hauptbahnhof Graz?",
+        "answer": "Die Strecke ist knapp 15 Kilometer lang, ohne Verkehr etwa 20 Minuten."
+      },
+      {
+        "question": "Was kostet ein Taxi von Hitzendorf zum Flughafen Graz?",
+        "answer": "Für Flughafentransfers bieten wir Festpreise an. Rufen Sie uns unter {phone} an, und wir nennen Ihnen den Preis vorab."
+      },
+      {
+        "question": "Fahren Sie auch nach Attendorf und Rohrbach-Steinberg?",
+        "answer": "Ja, wir holen Sie in allen Ortschaften der Gemeinde Hitzendorf ab, auch in Attendorf und Rohrbach-Steinberg."
+      }
+    ]
+  },
+  "nearbyIntro": "Rund um Hitzendorf sind wir auch in Graz-Eggenberg, Graz-Gösting und Gratkorn für Sie unterwegs.",
+  "nearby": [
+    {
+      "ort": "content/orte/taxi-eggenberg.json"
+    },
+    {
+      "ort": "content/orte/taxi-goesting.json"
+    },
+    {
+      "ort": "content/orte/taxi-gratkorn.json"
+    }
+  ]
+}

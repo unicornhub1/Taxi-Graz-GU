@@ -3,6 +3,8 @@
 import Link from 'next/link'
 import { Mail, MapPin } from 'lucide-react'
 import { useSettings } from '@/components/SettingsProvider'
+import { useOrte } from '@/components/OrteProvider'
+import { ortLinkLabel } from '@/lib/ort'
 import { phoneRaw, compact } from '@/lib/site'
 import { tinaField } from 'tinacms/dist/react'
 import { Container } from './Container'
@@ -14,6 +16,7 @@ export function Footer() {
   const { footer, navigation } = settings
   const mainNav = compact(navigation.main)
   const legalNav = compact(navigation.legal)
+  const orte = useOrte()
   return (
     <footer className="border-t border-[var(--color-border)] bg-[var(--color-gray-900)] text-white">
       <Container>
@@ -113,6 +116,27 @@ export function Footer() {
             </ul>
           </div>
         </div>
+
+        {/* Einsatzgebiete (automatisch aus allen Ortsseiten) */}
+        {orte.length > 0 && (
+          <div className="border-t border-[var(--color-gray-700)] py-10">
+            <h3
+              className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-gray-400)]"
+              data-tina-field={tinaField(settings.areaLabels, 'footerHeading')}
+            >
+              {settings.areaLabels.footerHeading}
+            </h3>
+            <ul className="mt-4 grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3 lg:grid-cols-4">
+              {orte.map((ort) => (
+                <li key={ort.slug}>
+                  <Link href={`/${ort.slug}`} className="text-sm text-[var(--color-gray-300)] transition-colors hover:text-[var(--color-gold)]">
+                    {ortLinkLabel(ort.name, settings.areaLabels.linkPrefix)}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         {/* Bottom bar */}
         <div className="flex flex-col items-center justify-between gap-4 border-t border-[var(--color-gray-700)] py-6 text-xs text-[var(--color-gray-500)] sm:flex-row">

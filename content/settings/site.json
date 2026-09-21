@@ -71,7 +71,7 @@
       },
       {
         "label": "Service-Gebiete",
-        "href": "/#gebiete"
+        "href": "/einsatzgebiete"
       },
       {
         "label": "Bewertungen",
@@ -108,6 +108,34 @@
     "callNow": "Jetzt anrufen",
     "reviews": "Bewertungen",
     "googleReviews": "Google-Bewertungen"
+  },
+  "areaLabels": {
+    "footerHeading": "Einsatzgebiete",
+    "linkPrefix": "Taxi",
+    "allAreas": "Alle Einsatzgebiete",
+    "nearbyEyebrow": "In der Nähe",
+    "nearbyHeading": "Taxi auch in den Nachbarorten",
+    "breadcrumbHome": "Start",
+    "breadcrumbHub": "Einsatzgebiete"
+  },
+  "orderLabels": {
+    "taxiSign": "TAXI",
+    "paymentsHeading": "Bezahlen",
+    "payments": [
+      "Bar",
+      "Bankomatkarte",
+      "Visa",
+      "Mastercard",
+      "Kontaktlos"
+    ],
+    "extrasHeading": "Auch möglich",
+    "extras": [
+      "Vorbestellung",
+      "Flughafentransfer zum Festpreis",
+      "Stretchlimousine",
+      "Botenfahrt",
+      "Barrierefreie Fahrt"
+    ]
   },
   "design": {
     "accentColor": "#E8B931",
