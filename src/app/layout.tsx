@@ -3,6 +3,7 @@ import client from '@tina/__generated__/client'
 import { dmSerifDisplay, outfit } from '@/lib/fonts'
 import { accentCssVars } from '@/lib/color'
 import { compact, interpolate } from '@/lib/site'
+import { listOrte } from '@/lib/orte-data'
 import { SiteShell } from '@/components/SiteShell'
 import { StructuredData } from '@/components/sections/StructuredData'
 import './globals.css'
@@ -41,7 +42,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  const [settings, home] = await Promise.all([loadSettings(), loadHome()])
+  const [settings, home, orte] = await Promise.all([loadSettings(), loadHome(), listOrte()])
   const site = settings.data.settings
 
   return (
@@ -51,14 +52,10 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
       style={accentCssVars(site.design.accentColor) as React.CSSProperties}
     >
       <head>
-        <StructuredData
-          settings={site}
-          faq={compact(home.data.home.faq.items)}
-          services={compact(home.data.home.services.items)}
-        />
+        <StructuredData settings={site} services={compact(home.data.home.services.items)} orte={orte} />
       </head>
       <body className="font-[var(--font-body)] antialiased bg-[var(--color-cream)]">
-        <SiteShell settings={{ data: settings.data, query: settings.query, variables: settings.variables }}>
+        <SiteShell settings={{ data: settings.data, query: settings.query, variables: settings.variables }} orte={orte}>
           {children}
         </SiteShell>
       </body>

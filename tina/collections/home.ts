@@ -116,7 +116,14 @@ export const home: Collection = {
           fields: [
             str('title', 'Gruppentitel'),
             { type: 'string', name: 'icon', label: 'Icon', required: true, options: AREA_ICONS },
-            { type: 'string', name: 'areas', label: 'Orte / Routen', list: true, required: true },
+            {
+              type: 'object', name: 'areas', label: 'Orte / Routen', list: true, required: true,
+              ui: { itemProps: (item) => ({ label: item?.label }) },
+              fields: [
+                str('label', 'Beschriftung'),
+                { type: 'reference', name: 'ort', label: 'Verknüpfte Ortsseite (optional – macht den Eintrag zum Link)', collections: ['ort'] },
+              ],
+            },
           ],
         },
       ],

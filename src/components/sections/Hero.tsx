@@ -5,12 +5,22 @@ import { Phone, MessageCircle, Mail, ArrowDown, Star } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { tinaField } from 'tinacms/dist/react'
 import { TinaMarkdown, type TinaMarkdownContent } from 'tinacms/dist/rich-text'
-import type { HomeQuery } from '@tina/__generated__/types'
 import { useSettings } from '@/components/SettingsProvider'
 import { phoneRaw, whatsappLink } from '@/lib/site'
 import { goldGridStyle } from '@/lib/styles'
 
-export type HeroData = NonNullable<HomeQuery['home']['hero']>
+/** Startseite und Ortsseiten (dort gemischt: Texte vom Ort, Buttons/Karte von der Startseite). */
+export type HeroData = {
+  badge: string
+  headline: string
+  headlineHighlight: string
+  subline: string
+  description: unknown
+  ctaCall: string
+  ctaWhatsapp: string
+  cardTitle: string
+  scrollHint: string
+}
 
 // Beschreibung liegt als Rich-Text vor; <p> wird zu Fragment, damit sie im bestehenden <motion.p> bleibt.
 const inlineMarkdown = {
@@ -18,7 +28,7 @@ const inlineMarkdown = {
   bold: (props?: { children?: React.ReactNode }) => <strong className="text-white">{props?.children}</strong>,
 }
 
-export function Hero({ data }: { data: HeroData }) {
+export function Hero({ data, imageSrc, imageField }: { data: HeroData; imageSrc?: string | null; imageField?: string }) {
   const settings = useSettings()
   const { labels } = settings
   const tel = `tel:${phoneRaw(settings.contact.phone)}`
@@ -27,9 +37,9 @@ export function Hero({ data }: { data: HeroData }) {
   return (
     <section className="relative min-h-[100dvh] flex items-center overflow-hidden">
       {/* Background image + dark overlay */}
-      <div className="absolute inset-0 z-0" data-tina-field={tinaField(settings.design, 'heroImage')}>
+      <div className="absolute inset-0 z-0" data-tina-field={imageField ?? tinaField(settings.design, 'heroImage')}>
         <Image
-          src={settings.design.heroImage}
+          src={imageSrc || settings.design.heroImage}
           alt="Taxi in der Stadt"
           fill
           priority

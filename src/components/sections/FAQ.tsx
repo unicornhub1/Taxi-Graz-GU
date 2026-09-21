@@ -2,13 +2,16 @@
 
 import { motion } from 'framer-motion'
 import { tinaField } from 'tinacms/dist/react'
-import type { HomeQuery } from '@tina/__generated__/types'
 import { Section } from '@/components/layout/Section'
 import { Accordion } from '@/components/ui'
 import { useSettings } from '@/components/SettingsProvider'
 import { compact, interpolate } from '@/lib/site'
 
-export type FaqData = NonNullable<HomeQuery['home']['faq']>
+export type FaqData = {
+  eyebrow: string
+  heading: string
+  items?: ReadonlyArray<{ question: string; answer: string } | null> | null
+}
 
 export function FAQ({ data }: { data: FaqData }) {
   const settings = useSettings()

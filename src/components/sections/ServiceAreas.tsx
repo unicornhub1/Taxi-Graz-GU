@@ -1,10 +1,13 @@
 'use client'
 
+import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { MapPin, Building2, Trees, type LucideIcon } from 'lucide-react'
+import { ArrowRight, MapPin, Building2, Trees, type LucideIcon } from 'lucide-react'
 import { tinaField } from 'tinacms/dist/react'
 import type { HomeQuery } from '@tina/__generated__/types'
 import { Section } from '@/components/layout/Section'
+import { AreaChip } from '@/components/ui/AreaChip'
+import { useSettings } from '@/components/SettingsProvider'
 import { compact } from '@/lib/site'
 
 export type ServiceAreasData = NonNullable<HomeQuery['home']['serviceAreas']>
@@ -31,13 +34,12 @@ function AreaGroup({ group, delay }: { group: AreaGroupData; delay: number }) {
       </div>
       <div className="flex flex-wrap justify-center gap-2">
         {areas.map((area, i) => (
-          <span
+          <AreaChip
             key={i}
-            className="group inline-flex items-center gap-1.5 rounded-full border border-[var(--color-border)] bg-white px-4 py-2 text-sm font-medium text-[var(--color-gray-600)] transition-all duration-300 hover:border-[var(--color-gold)]/50 hover:bg-[var(--color-gold)]/5 hover:text-[var(--color-black)]"
-          >
-            <MapPin className="h-3.5 w-3.5 text-[var(--color-gold)] transition-transform group-hover:scale-110" />
-            {area}
-          </span>
+            label={area.label}
+            href={area.ort ? `/${area.ort._sys.filename}` : undefined}
+            tinaFieldId={tinaField(area)}
+          />
         ))}
       </div>
     </motion.div>
@@ -46,6 +48,7 @@ function AreaGroup({ group, delay }: { group: AreaGroupData; delay: number }) {
 
 export function ServiceAreas({ data }: { data: ServiceAreasData }) {
   const groups = compact(data.groups)
+  const { areaLabels } = useSettings()
   return (
     <Section id="gebiete" className="bg-[var(--color-gray-50)]">
       <div className="text-center">
@@ -84,6 +87,17 @@ export function ServiceAreas({ data }: { data: ServiceAreasData }) {
         {groups.map((group, i) => (
           <AreaGroup key={i} group={group} delay={0.3 + i * 0.1} />
         ))}
+      </div>
+
+      <div className="mt-10 text-center">
+        <Link
+          href="/einsatzgebiete"
+          data-tina-field={tinaField(areaLabels, 'allAreas')}
+          className="inline-flex items-center gap-1 text-sm font-semibold text-[var(--color-gold-dark)] hover:underline"
+        >
+          {areaLabels.allAreas}
+          <ArrowRight className="h-4 w-4" />
+        </Link>
       </div>
     </Section>
   )

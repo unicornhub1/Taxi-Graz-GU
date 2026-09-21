@@ -3,6 +3,8 @@ import { settings } from './collections/settings'
 import { home } from './collections/home'
 import { kontakt } from './collections/kontakt'
 import { legal } from './collections/legal'
+import { ort } from './collections/ort'
+import { einsatzgebiete } from './collections/einsatzgebiete'
 
 const branch =
   process.env.NEXT_PUBLIC_TINA_BRANCH ||
@@ -16,5 +18,5 @@ export default defineConfig({
   token: process.env.TINA_TOKEN,
   build: { outputFolder: 'admin', publicFolder: 'public' },
   media: { tina: { mediaRoot: 'uploads', publicFolder: 'public' } },
-  schema: { collections: [settings, home, kontakt, legal] },
+  schema: { collections: [settings, home, kontakt, legal, ort, einsatzgebiete] },
 })
